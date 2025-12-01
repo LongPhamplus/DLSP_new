@@ -1,0 +1,2 @@
+Thêm tạo ticket chứa thông tin sau khi đặt chỗ (Thông tin trong: Tên cty -> Thông tin người đặt -> Thông tin chuyến bay + khách)
+Sửa lại cách trình bày của pilot/[id]
