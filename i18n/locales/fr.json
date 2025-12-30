@@ -57,9 +57,9 @@
       "optionalServices": "Services Optionnels:",
       "locations": "Lieux:",
       "takeoffPoint": "Point de Décollage: Montagne Hau Thao",
-      "landingPoint": "Point d'Atterrissage: Pont Lao Chai",
+      "landingPoint": "Point d'Atterrissage: Village de Lao Chai",
       "viewMap": "Voir la Carte →",
-      "promotionInfo": "Informations sur les Promotions",
+      "promotionInfo": "Réduction directe pour les réservations de groupe",
       "youSave": "🎉 Vous économisez:",
       "priceSummary": "Résumé des Prix",
       "flightPriceFor": "Prix du Vol",
@@ -69,24 +69,26 @@
       "total": "Total:",
       "continue": "Continuer →",
       "includedItems": {
-        "flight": "01 vol en parapente de 8-15 minutes (selon les conditions de vent)",
-        "photoVideo": "Enregistrement vidéo et photo depuis GOPRO",
-        "drinks": "Menu de boissons (Café et thé gratuits sur le site de vol)",
+        "flight": "01 vol en parapente de 8-15 minutes (peut être plus long selon la météo, la santé du passager et la décision du pilote)",
+        "photoVideo": "Enregistrement vidéo et photo avec GoPro, fourni par Sapa Paragliding",
+        "drinks": "Boissons sur le site de vol",
         "insurance": "Assurance parapente",
-        "certificate": "Certificat"
+        "certificate": "Certificat de participation à l'expérience",
+        "equipment": "Équipement de parapente certifié aux normes",
+        "reschedulePolicy": "Pas de frais de report et annulation gratuite en cas de mauvais temps"
       },
       "optionalItems": {
         "hotelTransfer": {
-          "name": "Transfert hôtel aller-retour",
-          "description": "Centre de Sapa, village de Lao Chai, village de Ta Van"
+          "name": "Zone de prise en charge : centre-ville de Sapa, village de Lao Chai, village de Ta Van.",
+          "description": "(Pour les autres lieux de prise en charge, nous vous contacterons à l’avance afin de discuter et convenir d’un supplément approprié.)"
         },
         "drone": {
-          "name": "FLYCAM (caméra DRONE)",
-          "description": "Enregistrez votre vol avec Flycam, toutes les données originales vous seront envoyées"
+          "name": "Vol enregistré à l’aide d’un flycam/drone professionnel",
+          "description": "Votre vol sera filmé par flycam et toutes les données originales vous seront envoyées"
         },
         "camera360": {
-          "name": "CAMÉRA panoramique 360",
-          "description": "Le pilote utilisera une caméra 360 pour enregistrer tout le vol et éditer les données pour vous"
+          "name": "Vol enregistré avec une caméra 360°, capturant l’intégralité du parcours.",
+          "description": "La vidéo sera montée avant de vous être envoyée."
         }
       },
       "promotions": {
@@ -101,7 +103,13 @@
       "pickupPlaceholder": "Exemple: Hôtel Sapa Charm, Centre de Sapa",
       "pickupNote": "Veuillez entrer le nom de l'hôtel ou l'adresse spécifique à Sapa, village de Lao Chai ou village de Ta Van",
       "importantNotice": "Avis Important",
-      "weatherNotice": "Les vols dépendent de la météo. Nous vous contacterons 24 heures avant votre vol prévu pour confirmer ou reprogrammer en fonction des conditions météorologiques.",
+      "weatherNotice": {
+        "item1": "Après la réservation, nous vous contacterons pour organiser le planning du vol, y compris l'heure du vol, le point de prise en charge et l'heure de prise en charge.",
+        "item2": "L'heure de prise en charge est environ 30 minutes avant le vol.",
+        "item3": "Le jour du vol, nous vous enverrons le nom du chauffeur, son numéro de téléphone et la plaque d'immatriculation du véhicule/moto par SMS, WhatsApp ou Email.",
+        "item4": "Veuillez arriver au point de rendez-vous 5 minutes avant l'heure de prise en charge pour éviter tout retard.",
+        "item5": "En cas de changement météorologique, nous vous contacterons pour reprogrammer entièrement gratuitement."
+      },
       "selectTime": "Sélectionner l'heure",
       "contactName": "Nom de Contact",
       "email": "Email",
@@ -180,8 +188,8 @@
       "fullName": "Nom Complet",
       "email": "Email",
       "phone": "Numéro de Téléphone",
-      "date": "Date Préférée",
-      "time": "Heure Préférée",
+      "date": "Date du vol",
+      "time": "Heure du vol",
       "passengers": "Nombre de Passagers",
       "specialRequests": "Demandes Spéciales",
       "dateOfBirth": "Date de Naissance",

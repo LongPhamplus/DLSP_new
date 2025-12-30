@@ -11,13 +11,8 @@
         <label class="block text-sm font-medium text-gray-700 mb-2">
           {{ $t('booking.fields.fullName') }} *
         </label>
-        <input
-          v-model="formData.contactName"
-          type="text"
-          required
-          class="input-field"
-          :placeholder="$t('booking.fields.fullName')"
-        />
+        <input v-model="formData.contactName" type="text" required class="input-field"
+          :placeholder="$t('booking.fields.fullName')" />
       </div>
 
       <!-- Email -->
@@ -25,13 +20,8 @@
         <label class="block text-sm font-medium text-gray-700 mb-2">
           {{ $t('booking.fields.email') }} *
         </label>
-        <input
-          v-model="formData.email"
-          type="email"
-          required
-          class="input-field"
-          :placeholder="$t('booking.fields.email')"
-        />
+        <input v-model="formData.email" type="email" required class="input-field"
+          :placeholder="$t('booking.fields.email')" />
       </div>
 
       <!-- Phone -->
@@ -39,13 +29,43 @@
         <label class="block text-sm font-medium text-gray-700 mb-2">
           {{ $t('booking.fields.phone') }} *
         </label>
-        <input
-          v-model="formData.phone"
-          type="tel"
-          required
-          class="input-field"
-          placeholder="+84 123 456 789"
-        />
+        <div class="flex gap-2">
+          <!-- Country Code Selector -->
+          <select v-model="formData.countryCode" required class="input-field w-40 flex-shrink-0">
+            <option value="" disabled>🌐 Code</option>
+            <option value="+84">🇻🇳 +84</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+33">🇫🇷 +33</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+7">🇷🇺 +7</option>
+            <option value="+81">🇯🇵 +81</option>
+            <option value="+82">🇰🇷 +82</option>
+            <option value="+86">🇨🇳 +86</option>
+            <option value="+61">🇦🇺 +61</option>
+            <option value="+65">🇸🇬 +65</option>
+            <option value="+66">🇹🇭 +66</option>
+            <option value="+60">🇲🇾 +60</option>
+            <option value="+62">🇮🇩 +62</option>
+            <option value="+63">🇵🇭 +63</option>
+            <option value="+91">🇮🇳 +91</option>
+            <option value="+971">🇦🇪 +971</option>
+            <option value="+39">🇮🇹 +39</option>
+            <option value="+34">🇪🇸 +34</option>
+            <option value="+31">🇳🇱 +31</option>
+            <option value="+46">🇸🇪 +46</option>
+            <option value="+47">🇳🇴 +47</option>
+            <option value="+45">🇩🇰 +45</option>
+            <option value="+41">🇨🇭 +41</option>
+            <option value="+48">🇵🇱 +48</option>
+            <option value="+55">🇧🇷 +55</option>
+            <option value="+52">🇲🇽 +52</option>
+            <option value="+64">🇳🇿 +64</option>
+          </select>
+          <!-- Phone Number Input -->
+          <input v-model="formData.phoneNumber" type="tel" required class="input-field flex-1"
+            placeholder="123 456 789" />
+        </div>
       </div>
 
       <!-- Date and Time -->
@@ -54,13 +74,7 @@
           <label class="block text-sm font-medium text-gray-700 mb-2">
             {{ $t('booking.fields.date') }} *
           </label>
-          <input
-            v-model="formData.preferredDate"
-            type="date"
-            required
-            :min="minDate"
-            class="input-field"
-          />
+          <input v-model="formData.preferredDate" type="date" required :min="minDate" class="input-field" />
         </div>
 
         <div>
@@ -92,19 +106,16 @@
           <label class="block text-sm font-medium text-gray-700 mb-2">
             <span class="flex items-center">
               <svg class="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               {{ $t('booking.step2Details.pickupLocation') }}
             </span>
           </label>
-          <input
-            v-model="formData.pickupLocation"
-            type="text"
-            required
-            class="input-field"
-            :placeholder="$t('booking.step2Details.pickupPlaceholder')"
-          />
+          <input v-model="formData.pickupLocation" type="text" required class="input-field"
+            :placeholder="$t('booking.step2Details.pickupPlaceholder')" />
           <p class="text-xs text-gray-600 mt-2">
             {{ $t('booking.step2Details.pickupNote') }}
           </p>
@@ -116,40 +127,67 @@
         <label class="block text-sm font-medium text-gray-700 mb-2">
           {{ $t('booking.fields.specialRequests') }}
         </label>
-        <textarea
-          v-model="formData.specialRequests"
-          rows="4"
-          class="input-field resize-none"
-          :placeholder="$t('booking.fields.specialRequests')"
-        />
+        <textarea v-model="formData.specialRequests" rows="4" class="input-field resize-none"
+          :placeholder="$t('booking.fields.specialRequests')" />
       </div>
 
       <!-- Important Notice -->
       <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
         <div class="flex items-start">
           <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd"
+              d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+              clip-rule="evenodd" />
           </svg>
           <div class="text-sm text-yellow-800">
-            <p class="font-semibold mb-1">{{ $t('booking.step2Details.importantNotice') }}</p>
-            <p>{{ $t('booking.step2Details.weatherNotice') }}</p>
+            <p class="font-semibold mb-2">{{ $t('booking.step2Details.importantNotice') }}</p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <svg class="w-4 h-4 text-yellow-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{{ $t('booking.step2Details.weatherNotice.item1') }}</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-4 h-4 text-yellow-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{{ $t('booking.step2Details.weatherNotice.item2') }}</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-4 h-4 text-yellow-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{{ $t('booking.step2Details.weatherNotice.item3') }}</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-4 h-4 text-yellow-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{{ $t('booking.step2Details.weatherNotice.item4') }}</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-4 h-4 text-yellow-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{{ $t('booking.step2Details.weatherNotice.item5') }}</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
       <!-- Navigation -->
       <div class="flex justify-between">
-        <button
-          type="button"
-          @click="handleBack"
-          class="btn-secondary"
-        >
+        <button type="button" @click="handleBack" class="btn-secondary">
           {{ $t('buttons.back') }}
         </button>
-        <button
-          type="submit"
-          class="btn-primary"
-        >
+        <button type="submit" class="btn-primary">
           {{ $t('buttons.next') }}
         </button>
       </div>
@@ -162,10 +200,25 @@ import { useBookingStore } from '~/stores/booking'
 
 const bookingStore = useBookingStore()
 
+// Parse existing phone number into country code and number
+const parsePhoneNumber = (fullPhone: string) => {
+  if (!fullPhone) return { countryCode: '', phoneNumber: '' }
+
+  // Try to extract country code
+  const match = fullPhone.match(/^(\+\d{1,4})\s*(.*)$/)
+  if (match && match[1] && match[2] !== undefined) {
+    return { countryCode: match[1], phoneNumber: match[2].trim() }
+  }
+  return { countryCode: '', phoneNumber: fullPhone }
+}
+
+const parsedPhone = parsePhoneNumber(bookingStore.bookingData.phone || '')
+
 const formData = reactive({
   contactName: bookingStore.bookingData.contactName || '',
   email: bookingStore.bookingData.email || '',
-  phone: bookingStore.bookingData.phone || '',
+  countryCode: parsedPhone.countryCode || '',
+  phoneNumber: parsedPhone.phoneNumber || '',
   preferredDate: bookingStore.bookingData.preferredDate || '',
   preferredTime: bookingStore.bookingData.preferredTime || '',
   specialRequests: bookingStore.bookingData.specialRequests || '',
@@ -185,7 +238,16 @@ const minDate = computed(() => {
 })
 
 const handleNext = () => {
-  bookingStore.setContactInfo(formData)
+  // Combine country code and phone number
+  const contactInfo = {
+    contactName: formData.contactName,
+    email: formData.email,
+    phone: `${formData.countryCode} ${formData.phoneNumber}`.trim(),
+    preferredDate: formData.preferredDate,
+    preferredTime: formData.preferredTime,
+    specialRequests: formData.specialRequests
+  }
+  bookingStore.setContactInfo(contactInfo)
   // Also save pickup location
   bookingStore.bookingData.pickupLocation = formData.pickupLocation
   bookingStore.nextStep()

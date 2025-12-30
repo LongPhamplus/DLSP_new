@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "SAPA\nPARAGLIDING",
+    "title": "SAPA PARAGLIDING",
     "subtitle": "The dream of flying in the heart of Sapa - where you feel freedom and the sky closer than ever",
     "bookNow": "Book Online",
     "chatZalo": "Chat on Zalo",
@@ -57,9 +57,9 @@
       "optionalServices": "Optional Services:",
       "locations": "Locations:",
       "takeoffPoint": "Take-off Point: Hau Thao Mountain",
-      "landingPoint": "Landing Point: Lao Chai Bridge",
+      "landingPoint": "Landing Point: Lao Chai Village",
       "viewMap": "View Map →",
-      "promotionInfo": "Promotion Information",
+      "promotionInfo": "Direct discount for group bookings",
       "youSave": "🎉 You save:",
       "priceSummary": "Price Summary",
       "flightPriceFor": "Flight Price",
@@ -69,24 +69,26 @@
       "total": "Total:",
       "continue": "Continue →",
       "includedItems": {
-        "flight": "01 paragliding flight 8-15 minutes (depending on wind conditions)",
-        "photoVideo": "Video & photo recording from GOPRO",
-        "drinks": "Drink menu (Free coffee & tea at the flight site)",
+        "flight": "01 paragliding flight 8-15 minutes (may be longer depending on weather, passenger health, and pilot's decision)",
+        "photoVideo": "Video & photo recording with GoPro, provided by Sapa Paragliding",
+        "drinks": "Beverages at the flight site",
         "insurance": "Paragliding insurance",
-        "certificate": "Certificate"
+        "certificate": "Experience participation certificate",
+        "equipment": "Standard certified paragliding equipment",
+        "reschedulePolicy": "No rescheduling fee and free cancellation in case of bad weather"
       },
       "optionalItems": {
         "hotelTransfer": {
-          "name": "Hotel pick-up and drop-off",
-          "description": "Sapa center, Lao Chai village, Ta Van village"
+          "name": "Pickup area: Sapa town center, Lao Chai village, Ta Van village.",
+          "description": "(For other pickup locations, we will contact you in advance to discuss and agree on a suitable additional fee.)"
         },
         "drone": {
-          "name": "FLYCAM (DRONE camera)",
-          "description": "Record your flight with Flycam, all original data will be sent to you"
+          "name": "Flight recorded using professional flycam/drone equipment",
+          "description": "Your flight will be filmed by a flycam, and all original footage will be sent to you"
         },
         "camera360": {
-          "name": "360 CAMERA panoramic",
-          "description": "Pilot will use 360 camera to record the entire flight and edit data for you"
+          "name": "Flight recorded with a 360° camera, capturing the entire journey.",
+          "description": "The video will be edited before being sent to you."
         }
       },
       "promotions": {
@@ -101,7 +103,13 @@
       "pickupPlaceholder": "Example: Sapa Charm Hotel, Sapa Center",
       "pickupNote": "Please enter hotel name or specific address in Sapa, Lao Chai village, or Ta Van village",
       "importantNotice": "Important Notice",
-      "weatherNotice": "Flights are weather-dependent. We will contact you 24 hours before your scheduled flight to confirm or reschedule based on weather conditions.",
+      "weatherNotice": {
+        "item1": "After booking, we will contact you to arrange the flight schedule, including flight time, pickup point, and pickup time.",
+        "item2": "Pickup time is approximately 30 minutes before the flight.",
+        "item3": "On the flight day, we will send you the driver's name, phone number, and vehicle/motorbike license plate via SMS, WhatsApp, or Email.",
+        "item4": "Please arrive at the meeting point 5 minutes before pickup time to avoid delays.",
+        "item5": "In case of weather changes, we will contact you to reschedule completely free of charge."
+      },
       "selectTime": "Select time",
       "contactName": "Contact Name",
       "email": "Email",
@@ -180,8 +188,8 @@
       "fullName": "Full Name",
       "email": "Email",
       "phone": "Phone Number",
-      "date": "Preferred Date",
-      "time": "Preferred Time",
+      "date": "Flight date",
+      "time": "Flight time",
       "passengers": "Number of Passengers",
       "specialRequests": "Special Requests",
       "dateOfBirth": "Date of Birth",

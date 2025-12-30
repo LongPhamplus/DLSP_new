@@ -123,15 +123,17 @@ useHead({
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <!-- Background Video -->
       <div class="absolute inset-0">
-        <video poster="/images/header-pic.jpeg" autoplay muted loop playsinline class="w-full h-full object-cover">
-          <source src="/videos/header/header-720p.mp4" type="video/mp4">
+        <video poster="/images/header-pic.jpeg" autoplay muted loop playsinline preload="metadata"
+          class="w-full h-full object-cover">
+          <source src="/videos/header/header-low.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
       </div>
 
       <!-- Hero Content -->
-      <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow animate-fade-in whitespace-pre-line">
+      <div class="relative z-10 text-center text-white px-4 w-full max-w-7xl mx-auto">
+        <h1
+          class="text-[50px] sm:text-[70px] md:text-[90px] lg:text-[120px] font-black leading-none mb-6 text-shadow animate-fade-in uppercase tracking-wider hero-title">
           {{ $t('hero.title') }}
         </h1>
         <p class="text-xl md:text-2xl mb-8 text-shadow animate-fade-in-delay">
@@ -479,5 +481,15 @@ useHead({
 .scroll-reveal.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Hero Title - Bold & Strong Typography */
+.hero-title {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  text-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.4));
 }
 </style>

@@ -57,9 +57,9 @@
       "optionalServices": "Dịch vụ tuỳ chọn:",
       "locations": "Địa điểm:",
       "takeoffPoint": "Toạ độ điểm cất cánh: Núi Hầu Thào",
-      "landingPoint": "Toạ độ điểm hạ cánh: Cầu Lao Chải",
+      "landingPoint": "Toạ độ điểm hạ cánh: Bản Lao Chải",
       "viewMap": "Xem bản đồ →",
-      "promotionInfo": "Thông tin khuyến mãi",
+      "promotionInfo": "Giảm giá trực tiếp khi đăng ký theo nhóm",
       "youSave": "🎉 Bạn được giảm:",
       "priceSummary": "Tổng kết giá",
       "flightPriceFor": "Giá bay",
@@ -69,24 +69,26 @@
       "total": "Tổng cộng:",
       "continue": "Tiếp tục →",
       "includedItems": {
-        "flight": "01 chuyến bay dù lượn từ 8-15 phút (tuỳ vào điều kiện gió)",
-        "photoVideo": "Quay phim & chụp hình từ GOPRO",
-        "drinks": "Menu đồ uống (Miễn phí các món cà phê & trà tại điểm bay)",
+        "flight": "01 chuyến bay dù lượn 8–15 phút (có thể lâu hơn tùy điều kiện thời tiết, sức khỏe hành khách và quyết định của phi công)",
+        "photoVideo": "Quay phim & chụp hình bằng GoPro, cung cấp bởi Dù Lượn Sapa",
+        "drinks": "Đồ uống tại điểm bay",
         "insurance": "Bảo hiểm dù lượn",
-        "certificate": "Giấy chứng nhận"
+        "certificate": "Giấy chứng nhận tham gia trải nghiệm",
+        "equipment": "Trang thiết bị bay dù lượn đạt chuẩn",
+        "reschedulePolicy": "Không phụ phí đổi lịch bay và miễn phí hủy trong trường hợp thời tiết xấu"
       },
       "optionalItems": {
         "hotelTransfer": {
-          "name": "Xe đón trả tại khách sạn",
-          "description": "Trung tâm Sapa, bản Lao Chải, bản Tả Van"
+          "name": "Khu vực đón: Trung tâm Sapa, bản Lao Chải, bản Tả Van.",
+          "description": "(Đối với các điểm đón khác, chúng tôi sẽ liên hệ trước để trao đổi và thống nhất phụ phí phù hợp.)"
         },
         "drone": {
-          "name": "FLYCAM (DRONE camera)",
+          "name": "Chuyến bay được ghi lại bằng thiết bị flycam/drone chuyên nghiệp",
           "description": "Quay chuyến bay của bạn bằng Flycam, toàn bộ dữ liệu gốc sẽ gửi cho bạn"
         },
         "camera360": {
-          "name": "CAMERA toàn cảnh 360",
-          "description": "Phi công sẽ sử dụng camera 360 quay toàn bộ chuyến bay và edit dữ liệu cho bạn"
+          "name": "Chuyến bay được ghi lại bằng camera 360°, quay trọn vẹn toàn bộ hành trình. ",
+          "description": "Video sẽ được chỉnh sửa trước khi gửi lại cho bạn."
         }
       },
       "promotions": {
@@ -101,7 +103,13 @@
       "pickupPlaceholder": "Ví dụ: Khách sạn Sapa Charm, Trung tâm Sapa",
       "pickupNote": "Vui lòng nhập tên khách sạn hoặc địa chỉ cụ thể tại Sapa, bản Lao Chải, hoặc bản Tả Van",
       "importantNotice": "Lưu Ý Quan Trọng",
-      "weatherNotice": "Chuyến bay phụ thuộc vào thời tiết. Chúng tôi sẽ liên hệ với bạn 24 giờ trước chuyến bay để xác nhận hoặc dời lịch dựa trên điều kiện thời tiết.",
+      "weatherNotice": {
+        "item1": "Sau khi đặt chỗ, chúng tôi sẽ liên hệ để sắp xếp lịch bay, bao gồm thời gian bay, điểm đón và giờ đón.",
+        "item2": "Thời gian đón khách trước giờ bay khoảng 30 phút.",
+        "item3": "Vào ngày bay, chúng tôi sẽ gửi tên tài xế, số điện thoại và biển số xe/xe máy qua SMS, WhatsApp hoặc Email.",
+        "item4": "Vui lòng có mặt tại điểm hẹn trước 5 phút so với giờ đón để tránh chậm trễ.",
+        "item5": "Trong trường hợp điều kiện thời tiết thay đổi, chúng tôi sẽ liên hệ để đổi lịch bay hoàn toàn miễn phí."
+      },
       "selectTime": "Chọn giờ",
       "contactName": "Tên Liên Hệ",
       "email": "Email",
@@ -112,10 +120,8 @@
       "selectGender": "Chọn giới tính",
       "weightLimit": "Giới hạn cân nặng: < 100 kg",
       "safetyRequirements": "Yêu Cầu An Toàn",
-      "minAge": "Độ tuổi tối thiểu: 5 tuổi (có sự đồng ý của người bảo hộ)",
-      "weightRange": "Cân nặng: < 100 kg",
-      "goodHealth": "Hành khách phải có sức khỏe tốt",
-      "noPregnant": "Phụ nữ mang thai không được tham gia",
+      "minAge": "Độ tuổi tối thiểu: 4 tuổi ( có sự đồng ý của người bảo hộ)",
+      "goodHealth": "Hoạt động không phù hợp cho: người huyết áp cao / bệnh động kinh / bệnh tim / bệnh hen suyễn / các tình trạng bệnh lý nghiêm trọng khác / phụ nữ mang thai / NKT (người khuyết tật) / người cao tuổi / trẻ sơ sinh",
       "personalInfoNotice": "Vui lòng điền đúng thông tin cá nhân theo giấy tờ tùy thân. Nếu sai, bảo hiểm sẽ không có hiệu lực.",
       "fullName": "Họ và Tên",
       "dateOfBirth": "Ngày Sinh",
@@ -180,8 +186,8 @@
       "fullName": "Họ và Tên",
       "email": "Email",
       "phone": "Số Điện Thoại",
-      "date": "Ngày Mong Muốn",
-      "time": "Giờ Mong Muốn",
+      "date": "Ngày bay",
+      "time": "Giờ bay",
       "passengers": "Số Hành Khách",
       "specialRequests": "Yêu Cầu Đặc Biệt",
       "dateOfBirth": "Ngày Sinh",
