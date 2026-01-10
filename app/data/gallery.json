@@ -1,49 +1,49 @@
 [
   {
     "id": 1,
-    "image": "/images/pilots/pilot1/header1.png",
+    "image": "/images/gallery/1. Soar above Sapa valley.JPG",
     "title": "Soaring Above Sapa Valley",
     "description": "Experience the breathtaking views of Sapa's terraced rice fields from above"
   },
   {
     "id": 2,
-    "image": "/images/pilots/pilot2/header1.png",
+    "image": "/images/gallery/2. Sunset flight.jpg",
     "title": "Sunset Flight",
     "description": "Golden hour flights offer the most spectacular colors and lighting"
   },
   {
     "id": 3,
-    "image": "/images/pilots/pilot3/header1.png",
+    "image": "/images/gallery/3. Mountain peak.JPG",
     "title": "Mountain Peaks",
     "description": "Fly alongside the majestic peaks of the Hoang Lien Son mountain range"
   },
   {
     "id": 4,
-    "image": "/images/pilots/pilot4/header1.png",
+    "image": "/images/gallery/4. Tandem joy.jpg",
     "title": "Tandem Joy",
     "description": "Share the excitement with our experienced pilots"
   },
   {
     "id": 5,
-    "image": "/images/pilots/pilot5/header1.png",
+    "image": "/images/gallery/5. Cloud dancing.JPG",
     "title": "Cloud Dancing",
     "description": "Touch the clouds and feel the freedom of flight"
   },
   {
     "id": 6,
-    "image": "/images/pilots/pilot6/header1.png",
+    "image": "/images/gallery/6. valley view.jpg",
     "title": "Valley Views",
     "description": "Panoramic views of Sapa's stunning landscape"
   },
   {
     "id": 7,
-    "image": "/images/pilots/pilot7/header1.png",
+    "image": "/images/gallery/7. Perfect landing.jpg",
     "title": "Perfect Landing",
     "description": "Smooth and safe landings every time"
   },
   {
     "id": 8,
-    "image": "/images/pilots/pilot8/header1.png",
+    "image": "/images/gallery/8. Adventure await.jpg",
     "title": "Adventure Awaits",
     "description": "Your next adventure starts here"
   }

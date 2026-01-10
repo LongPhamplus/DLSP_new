@@ -5,12 +5,12 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            title: 'Dù Lượn Sapa - Sapa Paragliding',
+            title: 'Sapa Paragliding',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 { name: 'description', content: 'Experience the dream of flying in Sapa - Where you feel freedom and the sky closer than ever.' },
-                { property: 'og:title', content: 'Dù Lượn Sapa - Sapa Paragliding' },
+                { property: 'og:title', content: 'Sapa Paragliding' },
                 { property: 'og:description', content: 'Book your paragliding adventure in Sapa, Vietnam' },
                 { property: 'og:image', content: '/images/hero-bg.jpg' },
                 { property: 'og:type', content: 'website' }

@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "PARAPENTE\nSAPA",
-    "subtitle": "Le rêve de voler au cœur de Sapa - où vous ressentez la liberté et le ciel plus proche que jamais",
+    "subtitle": "Le parapente est un sport d'aventure, c'est pourquoi le choix d'une organisation professionnelle avec les meilleurs pilotes du Vietnam est crucial pour une expérience de vol sécurisée.\\nLe point de décollage de parapente de Sapa est conçu selon les normes les plus élevées au Vietnam, avec un emplacement idéal pour capter le vent, offrant un parcours de vol passionnant et garantissant le processus de décollage le plus sûr.",
     "bookNow": "Réserver en Ligne",
     "chatZalo": "Chat sur Zalo",
     "chatWhatsApp": "Chat sur WhatsApp"
@@ -30,7 +30,7 @@
   "booking": {
     "title": "Réservez Votre Vol",
     "step1": "Sélectionner le Service",
-    "step2": "Informations de Contact",
+    "step2": "Programme de vol",
     "step3": "Détails du Passager",
     "step4": "Confirmer la Réservation",
     "step5": "Terminé",
@@ -151,7 +151,7 @@
       "basePrice": "Prix de Base",
       "discount": "Réduction",
       "paymentInfo": "Informations de Paiement",
-      "paymentText": "Le paiement sera effectué sur place avant le vol. Nous acceptons les espèces (VND) et les principales cartes de crédit. Un email de confirmation sera envoyé après la réservation.",
+      "paymentText": "Le paiement sera effectué sur place avant le vol. Nous acceptons les espèces  et les principales cartes de crédit. Un email de confirmation sera envoyé après la réservation.",
       "processing": "Traitement en cours..."
     },
     "step5Details": {
@@ -165,7 +165,7 @@
       "whatsNext": "Et Après?",
       "step1": "Vérifiez votre email pour la confirmation et les détails de la réservation",
       "step2": "Nous vous contacterons 24 heures avant pour confirmer les conditions météorologiques",
-      "step3": "Arrivez 30 minutes avant l'heure prévue de votre vol",
+      "step3": "Пожалуйста, прибудьте к месту встречи как минимум за 5 минут до времени посадки, чтобы избежать задержек.",
       "step4": "Profitez de votre incroyable expérience de parapente!",
       "backToHome": "Retour à l'Accueil",
       "makeAnother": "Faire une Autre Réservation",
@@ -187,7 +187,7 @@
     "fields": {
       "fullName": "Nom Complet",
       "email": "Email",
-      "phone": "Numéro de Téléphone",
+      "phone": "Numéro de Téléphone / Whatsapp / Zalo",
       "date": "Date du vol",
       "time": "Heure du vol",
       "passengers": "Nombre de Passagers",
@@ -243,7 +243,7 @@
     "backToList": "Retour aux Pilotes",
     "pilot1": {
       "name": "Dang Van My",
-      "nickname": "Capitaine My",
+      "nickname": "Captain America",
       "role": "Chef d'équipe",
       "des": "Leader organisant les compétitions nationales de parapente, tout en traduisant plus de 1000 pages de livres professionnels des 3 meilleures ressources mondiales, apportant une contribution significative à la communauté de l'aviation sportive du Vietnam.",
       "img": "Dang Van My_Team Leader.jpg",
@@ -253,105 +253,6 @@
       "personality": "Sur terre, il est extrêmement discipliné et sérieux dans son travail et son rôle de leader. Mais dès qu'il décolle, il se transforme en 'enfant du vent' — apportant de la joie, de l'énergie positive et inspirant la passion pour tous les passagers qui volent avec lui."
     },
     "pilot2": {
-      "name": "Dinh The Anh",
-      "nickname": "Chasseur de Nuages",
-      "role": "Pilote d'équipe",
-      "des": "Un pilote plein d'énergie athlétique, du cyclisme, la natation au parapente, avec 2000 vols, plus de 1500 heures de vol sécurisé et 3 fois champion d'atterrissage de précision au Vietnam.",
-      "img": "The Anh_Team Pilot.jpg",
-      "fullname": "DINH THE ANH",
-      "experience": "A effectué plus de 2 000 vols, avec un temps de vol sécurisé total dépassant 1 000 heures. Représentant du Vietnam qui a volé directement aux Jeux olympiques 2023 en Corée du Sud. Triple champion d'atterrissage de précision aux compétitions nationales. A décollé de nombreux pays du monde, notamment : Suisse, Corée du Sud, États-Unis, Thaïlande, Indonésie...",
-      "records": "Triple champion d'atterrissage de précision au Vietnam et représentant du Vietnam aux Jeux olympiques de parapente 2023 en Corée du Sud.",
-      "personality": "Connu sous le nom de 'frère national' – né et élevé à Da Nang, ce gars du Centre-Vietnam porte la douceur et la chaleur de la brise marine et du soleil doré de sa patrie. Impressionnant par son sourire doux, sa voix chaleureuse et son attention dans chaque action. Non seulement un pilote de premier ordre, mais aussi un photographe professionnel. En volant avec lui, vous pouvez être sûr d'avoir d'innombrables photos étonnantes, chaque angle est beau et chaque moment est mémorable!"
-    },
-    "pilot3": {
-      "name": "Tuan Nguyen",
-      "nickname": "Deuxième Voix",
-      "role": "Pilote d'équipe",
-      "des": "Un pilote doux et attentionné qui écoute toujours les demandes des passagers. Que vous aimiez un vol agressif ou un 'chill' doux, il a l'angle de caméra parfait et la trajectoire de vol, garantissant que tout le monde voudra... devenir un fan hardcore!",
-      "img": "Tuan Nguyen_Team Pilot.jpg",
-      "fullname": "TUAN NGUYEN",
-      "experience": "A complété avec succès plus de 1 000 vols en tandem en toute sécurité au Vietnam. Compréhension approfondie de la météorologie sur les sites de vol du pays, avec la capacité d'évaluer et de prévoir avec précision la météo pour les activités de vol. Compétent en parapente sans moteur et motorisé. Instructeur professionnel de parapente qui a formé et guidé de nombreux pilotes dans leur quête de conquérir les cieux du Vietnam.",
-      "records": "Plus de 1 000 vols en tandem sécurisés, expert météorologique de premier plan dans la communauté aérienne et instructeur expérimenté sur les principaux sites de vol du pays.",
-      "personality": "Son surnom porte l'esprit chevaleresque de 'Deuxième Voix', mais sa personnalité est extrêmement amicale et adorable. Il aime particulièrement les enfants — après chaque vol, les petits anges se souviennent du gentil pilote et envoient des lettres de remerciement. Si les parents cherchent quelqu'un de fiable, dévoué et plein d'énergie positive pour accompagner leur enfant dans un voyage pour toucher les nuages — alors personne d'autre, Deuxième Voix est le choix parfait!"
-    },
-    "pilot4": {
-      "name": "Minh Trung",
-      "nickname": "Guerrier de l'Espace",
-      "role": "Pilote d'équipe",
-      "des": "Plus de 2 000 vols en tandem, 7 ans suspendu dans le ciel, plus de 1 000 heures de 'jeu avec les nuages et le vent'. Surnommé Minh Chocolat – en volant avec lui, vous aurez du plaisir à discuter, à rire jusqu'à vous faire mal aux joues!",
-      "img": "Minh Trung_Team Pilot.jpg",
-      "fullname": "MINH TRUNG",
-      "experience": "Plus de 2 000 vols en tandem sécurisés avec les passagers. 7 ans d'expérience en parapente, se spécialisant dans les vols en tandem et les vols de fond. Accumulé plus de 1 000 heures de vol réel, maîtrisant diverses conditions météorologiques et terrains complexes. Diplômé d'un cours de formation à la sécurité des vols au Népal – un pays aux conditions de vol strictes et aux normes internationales élevées.",
-      "records": "Plus de 2 000 vols en tandem sécurisés, plus de 1 000 heures de vol accumulées et l'un des rares pilotes vietnamiens à avoir complété le cours de formation à la sécurité des vols au Népal.",
-      "personality": "Le parapente qu'il vole est un drapeau rouge et jaune brillant — voler propage l'inspiration d'aimer le pays, aimer le ciel, aimer la vie elle-même. En volant avec lui, votre vidéo obtient facilement des millions de vues sur TikTok, les photos et vidéos sont 'haut de gamme' sans édition, suffisant pour faire manquer un battement à votre béguin. Personnalité amicale, joyeuse, garantissant que vous volerez et rirez la bouche grande ouverte, oubliant toute peur de la hauteur. Le seul inconvénient? Le soleil le rend noir, la pluie rend ses cheveux frisés — mais son port est toujours haut de gamme, son sourire est impeccable!"
-    },
-    "pilot5": {
-      "name": "Phan Hung",
-      "nickname": "Vagabond du Ciel",
-      "role": "Pilote d'équipe",
-      "des": "En volant avec lui, vous aurez des clips avec des millions de vues avec des angles de caméra super artistiques. Expérience absolument sécurisée et beaux moments du ciel capturés, apportant des séquences précieuses et inoubliables de chaque vol en tandem.",
-      "img": "phan_hung.jpg",
-      "fullname": "PHAN HUNG",
-      "experience": "A commencé à poursuivre sa passion pour le parapente en 2018 et est maintenant un pilote professionnel avec de nombreuses années d'expérience de vol au Vietnam. Il a une compréhension approfondie de la météorologie et du terrain sur les sites de vol du pays — des facteurs clés garantissant que chaque vol est sûr et offre une expérience optimale. A complété plus de 1 000 vols en tandem professionnels et participe continuellement à des programmes de formation en parapente aux normes internationales.",
-      "records": "Plus de 1 000 vols en tandem professionnels, expert en analyse météorologique et terrain, membre actif des programmes de formation aux normes internationales.",
-      "personality": "Rencontrez Phan Hung – le 'rocker' du ciel, les longs cheveux volant dans le vent comme le parapente lui-même. En volant avec lui, vous n'obtenez pas seulement des clips avec des millions de vues, mais aussi un million d'émotions. Plus de 1 000 vols – chacun est une histoire, un moment pour la vie. Plein d'énergie, comprend le terrain, passionné 'brûlant' – toujours prêt à vous emmener toucher les nuages!"
-    },
-    "pilot6": {
-      "name": "Ngo Van Doi",
-      "nickname": "Guerrier du Tissage",
-      "role": "Pilote d'équipe",
-      "des": "Participe à chaque compétition de parapente au Vietnam, détient le record de 7 heures de vol continu à la colline Buu – Chuong My. Il est passionné par le parapente, apportant aux passagers des expériences de vol palpitantes, sûres et pleines de rires.",
-      "img": "Ngo Van Doi_Team Pilot.jpeg",
-      "fullname": "NGO VAN DOI",
-      "experience": "De 2023 à 2025, il a complété plus de 500 vols en solo et en tandem sur les sites de vol les plus célèbres du Vietnam. Accumulé plus de 300 heures de vol réel avec 5 ans d'expérience solide en parapente. Un visage familier à toutes les compétitions de parapente du sud au nord, participant toujours avec un esprit compétitif professionnel et une passion intense. Notamment, il a établi un record de 7 heures de vol continu à la colline Buu – Chuong My, marquant un jalon fier dans sa carrière de pilote.",
-      "records": "Record de 7 heures de vol continu à la colline Buu – Chuong My, plus de 500 vols en 2 ans et pilote actif participant à toutes les compétitions de parapente du pays.",
-      "personality": "Un jeune homme apportant le vent dans son sourire — volant haut sans avoir besoin d'un 'ascenseur'! Passion brûlante pour le parapente, avec lui chaque vol est un moment où son cœur 'décolle'. En volant avec lui, vous sentirez la joie se propager dans le ciel bleu — où les vents forts sont comme des applaudissements vous soutenant. Un ami super dévoué, toujours prêt à transformer votre rêve de vol en une aventure passionnante!"
-    },
-    "pilot7": {
-      "name": "Minh Vo",
-      "nickname": "Aigle d'Acier",
-      "role": "Pilote d'équipe",
-      "des": "Volez avec le 'pilote aux millions de likes' avec 14 ans d'expérience. Passionné par le ciel depuis l'enfance, il propage le feu à travers chaque vol en tandem, apportant une expérience de pointe et des moments inoubliables haut dans le ciel pour chaque client.",
-      "img": "Minh Vo_Team Pilot.jpg",
-      "fullname": "MINH VO",
-      "experience": "Avec 14 ans d'expérience en parapente et plus de 2 000 vols en tandem sécurisés, il est l'un des pilotes les plus vétérans et les plus fiables du Vietnam. L'un des 5 meilleurs pilotes de première génération, il a contribué à poser les fondations de la communauté de parapente nationale. En 2023, lui et son équipe ont excellemment remporté la première place à l'épreuve d'atterrissage de précision à la compétition MCC, affirmant des compétences professionnelles solides et un esprit compétitif.",
-      "records": "14 ans d'expérience, plus de 2 000 vols en tandem sécurisés. Pilote de première génération du top 5 du Vietnam et vainqueur de l'atterrissage de précision à MCC 2023.",
-      "personality": "Minh Vo – le 'pilote aux millions de likes' avec passion pour le ciel depuis l'enfance, a grandi en aimant seulement discuter avec les nuages et jouer avec le vent. Voler avec lui n'est pas juste monter haut, mais aussi relever votre moral! Belles vues, rires forts et énergie positive se propagent tout au long du voyage. Il propage le feu légèrement mais puissamment — faisant que tout le monde qui vole veuille... voler à nouveau!"
-    },
-    "pilot8": {
-      "name": "Toan Nguyen",
-      "nickname": "Rambo",
-      "role": "Pilote d'équipe",
-      "des": "Plus de 10 ans à chevaucher les nuages, près de 5 000 vols. Volant à travers le Vietnam : Kon Tum, Ly Son, Dien Bien... Le GPS n'a pas encore chargé, il a déjà atterri! Le parapente avec lui n'est pas juste une passion — c'est un mode de vie dans les nuages.",
-      "img": "Toan Nguyen_team Pilot.jpg",
-      "fullname": "TOAN NGUYEN",
-      "experience": "Avec plus de 10 ans d'expérience conquérant le ciel et près de 5 000 vols en solo et en tandem, il est l'un des pilotes les plus expérimentés et les plus fiables du Vietnam. Diplômé d'un cours de formation à la sécurité des vols aux normes internationales. A volé sur la plupart des sites de parapente célèbres du pays, notamment Kon Tum, Dak Nong, Nha Trang, Ly Son, Dien Bien Phu. Participe régulièrement aux compétitions d'atterrissage de précision à Hanoi, Mu Cang Chai et Da Nang, affirmant des compétences de vol solides et un esprit compétitif stable.",
-      "records": "Plus de 10 ans d'expérience et près de 5 000 vols à travers le Vietnam. Participé à la plupart des compétitions d'atterrissage de précision et complété la formation à la sécurité des vols aux normes internationales.",
-      "personality": "En volant avec Toan Nguyen – le 'Rambo' du ciel, vous n'obtenez pas seulement 'chevaucher les nuages' mais aussi rire jusqu'à vous faire mal aux joues! Il vole comme le vent, parle comme le vent, apportant une sensation à la fois de sécurité et de plaisir incroyable. Après le vol, tout le monde veut l'appeler son 'pilote personnel' pour chaque voyage. Une garantie : volez avec Toan, vous ne voudrez pas descendre!"
-    },
-    "pilot9": {
-      "name": "Chien Thang",
-      "nickname": "Dieu du Tonnerre",
-      "role": "Pilote d'équipe",
-      "des": "7 ans vivant avec les nuages et le vent, plus de 1 500 vols en tandem sécurisés, 1 000+ heures planant dans le ciel. Il a autrefois détenu le record de 9,5 heures de vol en solo au Vietnam! 'Balayant' les compétitions de parapente du nord au sud, toujours au sommet de ses performances.",
-      "img": "Chien Thang_Team Pilot.jpg",
-      "fullname": "CHIEN THANG",
-      "experience": "Avec 7 ans d'expérience en tant que compagnon du ciel et des nuages, il a complété plus de 1 500 vols en tandem sûrs et professionnels, accumulant plus de 1 000 heures de vol. Il a autrefois détenu le record du Vietnam #2 pour le temps de vol en solo le plus long — 9,5 heures continu, démontrant une persévérance remarquable et d'excellentes compétences de contrôle de parapente. Compréhension approfondie des techniques de parapente et des conditions météorologiques sur les sites de vol du pays, il assure toujours que chaque vol soit à la fois sûr et émotionnellement élevant.",
-      "records": "Détient le record du Vietnam #2 pour le temps de vol en solo le plus long – 9,5 heures continu. Plus de 1 500 vols en tandem et plus de 1 000 heures de vol accumulées en 7 ans de conquête du ciel.",
-      "personality": "Chien Thang – 'Dieu du Tonnerre', vole vite comme l'éclair mais vous fait sentir absolument en sécurité. Planant dans le ciel avec lui, vous rirez de joie sans vouloir descendre. Voler avec lui n'est pas juste une expérience mais une aventure pleine de rires. Vole si longtemps que même les nuages doivent admirer : 'Hé, tu n'as pas besoin d'une pause?'"
-    },
-    "pilot10": {
-      "name": "Suman Thapa",
-      "nickname": "Cavalier du Ciel",
-      "role": "Pilote de Démonstration",
-      "des": "La plupart des vidéos acrobatiques spectaculaires à Sapa viennent de lui – un pilote expérimenté avec une compréhension approfondie du parapente. Avec lui, voler n'est pas juste une passion — c'est une carrière. Les clients l'appellent par un nom spécial : 'Enfant du Dieu du Vent'.",
-      "img": "Suman Thapa_Team Pilot.jpg",
-      "fullname": "SUMAN THAPA",
-      "experience": "Complété un cours de formation de pilote professionnel au Népal. Un pilote acro avec des compétences acrobatiques exceptionnelles, maîtrisant de nombreuses manœuvres techniques complexes. Il a plus de 1 000 heures de vol en tandem professionnel, assurant toujours la sécurité absolue des passagers. Actif depuis plus de 3 ans au Vietnam, avec une compréhension approfondie du terrain et des conditions météorologiques sur les sites de vol du pays. Vise actuellement à devenir un instructeur de parapente certifié APPI.",
-      "records": "Pilote acro (acrobatique) de premier plan au Vietnam, célèbre pour les performances spectaculaires à Sapa. Possède plus de 1 000 heures de vol en tandem et 3 ans d'activité professionnelle au Vietnam.",
-      "personality": "Il est quelqu'un qui quand le vent se lève — même avant le décollage — vous pouvez entendre son cœur crier : 'Volons ensemble!'. Il aime le parapente comme quelqu'un accro au café du matin — indispensable, irrépressible. Avec lui, chaque manœuvre acrobatique est un sourire affirmant : 'Nous vivons pour voler.'"
-    },
-    "pilot11": {
       "name": "Alish Thapa",
       "nickname": "Fantôme du Ciel",
       "role": "Instructeur International APPI",
@@ -362,9 +263,31 @@
       "records": "Instructeur APPI international, a enseigné sur de nombreux grands sites de vol au Vietnam, en Thaïlande et en Chine. Occupe des postes de gestion et d'exploitation dans plusieurs organisations réputées de parapente et de parachutisme dans la région.",
       "personality": "Il est l'un des pilotes de parapente de premier plan du Népal, avec un style d'enseignement amusant et inspirant. Il aide les étudiants à ressentir le vol comme une danse dans les airs — non seulement apprendre les techniques mais apprendre à aimer le ciel. Il apporte de l'énergie positive à chaque vol, faisant que les visiteurs non seulement se souviennent du voyage mais aussi se souviennent de ce compagnon spécial."
     },
-    "pilot12": {
+    "pilot3": {
+      "name": "Subash Thapa",
+      "nickname": "Chevalier du Ciel",
+      "role": "Instructeur Professionnel de Parapente",
+      "des": "Instructeur professionnel de parapente qui a formé de nombreux pilotes de parapente dans le monde entier. Il ne se contente pas d'avoir une passion pour le parapente, mais il aime aussi la musique, c'est pourquoi chaque vol en tandem avec lui est vivant et plein d'inspiration.",
+      "img": "Subash Thapa_Team Pilot.jpg",
+      "fullname": "SUBASH THAPA",
+      "experience": "Il est pilote en chef, instructeur de parapente et instructeur de parachutisme à Pokhara. Il a également servi comme pilote en chef chez Acro Paragliding et New Para World Paragliding. Il possède plus de 1 000 heures de vol en tandem professionnel et place toujours la sécurité en premier. Avec plus de 3 ans d'expérience d'exploitation au Vietnam, Subash possède une solide connaissance du terrain et des conditions météorologiques sur les différents sites de vol.",
+      "records": "Plus de 1 000 heures de vol en tandem professionnel, ancien pilote en chef dans plusieurs organisations de parapente réputées et 3+ ans d'expérience d'exploitation au Vietnam.",
+      "personality": "Subash Thapa n'est pas seulement un instructeur de parapente de premier ordre, mais aussi un 'DJ dans le ciel' avec une passion brûlante pour la musique, transformant chaque vol en tandem en une fête joyeuse dans les nuages. Il assure toujours une sécurité absolue, vous aidant à voler sans souci. Voler avec lui, c'est non seulement expérimenter le vol dans le ciel, mais aussi gagner un ami joyeux plein d'énergie positive!"
+    },
+    "pilot4": {
+      "name": "Suman Thapa",
+      "nickname": "Cavalier du Ciel",
+      "role": "Pilote de Démonstration",
+      "des": "La plupart des vidéos acrobatiques spectaculaires à Sapa viennent de lui – un pilote expérimenté avec une compréhension approfondie du parapente. Avec lui, voler n'est pas juste une passion — c'est une carrière. Les clients l'appellent par un nom spécial : 'Enfant du Dieu du Vent'.",
+      "img": "Suman Thapa_Team Pilot.jpg",
+      "fullname": "SUMAN THAPA",
+      "experience": "Complété un cours de formation de pilote professionnel au Népal. Un pilote acro avec des compétences acrobatiques exceptionnelles, maîtrisant de nombreuses manœuvres techniques complexes. Il a plus de 1 000 heures de vol en tandem professionnel, assurant toujours la sécurité absolue des passagers. Actif depuis plus de 3 ans au Vietnam, avec une compréhension approfondie du terrain et des conditions météorologiques sur les sites de vol du pays. Vise actuellement à devenir un instructeur de parapente certifié APPI.",
+      "records": "Pilote acro (acrobatique) de premier plan au Vietnam, célèbre pour les performances spectaculaires à Sapa. Possède plus de 1 000 heures de vol en tandem et 3 ans d'activité professionnelle au Vietnam.",
+      "personality": "Il est quelqu'un qui quand le vent se lève — même avant le décollage — vous pouvez entendre son cœur crier : 'Volons ensemble!'. Il aime le parapente comme quelqu'un accro au café du matin — indispensable, irrépressible. Avec lui, chaque manœuvre acrobatique est un sourire affirmant : 'Nous vivons pour voler.'"
+    },
+    "pilot5": {
       "name": "Bishal Thapa",
-      "nickname": "Spécialiste du Vent",
+      "nickname": "Commando du Vent",
       "role": "Expert en Atterrissage de Précision",
       "des": "Passionné par l'atterrissage de précision, il vise toujours à toucher le centre exact avec une erreur minimale. Cela garantit que chaque vol est sûr et exécuté comme un programme. Joyeux et accessible, il écoute toujours et se soucie des sentiments de ses passagers pour offrir l'expérience de vol la plus complète.",
       "img": "Bishal Thapa.jpg",
@@ -373,7 +296,7 @@
       "records": "Expert en atterrissage de précision de premier plan – a remporté de nombreux titres aux compétitions Pre-World Cup et Accuracy Cup internationales. Possède plus de 2 000 vols et 800+ heures de vol en toute sécurité.",
       "personality": "Bishal Thapa porte toujours une 'batterie d'énergie' et un sourire radieux à chaque vol. Il est joyeux, attachant et fait toujours sentir aux passagers qu'ils volent avec un ami proche. Passionné par l'atterrissage de précision au millimètre près, il transforme chaque atterrissage en une belle 'danse' dans le ciel. Voler avec lui, c'est non seulement ressentir la sensation de voler, mais aussi vivre une aventure pleine de rires et d'émotions."
     },
-    "pilot13": {
+    "pilot6": {
       "name": "Bishal Skyboy",
       "nickname": "Skyboy",
       "role": "Pilote Acro",
@@ -384,41 +307,126 @@
       "records": "Pilote Acro réputé mondialement avec des compétences acrobatiques exceptionnelles. Expérience extensive des vols en tandem et dossier de sécurité, participation à de nombreux événements aériens internationaux.",
       "personality": "Bishal Skyboy se distingue par ses compétences de vol habiles et son attitude confiante dans les airs. Il offre des expériences de vol rafraîchissantes, excitantes et mémorables pour tous les passagers, en maintenant toujours une attitude professionnelle mais accessible et amicale."
     },
+    "pilot7": {
+      "name": "Dinh The Anh",
+      "nickname": "Chasseur de Nuages",
+      "role": "Pilote d'équipe",
+      "des": "Un pilote plein d'énergie athlétique, du cyclisme, la natation au parapente, avec 2000 vols, plus de 1500 heures de vol sécurisé et 3 fois champion d'atterrissage de précision au Vietnam.",
+      "img": "The Anh_Team Pilot.jpg",
+      "fullname": "DINH THE ANH",
+      "experience": "A effectué plus de 2 000 vols, avec un temps de vol sécurisé total dépassant 1 000 heures. Représentant du Vietnam qui a volé directement aux Jeux olympiques 2023 en Corée du Sud. Triple champion d'atterrissage de précision aux compétitions nationales. A décollé de nombreux pays du monde, notamment : Suisse, Corée du Sud, États-Unis, Thaïlande, Indonésie...",
+      "records": "Triple champion d'atterrissage de précision au Vietnam et représentant du Vietnam aux Jeux olympiques de parapente 2023 en Corée du Sud.",
+      "personality": "Connu sous le nom de 'frère national' – né et élevé à Da Nang, ce gars du Centre-Vietnam porte la douceur et la chaleur de la brise marine et du soleil doré de sa patrie. Impressionnant par son sourire doux, sa voix chaleureuse et son attention dans chaque action. Non seulement un pilote de premier ordre, mais aussi un photographe professionnel. En volant avec lui, vous pouvez être sûr d'avoir d'innombrables photos étonnantes, chaque angle est beau et chaque moment est mémorable!"
+    },
+    "pilot8": {
+      "name": "Tuan Nguyen",
+      "nickname": "Nhi Ca",
+      "role": "Pilote d'équipe",
+      "des": "Un pilote doux et attentionné qui écoute toujours les demandes des passagers. Que vous aimiez un vol agressif ou un 'chill' doux, il a l'angle de caméra parfait et la trajectoire de vol, garantissant que tout le monde voudra... devenir un fan hardcore!",
+      "img": "Tuan Nguyen_Team Pilot.jpg",
+      "fullname": "TUAN NGUYEN",
+      "experience": "A complété avec succès plus de 1 000 vols en tandem en toute sécurité au Vietnam. Compréhension approfondie de la météorologie sur les sites de vol du pays, avec la capacité d'évaluer et de prévoir avec précision la météo pour les activités de vol. Compétent en parapente sans moteur et motorisé. Instructeur professionnel de parapente qui a formé et guidé de nombreux pilotes dans leur quête de conquérir les cieux du Vietnam.",
+      "records": "Plus de 1 000 vols en tandem sécurisés, expert météorologique de premier plan dans la communauté aérienne et instructeur expérimenté sur les principaux sites de vol du pays.",
+      "personality": "Son surnom porte l'esprit chevaleresque de 'Deuxième Voix', mais sa personnalité est extrêmement amicale et adorable. Il aime particulièrement les enfants — après chaque vol, les petits anges se souviennent du gentil pilote et envoient des lettres de remerciement. Si les parents cherchent quelqu'un de fiable, dévoué et plein d'énergie positive pour accompagner leur enfant dans un voyage pour toucher les nuages — alors personne d'autre, Deuxième Voix est le choix parfait!"
+    },
+    "pilot9": {
+      "name": "Minh Trung",
+      "nickname": "Guerrier de l'Espace",
+      "role": "Pilote d'équipe",
+      "des": "Plus de 2 000 vols en tandem, 7 ans suspendu dans le ciel, plus de 1 000 heures de 'jeu avec les nuages et le vent'. Surnommé Minh Chocolat – en volant avec lui, vous aurez du plaisir à discuter, à rire jusqu'à vous faire mal aux joues!",
+      "img": "Minh Trung_Team Pilot.jpg",
+      "fullname": "MINH TRUNG",
+      "experience": "Plus de 2 000 vols en tandem sécurisés avec les passagers. 7 ans d'expérience en parapente, se spécialisant dans les vols en tandem et les vols de fond. Accumulé plus de 1 000 heures de vol réel, maîtrisant diverses conditions météorologiques et terrains complexes. Diplômé d'un cours de formation à la sécurité des vols au Népal – un pays aux conditions de vol strictes et aux normes internationales élevées.",
+      "records": "Plus de 2 000 vols en tandem sécurisés, plus de 1 000 heures de vol accumulées et l'un des rares pilotes vietnamiens à avoir complété le cours de formation à la sécurité des vols au Népal.",
+      "personality": "Le parapente qu'il vole est un drapeau rouge et jaune brillant — voler propage l'inspiration d'aimer le pays, aimer le ciel, aimer la vie elle-même. En volant avec lui, votre vidéo obtient facilement des millions de vues sur TikTok, les photos et vidéos sont 'haut de gamme' sans édition, suffisant pour faire manquer un battement à votre béguin. Personnalité amicale, joyeuse, garantissant que vous volerez et rirez la bouche grande ouverte, oubliant toute peur de la hauteur. Le seul inconvénient? Le soleil le rend noir, la pluie rend ses cheveux frisés — mais son port est toujours haut de gamme, son sourire est impeccable!"
+    },
+    "pilot10": {
+      "name": "Phan Hung",
+      "nickname": "Vagabond du Ciel",
+      "role": "Pilote d'équipe",
+      "des": "En volant avec lui, vous aurez des clips avec des millions de vues avec des angles de caméra super artistiques. Expérience absolument sécurisée et beaux moments du ciel capturés, apportant des séquences précieuses et inoubliables de chaque vol en tandem.",
+      "img": "phan_hung.jpg",
+      "fullname": "PHAN HUNG",
+      "experience": "A commencé à poursuivre sa passion pour le parapente en 2018 et est maintenant un pilote professionnel avec de nombreuses années d'expérience de vol au Vietnam. Il a une compréhension approfondie de la météorologie et du terrain sur les sites de vol du pays — des facteurs clés garantissant que chaque vol est sûr et offre une expérience optimale. A complété plus de 1 000 vols en tandem professionnels et participe continuellement à des programmes de formation en parapente aux normes internationales.",
+      "records": "Plus de 1 000 vols en tandem professionnels, expert en analyse météorologique et terrain, membre actif des programmes de formation aux normes internationales.",
+      "personality": "Rencontrez Phan Hung – le 'rocker' du ciel, les longs cheveux volant dans le vent comme le parapente lui-même. En volant avec lui, vous n'obtenez pas seulement des clips avec des millions de vues, mais aussi un million d'émotions. Plus de 1 000 vols – chacun est une histoire, un moment pour la vie. Plein d'énergie, comprend le terrain, passionné 'brûlant' – toujours prêt à vous emmener toucher les nuages!"
+    },
+    "pilot11": {
+      "name": "Ngo Van Doi",
+      "nickname": "Guerrier de la Manœuvre",
+      "role": "Pilote d'équipe",
+      "des": "Participe à chaque compétition de parapente au Vietnam, détient le record de 7 heures de vol continu à la colline Buu – Chuong My. Il est passionné par le parapente, apportant aux passagers des expériences de vol palpitantes, sûres et pleines de rires.",
+      "img": "Ngo Van Doi_Team Pilot.jpeg",
+      "fullname": "NGO VAN DOI",
+      "experience": "De 2023 à 2025, il a complété plus de 500 vols en solo et en tandem sur les sites de vol les plus célèbres du Vietnam. Accumulé plus de 300 heures de vol réel avec 5 ans d'expérience solide en parapente. Un visage familier à toutes les compétitions de parapente du sud au nord, participant toujours avec un esprit compétitif professionnel et une passion intense. Notamment, il a établi un record de 7 heures de vol continu à la colline Buu – Chuong My, marquant un jalon fier dans sa carrière de pilote.",
+      "records": "Record de 7 heures de vol continu à la colline Buu – Chuong My, plus de 500 vols en 2 ans et pilote actif participant à toutes les compétitions de parapente du pays.",
+      "personality": "Un jeune homme apportant le vent dans son sourire — volant haut sans avoir besoin d'un 'ascenseur'! Passion brûlante pour le parapente, avec lui chaque vol est un moment où son cœur 'décolle'. En volant avec lui, vous sentirez la joie se propager dans le ciel bleu — où les vents forts sont comme des applaudissements vous soutenant. Un ami super dévoué, toujours prêt à transformer votre rêve de vol en une aventure passionnante!"
+    },
+    "pilot12": {
+      "name": "Minh Vo",
+      "nickname": "Aigle d'Acier",
+      "role": "Pilote d'équipe",
+      "des": "Volez avec le 'pilote aux millions de likes' avec 14 ans d'expérience. Passionné par le ciel depuis l'enfance, il propage le feu à travers chaque vol en tandem, apportant une expérience de pointe et des moments inoubliables haut dans le ciel pour chaque client.",
+      "img": "Minh Vo_Team Pilot.jpg",
+      "fullname": "MINH VO",
+      "experience": "Avec 14 ans d'expérience en parapente et plus de 2 000 vols en tandem sécurisés, il est l'un des pilotes les plus vétérans et les plus fiables du Vietnam. L'un des 5 meilleurs pilotes de première génération, il a contribué à poser les fondations de la communauté de parapente nationale. En 2023, lui et son équipe ont excellemment remporté la première place à l'épreuve d'atterrissage de précision à la compétition MCC, affirmant des compétences professionnelles solides et un esprit compétitif.",
+      "records": "14 ans d'expérience, plus de 2 000 vols en tandem sécurisés. Pilote de première génération du top 5 du Vietnam et vainqueur de l'atterrissage de précision à MCC 2023.",
+      "personality": "Minh Vo – le 'pilote aux millions de likes' avec passion pour le ciel depuis l'enfance, a grandi en aimant seulement discuter avec les nuages et jouer avec le vent. Voler avec lui n'est pas juste monter haut, mais aussi relever votre moral! Belles vues, rires forts et énergie positive se propagent tout au long du voyage. Il propage le feu légèrement mais puissamment — faisant que tout le monde qui vole veuille... voler à nouveau!"
+    },
+    "pilot13": {
+      "name": "Toan Nguyen",
+      "nickname": "Rambo",
+      "role": "Pilote d'équipe",
+      "des": "Plus de 10 ans à chevaucher les nuages, près de 5 000 vols. Volant à travers le Vietnam : Kon Tum, Ly Son, Dien Bien... Le GPS n'a pas encore chargé, il a déjà atterri! Le parapente avec lui n'est pas juste une passion — c'est un mode de vie dans les nuages.",
+      "img": "Toan Nguyen_team Pilot.jpg",
+      "fullname": "TOAN NGUYEN",
+      "experience": "Avec plus de 10 ans d'expérience conquérant le ciel et près de 5 000 vols en solo et en tandem, il est l'un des pilotes les plus expérimentés et les plus fiables du Vietnam. Diplômé d'un cours de formation à la sécurité des vols aux normes internationales. A volé sur la plupart des sites de parapente célèbres du pays, notamment Kon Tum, Dak Nong, Nha Trang, Ly Son, Dien Bien Phu. Participe régulièrement aux compétitions d'atterrissage de précision à Hanoi, Mu Cang Chai et Da Nang, affirmant des compétences de vol solides et un esprit compétitif stable.",
+      "records": "Plus de 10 ans d'expérience et près de 5 000 vols à travers le Vietnam. Participé à la plupart des compétitions d'atterrissage de précision et complété la formation à la sécurité des vols aux normes internationales.",
+      "personality": "En volant avec Toan Nguyen – le 'Rambo' du ciel, vous n'obtenez pas seulement 'chevaucher les nuages' mais aussi rire jusqu'à vous faire mal aux joues! Il vole comme le vent, parle comme le vent, apportant une sensation à la fois de sécurité et de plaisir incroyable. Après le vol, tout le monde veut l'appeler son 'pilote personnel' pour chaque voyage. Une garantie : volez avec Toan, vous ne voudrez pas descendre!"
+    },
     "pilot14": {
-      "name": "Subash Thapa",
-      "nickname": "Chevalier du Ciel",
-      "role": "Instructeur Professionnel de Parapente",
-      "des": "Instructeur professionnel de parapente qui a formé de nombreux pilotes de parapente dans le monde entier. Il ne se contente pas d'avoir une passion pour le parapente, mais il aime aussi la musique, c'est pourquoi chaque vol en tandem avec lui est vivant et plein d'inspiration.",
-      "img": "Subash Thapa_Team Pilot.jpg",
-      "fullname": "SUBASH THAPA",
-      "experience": "Il est pilote en chef, instructeur de parapente et instructeur de parachutisme à Pokhara. Il a également servi comme pilote en chef chez Acro Paragliding et New Para World Paragliding. Il possède plus de 1 000 heures de vol en tandem professionnel et place toujours la sécurité en premier. Avec plus de 3 ans d'expérience d'exploitation au Vietnam, Subash possède une solide connaissance du terrain et des conditions météorologiques sur les différents sites de vol.",
-      "records": "Plus de 1 000 heures de vol en tandem professionnel, ancien pilote en chef dans plusieurs organisations de parapente réputées et 3+ ans d'expérience d'exploitation au Vietnam.",
-      "personality": "Subash Thapa n'est pas seulement un instructeur de parapente de premier ordre, mais aussi un 'DJ dans le ciel' avec une passion brûlante pour la musique, transformant chaque vol en tandem en une fête joyeuse dans les nuages. Il assure toujours une sécurité absolue, vous aidant à voler sans souci. Voler avec lui, c'est non seulement expérimenter le vol dans le ciel, mais aussi gagner un ami joyeux plein d'énergie positive!"
+      "name": "Chien Thang",
+      "nickname": "Victor Foudroyant",
+      "role": "Pilote d'équipe",
+      "des": "7 ans vivant avec les nuages et le vent, plus de 1 500 vols en tandem sécurisés, 1 000+ heures planant dans le ciel. Il a autrefois détenu le record de 9,5 heures de vol en solo au Vietnam! 'Balayant' les compétitions de parapente du nord au sud, toujours au sommet de ses performances.",
+      "img": "Chien Thang_Team Pilot.jpg",
+      "fullname": "CHIEN THANG",
+      "experience": "Avec 7 ans d'expérience en tant que compagnon du ciel et des nuages, il a complété plus de 1 500 vols en tandem sûrs et professionnels, accumulant plus de 1 000 heures de vol. Il a autrefois détenu le record du Vietnam #2 pour le temps de vol en solo le plus long — 9,5 heures continu, démontrant une persévérance remarquable et d'excellentes compétences de contrôle de parapente. Compréhension approfondie des techniques de parapente et des conditions météorologiques sur les sites de vol du pays, il assure toujours que chaque vol soit à la fois sûr et émotionnellement élevant.",
+      "records": "Détient le record du Vietnam #2 pour le temps de vol en solo le plus long – 9,5 heures continu. Plus de 1 500 vols en tandem et plus de 1 000 heures de vol accumulées en 7 ans de conquête du ciel.",
+      "personality": "Chien Thang – 'Dieu du Tonnerre', vole vite comme l'éclair mais vous fait sentir absolument en sécurité. Planant dans le ciel avec lui, vous rirez de joie sans vouloir descendre. Voler avec lui n'est pas juste une expérience mais une aventure pleine de rires. Vole si longtemps que même les nuages doivent admirer : 'Hé, tu n'as pas besoin d'une pause?'"
     }
   },
   "preNotice": {
-    "title": "Avis Pré-vol",
+    "title": "Préparation Avant le Vol",
     "subtitle": "Informations importantes avant votre vol",
     "items": {
+      "photoSupport": {
+        "title": "Support Photographique Aérien",
+        "description": "Nos pilotes vous aideront à obtenir les meilleurs angles depuis le ciel - demandez-leur simplement de capturer vos moments parfaits!"
+      },
       "timing": {
-        "title": "Arrivez Tôt",
-        "description": "Veuillez arriver au moins 30 minutes avant l'heure prévue de votre vol."
-      },
-      "clothing": {
-        "title": "Vêtements Appropriés",
-        "description": "Portez des vêtements de sport confortables et des chaussures fermées. Évitez les articles amples."
-      },
-      "footwear": {
-        "title": "Chaussures Appropriées",
-        "description": "Pas de talons hauts ou de sandales. Portez des baskets ou des chaussures de randonnée."
+        "title": "Arrivez à l'Heure",
+        "description": "Veuillez arriver 5 minutes avant l'heure de prise en charge pour éviter tout retard"
       },
       "storage": {
         "title": "Stockage Téléphone",
-        "description": "Assurez-vous que votre téléphone dispose d'au moins 4 Go d'espace libre pour les photos et vidéos."
+        "description": "Votre téléphone doit avoir au moins 4 Go d'espace libre pour stocker les photos/vidéos après le vol"
+      },
+      "baggage": {
+        "title": "Sac Personnel",
+        "description": "Vous pouvez apporter un petit sac personnel (1-2 kg) pour les essentiels (téléphone, clés, documents)"
+      },
+      "clothing": {
+        "title": "Tenue Appropriée",
+        "description": "Vêtements de sport confortables (manches longues, pantalons longs); pas de jupes, pas de talons hauts; portez des baskets ou des chaussures de randonnée (astuce: les couleurs vives sont superbes en photo)"
+      },
+      "beginner": {
+        "title": "Adapté aux Débutants",
+        "description": "Convient aux pilotes débutants"
       },
       "weather": {
-        "title": "Dépendant de la Météo",
-        "description": "Les vols dépendent des conditions météorologiques. Nous pouvons reporter pour votre sécurité."
+        "title": "Conditions Météorologiques",
+        "description": "Les vols dépendent de la météo (vent, pluie, brouillard). Si un report est nécessaire, vous serez informé au moins 1 jour à l'avance, gratuitement; si vous préférez ne pas reporter, vous recevrez un remboursement à 100%"
       }
     },
     "locations": {
@@ -514,12 +522,12 @@
   },
   "pricing": {
     "title": "Tarifs de vol",
-    "subtitle": "Choisissez le forfait de vol parfait pour vous",
+    "subtitle": "Réservez à l'avance - Payez plus tard - Aucun acompte requis",
     "packages": {
       "basic": {
         "name": "Forfait de base",
-        "price": "2.190k",
-        "priceUsd": "85 USD/vol",
+        "price": "2.090k",
+        "priceUsd": "80 USD/vol",
         "duration": "Durée: 20 minutes",
         "weatherNote": "(Selon les conditions météorologiques)",
         "included": "Inclus:",
@@ -534,8 +542,8 @@
       "standard": {
         "name": "Forfait standard",
         "badge": "POPULAIRE",
-        "price": "2.290k",
-        "priceUsd": "105 USD/vol",
+        "price": "2.190k",
+        "priceUsd": "85 USD/vol",
         "duration": "Durée: 30 minutes",
         "weatherNote": "(Selon les conditions météorologiques)",
         "included": "Inclus:",
@@ -550,8 +558,8 @@
       },
       "premium": {
         "name": "Forfait Premium",
-        "price": "3.090k",
-        "priceUsd": "140 USD/vol",
+        "price": "2.990k",
+        "priceUsd": "113 USD/vol",
         "duration": "Durée: 35 minutes",
         "weatherNote": "(Selon les conditions météorologiques)",
         "included": "Inclus:",
@@ -601,7 +609,7 @@
     "address": "Adresse",
     "followUs": "Suivez-nous",
     "quickLinks": "Liens Rapides",
-    "copyright": "© 2024 Parapente Sapa. Tous droits réservés."
+    "copyright": "Autorisé à voler par le Département des Opérations – État-major général, Ministère de la Défense nationale du Vietnam.\\nLicence de parapente n° 02/GCN-SVHTT délivrée par le Département de la Culture, des Sports et du Tourisme de la province de Lao Cai"
   },
   "validation": {
     "required": "Ce champ est obligatoire",

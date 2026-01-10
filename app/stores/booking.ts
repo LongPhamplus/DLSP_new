@@ -71,20 +71,58 @@ export const useBookingStore = defineStore('booking', {
   }),
 
   getters: {
-    // Calculate discount based on number of passengers
-    calculatedDiscount: (state): number => {
+    // Calculate discount per person based on number of passengers (in VND)
+    calculatedDiscountPerPerson: (state): number => {
       const passengers = state.bookingData.numberOfPassengers
-      if (passengers >= 5) return 0.15 // 15% for 5+
-      if (passengers >= 3) return 0.10 // 10% for 3-4
-      if (passengers >= 2) return 0.05 // 5% for 2
+      if (passengers >= 6) return 150000 // -150k/người for 6+
+      if (passengers >= 4) return 100000 // -100k/người for 4-5
+      if (passengers >= 3) return 70000  // -70k/người for 3
+      if (passengers >= 2) return 50000  // -50k/người for 2
       return 0
     },
 
-    // Calculate total price with discount
-    finalPrice: (state): number => {
+    // Calculate optional services total
+    optionalServicesTotal: (state): number => {
+      let total = 0
+      const selectedOptions = state.bookingData.selectedOptions || []
+      const quantities = state.bookingData.serviceQuantities || { drone: 1, camera360: 1 }
+      const passengers = state.bookingData.numberOfPassengers
+
+      selectedOptions.forEach(optionId => {
+        if (optionId === 'hotel-transfer') {
+          total += 100000 * passengers // 100k/người
+        } else if (optionId === 'drone') {
+          total += 300000 * (quantities['drone'] || 1) // 300k/chuyến
+        } else if (optionId === 'camera360') {
+          total += 500000 * (quantities['camera360'] || 1) // 500k/chuyến
+        }
+      })
+
+      return total
+    },
+
+    // Calculate total discount amount
+    totalDiscountAmount(state): number {
+      const discountPerPerson = this.calculatedDiscountPerPerson
+      return discountPerPerson * state.bookingData.numberOfPassengers
+    },
+
+    // Calculate total price with discount and optional services
+    finalPrice(state): number {
       const basePrice = state.bookingData.servicePrice * state.bookingData.numberOfPassengers
-      const discount = state.bookingData.discount || 0
-      return basePrice * (1 - discount)
+      const discountAmount = this.totalDiscountAmount
+      const optionalTotal = this.optionalServicesTotal
+      return basePrice - discountAmount + optionalTotal
+    },
+
+    // Calculate discount rate (for display purposes)
+    calculatedDiscount: (state): number => {
+      const passengers = state.bookingData.numberOfPassengers
+      if (passengers >= 6) return 150000
+      if (passengers >= 4) return 100000
+      if (passengers >= 3) return 70000
+      if (passengers >= 2) return 50000
+      return 0
     },
 
     // Check if current step is valid
@@ -157,8 +195,25 @@ export const useBookingStore = defineStore('booking', {
 
     // Update pricing calculations
     updatePricing() {
-      this.bookingData.discount = this.calculatedDiscount
+      this.bookingData.discount = this.calculatedDiscountPerPerson
       this.bookingData.totalPrice = this.finalPrice
+    },
+
+    // Set selected optional services
+    setSelectedOptions(options: string[]) {
+      this.bookingData.selectedOptions = options
+      this.updatePricing()
+    },
+
+    // Set service quantities (for drone and camera360)
+    setServiceQuantities(quantities: Record<string, number>) {
+      this.bookingData.serviceQuantities = quantities
+      this.updatePricing()
+    },
+
+    // Set pickup location (for hotel-transfer)
+    setPickupLocation(location: string) {
+      this.bookingData.pickupLocation = location
     },
 
     // Set contact information (Step 2)

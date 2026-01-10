@@ -1,18 +1,12 @@
 <template>
   <div class="language-switcher-horizontal">
     <div class="flex gap-1 items-center">
-      <button
-        v-for="locale in availableLocales"
-        :key="locale.code"
-        @click="switchLanguage(locale.code)"
-        :class="[
-          'px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200',
-          currentLocale === locale.code
-            ? 'bg-green-600 text-white shadow-md'
-            : 'text-gray-700 hover:bg-gray-100'
-        ]"
-        :title="locale.name"
-      >
+      <button v-for="locale in availableLocales" :key="locale.code" @click="switchLanguage(locale.code)" :class="[
+        'px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200',
+        currentLocale === locale.code
+          ? 'bg-red-600 text-white shadow-md'
+          : 'text-gray-700 hover:bg-gray-100'
+      ]" :title="locale.name">
         {{ locale.code.toUpperCase() }}
       </button>
     </div>
@@ -31,10 +25,10 @@ const switchLanguage = async (code: string) => {
   try {
     // Get the path for the new locale
     const path = switchLocalePath(code)
-    
+
     // Navigate to the new locale path
     await navigateTo(path)
-    
+
     // Set the locale
     await setLocale(code)
   } catch (error) {

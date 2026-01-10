@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-900 text-white py-12">
+  <footer class="bg-gray-900 text-white py-12 relative z-10">
     <div class="container-custom">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Contact Information -->
@@ -13,7 +13,7 @@
               </svg>
               <div>
                 <p class="text-sm text-gray-400">{{ $t('footer.email') }}</p>
-                <a href="mailto:sapa.paragliding@gmail.com" class="hover:text-green-400 transition-colors">
+                <a href="mailto:sapa.paragliding@gmail.com" class="hover:text-red-400 transition-colors">
                   sapa.paragliding@gmail.com
                 </a>
               </div>
@@ -24,12 +24,26 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <div>
-                <p class="text-sm text-gray-400">{{ $t('footer.phone') }}</p>
-                <a href="tel:+84123456789" class="hover:text-green-400 transition-colors">
-                  +84 123 456 789
-                </a>
+              <div class="space-y-3">
+                <p class="text-sm text-gray-400">
+                  {{ contactData.title }}
+                </p>
+
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li v-for="(item, index) in contactData.list" :key="index">
+                    <span class="font-semibold">{{ item.name }}</span>
+                    – {{ item.role }}:
+                    <a :href="`tel:${item.phone.replace(/\s+/g, '')}`"
+                      class="text-red-600 hover:text-red-500 transition-colors">
+                      {{ item.phone }}
+                    </a>
+                    <span v-if="item.note" class="text-gray-500">
+                      {{ item.note }}
+                    </span>
+                  </li>
+                </ul>
               </div>
+
             </div>
 
             <div class="flex items-start space-x-3">
@@ -53,7 +67,7 @@
           <ul class="space-y-2">
             <li v-for="item in menuItems" :key="item.path">
               <button @click="localizedNavigateTo(item.path)"
-                class="hover:text-green-400 transition-colors inline-block cursor-pointer bg-none border-none p-0 text-left">
+                class="hover:text-red-400 transition-colors inline-block cursor-pointer bg-none border-none p-0 text-left">
                 {{ $t(item.label) }}
               </button>
             </li>
@@ -76,7 +90,7 @@
 
             <!-- WhatsApp -->
             <a href="https://wa.me/84386887489" target="_blank" rel="noopener noreferrer"
-              class="bg-gray-800 hover:bg-green-500 w-11 h-11 rounded-full transition-colors flex items-center justify-center"
+              class="bg-gray-800 hover:bg-red-500 w-11 h-11 rounded-full transition-colors flex items-center justify-center"
               aria-label="WhatsApp">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -113,22 +127,32 @@
                   d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/SAPA_PARAGLIDING" target="_blank" rel="noopener noreferrer"
+              class="bg-gray-800 hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 w-11 h-11 rounded-full transition-colors flex items-center justify-center"
+              aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
           </div>
 
           <p class="text-sm text-gray-400 leading-relaxed mb-6">
             {{ $t('hero.subtitle') }}
           </p>
 
-          <!-- Logo - Absolute positioned -->
+          <!-- Logo - Absolute positioned, hidden on mobile -->
           <img src="/images/Sapa_logo.png" alt="Sapa Paragliding Logo"
-            class="absolute w-40 h-40 object-contain opacity-80 transition-opacity duration-300"
-            style="right: 36px; bottom: 200px;" :style="isDesktop ? { bottom: '85px' } : { bottom: '200px' }" />
+            class="hidden md:block absolute w-32 h-32 object-contain opacity-60 pointer-events-none"
+            style="right: 0; top: 0;" />
         </div>
       </div>
 
       <!-- Copyright -->
       <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-        <p>{{ $t('footer.copyright') }}</p>
+        <p class="whitespace-pre-line">{{ $t('footer.copyright') }}</p>
         <button @click="localizedNavigateTo('/admin/login')"
           class="mt-4 text-xs text-gray-500 hover:text-gray-300 transition-colors">
           Admin
@@ -152,6 +176,68 @@ const menuItems = [
   { path: '/pre-notice', label: 'menu.preNotice' },
   { path: '/about', label: 'menu.about' }
 ]
+
+const contactData = computed(() => {
+  const currentLocale = locale.value || 'vi' // mặc định là vi
+
+  if (currentLocale === 'vi') {
+    return {
+      title: 'Hotline / WhatsApp / Zalo (Hỗ trợ 24/7)',
+      list: [
+        {
+          name: 'Ms. Judy',
+          role: 'Nhân viên Chăm sóc Khách hàng',
+          phone: '+84 386 887 489',
+          note: '(Đặt bay)'
+        },
+        {
+          name: 'Ms. Linh Lee',
+          role: 'Nhân viên Chăm sóc Khách hàng',
+          phone: '+84 776 499 562',
+          note: '(Đặt bay)'
+        },
+        {
+          name: 'Mr. Mỹ',
+          role: 'Phi công trưởng',
+          phone: '+84 964 073 555'
+        },
+        {
+          name: 'Mr. Trường',
+          role: 'Điều phối bay',
+          phone: '+84 336 233 789'
+        }
+      ]
+    }
+  }
+
+  return {
+    title: 'Hotline / WhatsApp / Zalo (Available 24/7)',
+    list: [
+      {
+        name: 'Ms. Judy',
+        role: 'Customer Service',
+        phone: '+84 386 887 489',
+        note: '(Paragliding bookings)'
+      },
+      {
+        name: 'Ms. Linh Lee',
+        role: 'Customer Service',
+        phone: '+84 776 499 562',
+        note: '(Paragliding bookings)'
+      },
+      {
+        name: 'Mr. My',
+        role: 'Chief Pilot',
+        phone: '+84 964 073 555'
+      },
+      {
+        name: 'Mr. Truong',
+        role: 'Flight Coordinator',
+        phone: '+84 336 233 789'
+      }
+    ]
+  }
+})
 
 const localizedNavigateTo = (path: string) => {
   const currentLocale = locale.value || 'vi' // mặc định là vi

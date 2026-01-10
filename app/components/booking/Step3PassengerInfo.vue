@@ -6,7 +6,7 @@
     </div>
 
     <!-- Personal Info Notice -->
-    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+    <div class="notice-box mb-6">
       <div class="flex items-start">
         <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd"
@@ -21,13 +21,13 @@
 
     <!-- Passenger Forms -->
     <div class="space-y-6">
-      <div v-for="(passenger, index) in passengers" :key="index" class="bg-gray-50 rounded-xl p-6">
+      <div v-for="(passenger, index) in passengers" :key="index" class="booking-section">
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-lg font-semibold text-gray-900">
             {{ $t('booking.step3Details.passenger') }} {{ index + 1 }}
           </h3>
           <button v-if="index === 0" type="button" @click="fillContactInfo(index)"
-            class="text-sm px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition-colors">
+            class="text-sm px-3 py-1 bg-red-600 text-white rounded-none font-bold uppercase tracking-wider hover:bg-red-700 transition-colors">
             Điền thông tin người đăng ký
           </button>
         </div>
@@ -47,7 +47,7 @@
             <label class="block text-sm font-medium text-gray-700 mb-2">
               {{ $t('booking.fields.dateOfBirth') }} *
             </label>
-            <input v-model="passenger.dateOfBirth" type="date" required :max="maxDate" class="input-field" />
+            <DateInput v-model="passenger.dateOfBirth" :max="maxDate" required />
           </div>
 
           <!-- Gender -->
@@ -95,7 +95,7 @@
     </div>
 
     <!-- Safety Information -->
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+    <div class="notice-box info">
       <div class="flex items-start">
         <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd"

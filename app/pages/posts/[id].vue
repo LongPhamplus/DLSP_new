@@ -1,36 +1,51 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
-    
-    <main class="py-12">
-      <article v-if="post" class="container-custom max-w-4xl">
-        <!-- Back Button -->
-        <button @click="goBack" class="mb-6 text-green-600 hover:text-green-700 flex items-center">
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-          </svg>
-          {{ $t('buttons.back') }}
-        </button>
+  <div class="min-h-screen bg-gray-50 font-sans">
+
+    <main class="py-12 md:py-20 px-4 sm:px-6">
+      <article v-if="post" class="container-custom max-w-4xl mx-auto">
+
+        <!-- Navigation -->
+        <nav class="flex justify-between items-center mb-12">
+          <button @click="goBack"
+            class="group inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300">
+            <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            {{ $t('buttons.back') }}
+          </button>
+        </nav>
 
         <!-- Post Header -->
-        <header class="mb-8">
-          <div class="mb-4">
-            <span class="inline-block px-3 py-1 text-sm font-semibold text-green-800 bg-green-100 rounded-full">
+        <header class="max-w-3xl mx-auto text-center mb-16">
+          <div class="inline-flex items-center justify-center mb-6">
+            <span
+              class="px-3 py-1 text-xs font-bold tracking-wide text-gray-900 bg-white border border-gray-200 rounded-full shadow-sm uppercase">
               {{ post.category }}
             </span>
           </div>
-          <h1 class="text-4xl font-bold text-gray-900 mb-4">
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight tracking-tight">
             {{ currentLocale === 'vi' ? post.titleVi : post.title }}
           </h1>
-          <div class="flex items-center text-gray-600 text-sm space-x-4">
-            <div class="flex items-center">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-              </svg>
-              {{ post.author }}
+
+          <div class="flex items-center justify-center space-x-2">
+            <div class="flex items-center p-1 pr-4 bg-white rounded-full border border-gray-200 shadow-sm">
+              <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center mr-3 overflow-hidden">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=000000&color=fff" alt="Author"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div class="flex flex-col text-left">
+                <span class="text-xs font-bold text-gray-900 leading-none">{{ post.author }}</span>
+                <span class="text-[10px] text-gray-500 font-medium pt-0.5">Author</span>
+              </div>
             </div>
-            <div class="flex items-center">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+
+            <div
+              class="hidden sm:flex items-center px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm text-xs font-medium text-gray-500">
+              <svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               {{ formatDate(post.date) }}
             </div>
@@ -38,43 +53,56 @@
         </header>
 
         <!-- Featured Image -->
-        <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
-          <img :src="post.image" :alt="currentLocale === 'vi' ? post.titleVi : post.title" class="w-full h-96 object-cover" />
+        <div class="mb-16 relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-200 border border-gray-100">
+          <div class="aspect-video w-full bg-gray-100">
+            <img :src="post.image" :alt="currentLocale === 'vi' ? post.titleVi : post.title"
+              class="w-full h-full object-cover" />
+          </div>
         </div>
 
         <!-- Post Content -->
-        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div class="prose prose-lg max-w-none" v-html="currentLocale === 'vi' ? post.contentVi : post.content"></div>
+        <div
+          class="prose prose-lg prose-slate max-w-prose mx-auto prose-headings:font-bold prose-headings:tracking-tight prose-a:text-red-600 hover:prose-a:text-red-700 prose-img:rounded-2xl prose-img:shadow-lg">
+          <div v-html="currentLocale === 'vi' ? post.contentVi : post.content"></div>
         </div>
 
+        <hr class="my-16 border-gray-200 max-w-3xl mx-auto" />
+
         <!-- Related Posts -->
-        <section v-if="relatedPosts.length > 0" class="mt-12">
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">{{ $t('posts.relatedPosts') }}</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div
-              v-for="relatedPost in relatedPosts"
-              :key="relatedPost.id"
-              @click="navigateToPost(relatedPost.id)"
-              class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
-            >
-              <img :src="relatedPost.image" :alt="currentLocale === 'vi' ? relatedPost.titleVi : relatedPost.title" class="w-full h-48 object-cover" />
-              <div class="p-4">
-                <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">
-                  {{ currentLocale === 'vi' ? relatedPost.titleVi : relatedPost.title }}
-                </h3>
-                <p class="text-sm text-gray-600 line-clamp-2">
-                  {{ currentLocale === 'vi' ? relatedPost.excerptVi : relatedPost.excerpt }}
-                </p>
+        <section v-if="relatedPosts.length > 0" class="max-w-5xl mx-auto">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 tracking-tight">{{ $t('posts.relatedPosts') }}</h2>
+            <button @click="localizedNavigateTo('/posts')"
+              class="text-sm font-semibold text-red-600 hover:text-red-700">
+              {{ currentLocale === 'vi' ? 'Xem tất cả' : 'View all' }} &rarr;
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div v-for="relatedPost in relatedPosts" :key="relatedPost.id" @click="navigateToPost(relatedPost.id)"
+              class="group cursor-pointer">
+              <!-- Simple Card for Related -->
+              <div
+                class="relative aspect-[16/10] bg-gray-100 rounded-xl overflow-hidden mb-4 border border-gray-200 group-hover:shadow-lg transition-all duration-300">
+                <img :src="relatedPost.image" :alt="currentLocale === 'vi' ? relatedPost.titleVi : relatedPost.title"
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
               </div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
+                {{ currentLocale === 'vi' ? relatedPost.titleVi : relatedPost.title }}
+              </h3>
+              <p class="text-sm text-gray-500 line-clamp-2">
+                {{ currentLocale === 'vi' ? relatedPost.excerptVi : relatedPost.excerpt }}
+              </p>
             </div>
           </div>
         </section>
       </article>
 
       <!-- Post Not Found -->
-      <div v-else class="container-custom text-center py-20">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">{{ $t('posts.notFound') }}</h2>
-        <button @click="goBack" class="btn-primary">
+      <div v-else class="flex flex-col items-center justify-center py-32 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">{{ $t('posts.notFound') }}</h2>
+        <button @click="goBack"
+          class="px-6 py-3 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors shadow-lg shadow-gray-900/20">
           {{ $t('buttons.back') }}
         </button>
       </div>
@@ -155,46 +183,11 @@ useHead({
 </script>
 
 <style scoped>
+/* Customize typography plugin defaults if needed */
 .prose {
-  color: #374151;
-}
-
-.prose h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #111827;
-}
-
-.prose h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: #1f2937;
-}
-
-.prose p {
-  margin-bottom: 1rem;
-  line-height: 1.75;
-}
-
-.prose ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.prose li {
-  margin-bottom: 0.5rem;
-}
-
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  line-clamp: 2;
+  --tw-prose-body: #4b5563;
+  --tw-prose-headings: #111827;
+  --tw-prose-links: #dc2626;
+  --tw-prose-bold: #111827;
 }
 </style>

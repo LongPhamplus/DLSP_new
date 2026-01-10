@@ -5,41 +5,30 @@
         <!-- Progress Steps -->
         <div class="mb-8">
           <div class="flex items-start justify-between">
-            <div
-              v-for="step in 5"
-              :key="step"
-              class="flex flex-col items-center flex-1"
-            >
+            <div v-for="step in 5" :key="step" class="flex flex-col items-center flex-1">
               <!-- Step Number and Line -->
               <div class="flex items-center w-full">
                 <div class="flex-shrink-0">
-                  <div
-                    :class="[
-                      'w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all',
-                      currentStep >= step
-                        ? 'bg-green-600 text-white'
-                        : 'bg-gray-300 text-gray-600'
-                    ]"
-                  >
+                  <div :class="[
+                    'w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all',
+                    currentStep >= step
+                      ? 'bg-red-600 text-white'
+                      : 'bg-gray-300 text-gray-600'
+                  ]">
                     {{ step }}
                   </div>
                 </div>
-                <div
-                  v-if="step < 6"
-                  :class="[
-                    'flex-1 h-1 mx-2 transition-all',
-                    currentStep > step ? 'bg-green-600' : 'bg-gray-300'
-                  ]"
-                />
+                <div v-if="step < 6" :class="[
+                  'flex-1 h-1 mx-2 transition-all',
+                  currentStep > step ? 'bg-red-600' : 'bg-gray-300'
+                ]" />
               </div>
-              
+
               <!-- Step Label -->
-              <p
-                :class="[
-                  'text-xs mt-2 text-center w-full px-1',
-                  currentStep >= step ? 'text-green-600 font-semibold' : 'text-gray-500'
-                ]"
-              >
+              <p :class="[
+                'text-xs mt-2 text-center w-full px-1',
+                currentStep >= step ? 'text-red-600 font-semibold' : 'text-gray-500'
+              ]">
                 {{ $t(`booking.step${step}`) }}
               </p>
             </div>

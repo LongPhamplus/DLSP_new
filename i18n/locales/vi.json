@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "DÙ LƯỢN\nSAPA",
-    "subtitle": "Giấc mơ bay giữa đại ngàn Sapa - nơi bạn cảm nhận tự do và bầu trời gần hơn bao giờ hết",
+    "subtitle": "Dù lượn là môn thể thao mạo hiểm, vì vậy việc lựa chọn đơn vị tổ chức chuyên nghiệp với đội ngũ phi công hàng đầu Việt Nam là yếu tố quan trọng để đảm bảo an toàn cho trải nghiệm bay.\nĐiểm cất cánh dù lượn Sapa được thiết kế đạt tiêu chuẩn cao nhất tại Việt Nam, sở hữu vị trí đón gió thuận lợi, mang đến hành trình bay hấp dẫn và giúp quá trình cất cánh diễn ra an toàn nhất.",
     "bookNow": "Đặt Lịch Ngay",
     "chatZalo": "Chat qua Zalo",
     "chatWhatsApp": "Chat qua WhatsApp"
@@ -16,7 +16,7 @@
   },
   "buttons": {
     "book": "Đặt Ngay",
-    "learnMore": "Tìm Hiểu Thêm",
+    "learnMore": "Khám Phá Thêm",
     "viewMore": "Xem Thêm",
     "next": "Tiếp Theo",
     "back": "Quay Lại",
@@ -30,7 +30,7 @@
   "booking": {
     "title": "Đặt Chuyến Bay",
     "step1": "Chọn Dịch Vụ",
-    "step2": "Thông Tin Liên Hệ",
+    "step2": "Lịch bay",
     "step3": "Thông Tin Hành Khách",
     "step4": "Xác Nhận Đặt Chỗ",
     "step5": "Hoàn Tất",
@@ -113,7 +113,7 @@
       "selectTime": "Chọn giờ",
       "contactName": "Tên Liên Hệ",
       "email": "Email",
-      "phone": "Số Điện Thoại"
+      "phone": "Số Điện Thoại/Whatsapp/Zalo"
     },
     "step3Details": {
       "passenger": "Hành khách",
@@ -149,7 +149,7 @@
       "basePrice": "Giá cơ bản",
       "discount": "Giảm giá",
       "paymentInfo": "Thông Tin Thanh Toán",
-      "paymentText": "Thanh toán sẽ được thực hiện tại chỗ trước khi bay. Chúng tôi chấp nhận tiền mặt (VND) và các loại thẻ tín dụng chính. Email xác nhận sẽ được gửi sau khi đặt chỗ.",
+      "paymentText": "Thanh toán sẽ được thực hiện tại chỗ trước khi bay. Chúng tôi chấp nhận tiền mặt  và các loại thẻ tín dụng chính. Email xác nhận sẽ được gửi sau khi đặt chỗ.",
       "processing": "Đang xử lý..."
     },
     "step5Details": {
@@ -163,7 +163,7 @@
       "whatsNext": "Tiếp Theo Là Gì?",
       "step1": "Kiểm tra email để xem xác nhận đặt chỗ và chi tiết",
       "step2": "Chúng tôi sẽ liên hệ với bạn 24 giờ trước để xác nhận điều kiện thời tiết",
-      "step3": "Đến trước 30 phút so với giờ bay đã lên lịch",
+      "step3": "Có mặt tại điểm hẹn trước 5 phút so với giờ đón để tránh chậm trễ.",
       "step4": "Tận hưởng trải nghiệm dù lượn tuyệt vời!",
       "backToHome": "Về Trang Chủ",
       "makeAnother": "Đặt Chỗ Khác",
@@ -185,7 +185,7 @@
     "fields": {
       "fullName": "Họ và Tên",
       "email": "Email",
-      "phone": "Số Điện Thoại",
+      "phone": "Số Điện Thoại / WhatsApp / Zalo",
       "date": "Ngày bay",
       "time": "Giờ bay",
       "passengers": "Số Hành Khách",
@@ -251,105 +251,6 @@
       "personality": "Khi ở dưới mặt đất, anh là người cực kỳ kỷ luật, nghiêm túc trong công việc và vai trò điều hành. Nhưng chỉ cần cất cánh, anh liền hóa thân thành 'người con của gió' — mang theo niềm vui, năng lượng tích cực và truyền cảm hứng đam mê cho mọi hành khách bay cùng."
     },
     "pilot2": {
-      "name": "Đinh Thế Anh",
-      "nickname": "Thợ săn mây",
-      "role": "Phi công đội",
-      "des": "Phi công giàu năng lượng thể thao, từ đua xe đạp, bơi lội đến dù lượn, với 2000 chuyến bay, hơn 1500 giờ bay an toàn và 3 lần vô địch hạ cánh chính xác tại Việt Nam.",
-      "img": "The Anh_Team Pilot.jpg",
-      "fullname": "ĐINH THẾ ANH",
-      "experience": "Thực hiện hơn 2.000 chuyến bay, với tổng thời gian bay an toàn vượt mốc 1.000 giờ. Đại diện Việt Nam bay thẳng sang Olympic 2023 tại Hàn Quốc. Ba lần vô địch nội dung hạ cánh chính xác trong các giải đấu quốc gia. Đã từng cất cánh tại nhiều quốc gia trên thế giới như: Thụy Sĩ, Hàn Quốc, Hoa Kỳ, Thái Lan, Indonesia…",
-      "records": "Ba lần vô địch hạ cánh chính xác tại Việt Nam và là đại diện của Việt Nam tham dự Olympic Dù lượn 2023 tại Hàn Quốc.",
-      "personality": "Được mệnh danh là 'anh trai quốc dân' – sinh ra và lớn lên tại Đà Nẵng, chàng trai miền Trung mang trong mình nét dịu dàng, ấm áp đúng chất gió biển và nắng vàng quê hương. Ấn tượng với nụ cười hiền khô, giọng nói trầm ấm và sự chu đáo, tinh tế trong từng hành động. Không chỉ là phi công đỉnh cao mà còn là nhiếp ảnh gia chuyên nghiệp. Khi bay cùng anh, bạn có thể yên tâm rằng sẽ có vô số tấm hình siêu chất, góc nào cũng đẹp và khoảnh khắc nào cũng đáng nhớ!"
-    },
-    "pilot3": {
-      "name": "Tuấn Nguyễn",
-      "nickname": "Nhị ca",
-      "role": "Phi công đội",
-      "des": "Phi công nhẹ nhàng, ân cần, luôn lắng nghe yêu cầu khách. Bạn thích bay mạnh tay hay 'chill' nhẹ nhàng, anh đều có cách chọn góc quay và đường bay siêu phẩm, đảm bảo bay xong ai cũng muốn… làm fan cứng!",
-      "img": "Tuan Nguyen_Team Pilot.jpg",
-      "fullname": "TUẤN NGUYỄN",
-      "experience": "Đã thực hiện thành công hơn 1.000 chuyến bay đôi (tandem) an toàn tại Việt Nam. Hiểu biết sâu về khí tượng tại các điểm bay trên toàn quốc, với khả năng đánh giá và dự báo thời tiết chính xác phục vụ cho hoạt động bay. Thuần thục kỹ năng bay dù lượn không động cơ và có động cơ. Là hướng dẫn viên dù lượn chuyên nghiệp, đã đào tạo và đồng hành cùng nhiều phi công trên hành trình chinh phục bầu trời Việt Nam.",
-      "records": "Hơn 1.000 chuyến bay tandem an toàn, chuyên gia dự báo khí tượng hàng đầu trong cộng đồng bay, và là huấn luyện viên giàu kinh nghiệm tại các điểm bay lớn trên cả nước.",
-      "personality": "Biệt danh mang đậm chất kiếm hiệp 'Nhị ca' nhưng tính cách anh vô cùng thân thiện và dễ thương. Anh đặc biệt yêu quý trẻ nhỏ — sau mỗi chuyến bay, các thiên thần nhỏ đều nhớ đến chú phi công hiền lành và gửi thư cảm ơn. Nếu cha mẹ đang tìm kiếm một người đáng tin cậy, tận tâm và tràn đầy năng lượng tích cực để đồng hành cùng bé yêu trên hành trình chạm mây — thì không ai khác, Nhị ca chính là lựa chọn tuyệt vời!"
-    },
-    "pilot4": {
-      "name": "Minh Trung",
-      "nickname": "Chiến thần không gian",
-      "role": "Phi công đội",
-      "des": "Hơn 2.000 chuyến bay đôi, 7 năm bám dây lơ lửng trên trời, hơn 1.000 giờ “tán mây, thả gió”. Bí danh Trung Chocolate – bay cùng anh, bạn sẽ được chém gió vui hết nấc, cười mỏi miệng!",
-      "img": "Minh Trung_Team Pilot.jpg",
-      "fullname": "MINH TRUNG",
-      "experience": "Hơn 2.000 chuyến bay đôi an toàn cùng hành khách. 7 năm kinh nghiệm bay dù lượn, chuyên sâu trong lĩnh vực bay đôi và bay đường trường. Tích lũy hơn 1.000 giờ bay thực tế, làm chủ nhiều điều kiện thời tiết và địa hình phức tạp. Tốt nghiệp khóa huấn luyện An toàn bay tại Nepal – quốc gia có điều kiện bay khắt khe và tiêu chuẩn quốc tế cao.",
-      "records": "Hơn 2.000 chuyến bay đôi an toàn, hơn 1.000 giờ bay tích lũy, và là phi công Việt Nam hiếm hoi hoàn thành khóa huấn luyện An toàn bay tại Nepal.",
-      "personality": "Cánh dù anh đang bay là cờ đỏ sao vàng rực rỡ — bay là truyền cảm hứng yêu nước, yêu trời, yêu luôn cả cuộc đời. Bay cùng anh, clip dễ lên triệu view TikTok, ảnh và video thì 'xịn xò' khỏi chỉnh, đủ làm crush cũng phải lỡ nhịp tim. Tính cách hòa đồng, vui vẻ, bảo đảm bạn vừa bay vừa cười toe toét, quên luôn cả sợ độ cao. Nhược điểm duy nhất? Nắng làm đen da, mưa làm tóc xù — nhưng thần thái vẫn đỉnh, nụ cười thì không chỗ nào chê!"
-    },
-    "pilot5": {
-      "name": "Phan Hùng",
-      "nickname": "Lãng khách bầu trời",
-      "role": "Phi công đội",
-      "des": "Bay cùng anh, bạn sẽ có clip triệu view triệu like với góc quay siêu nghệ thuật. Trải nghiệm an toàn tuyệt đối và khoảnh khắc bầu trời tuyệt đẹp được lưu giữ, mang về những tư liệu quý giá khó quên trên từng chuyến bay đôi.",
-      "img": "phan_hung.jpg",
-      "fullname": "PHAN HÙNG",
-      "experience": "Bắt đầu theo đuổi đam mê dù lượn từ năm 2018 và hiện là phi công chuyên nghiệp với nhiều năm kinh nghiệm bay tại Việt Nam. Anh am hiểu sâu sắc về khí tượng và địa hình tại các điểm bay trên khắp cả nước — yếu tố then chốt giúp đảm bảo mỗi chuyến bay đều an toàn và mang lại trải nghiệm tối ưu. Đã thực hiện hơn 1.000 chuyến bay đôi chuyên nghiệp và liên tục tham gia các khóa huấn luyện, đào tạo đạt chuẩn quốc tế về dù lượn.",
-      "records": "Hơn 1.000 chuyến bay đôi chuyên nghiệp, chuyên gia phân tích khí tượng và địa hình, thành viên tích cực trong các chương trình huấn luyện đạt chuẩn quốc tế.",
-      "personality": "Gặp Phan Hùng – 'rocker' của bầu trời, mái tóc dài bay trong gió như chính đôi cánh dù lượn. Bay cùng anh, bạn không chỉ có clip triệu view mà còn triệu cảm xúc. Hơn 1.000 chuyến bay – mỗi chuyến là một câu chuyện, một khoảnh khắc để đời. Giàu năng lượng, am hiểu địa hình, đam mê 'cháy' – luôn sẵn sàng đưa bạn chạm mây!"
-    },
-    "pilot6": {
-      "name": "Ngô Văn Đội",
-      "nickname": "Chiến binh lượn lách",
-      "role": "Phi công đội",
-      "des": "Tham gia mọi giải đấu dù lượn tại Việt Nam, giữ kỷ lục 7 giờ bay liên tục tại Đồi Bù – Chương Mỹ. Anh đam mê dù lượn, mang đến cho khách hàng trải nghiệm bay đầy phấn khích, an toàn và ngập tràn tiếng cười.",
-      "img": "Ngo Van Doi_Team Pilot.jpeg",
-      "fullname": "NGÔ VĂN ĐỘI",
-      "experience": "Từ năm 2023 đến 2025, anh đã thực hiện hơn 500 chuyến bay đơn và đôi tại hầu hết các điểm bay nổi tiếng trên khắp Việt Nam. Tích lũy hơn 300 giờ bay thực tế cùng 5 năm kinh nghiệm vững chắc trong lĩnh vực dù lượn. Là gương mặt quen thuộc tại tất cả các giải đấu dù lượn từ Nam ra Bắc, luôn góp mặt với tinh thần thi đấu chuyên nghiệp và niềm đam mê mãnh liệt. Đặc biệt, anh đã lập kỷ lục bay liên tục 7 giờ tại Đồi Bù – Chương Mỹ, đánh dấu một cột mốc đáng tự hào trong sự nghiệp bay của mình.",
-      "records": "Kỷ lục 7 giờ bay liên tục tại Đồi Bù – Chương Mỹ, hơn 500 chuyến bay trong 2 năm và là phi công tích cực tham gia mọi giải đấu dù lượn trên toàn quốc.",
-      "personality": "Chàng trai trẻ mang gió vào nụ cười — bay cao chẳng cần 'đi thang máy'! Đam mê dù lượn cháy bỏng, với anh mỗi chuyến bay là một lần trái tim được 'cất cánh'. Bay cùng anh, bạn sẽ cảm nhận niềm vui lan tỏa giữa trời xanh — nơi gió lùa mạnh như đang vỗ tay cổ vũ bạn. Một người bạn đồng hành siêu tận tâm, luôn sẵn sàng biến giấc mơ bay lơ lửng thành một chuyến phiêu lưu kỳ thú!"
-    },
-    "pilot7": {
-      "name": "Minh Võ",
-      "nickname": "Đại bàng thép",
-      "role": "Phi công đội",
-      "des": "Bay cùng 'phi công triệu like' với 14 năm kinh nghiệm. Đam mê bầu trời từ nhỏ, anh truyền lửa qua từng chuyến bay đôi, mang đến trải nghiệm tuyệt đỉnh và khoảnh khắc đáng nhớ trên cao cho mọi khách hàng.",
-      "img": "Minh Vo_Team Pilot.jpg",
-      "fullname": "MINH VÕ",
-      "experience": "Với 14 năm kinh nghiệm bay dù lượn và hơn 2.000 chuyến bay đôi an toàn, anh là một trong những phi công kỳ cựu và đáng tin cậy hàng đầu tại Việt Nam. Là một trong Top 5 phi công đời đầu, anh đã góp phần đặt nền móng cho cộng đồng dù lượn trong nước. Năm 2023, anh cùng đồng đội xuất sắc giành giải Nhất nội dung Hạ Cánh Chính Xác tại giải đấu MCC, khẳng định kỹ năng chuyên môn và bản lĩnh thi đấu vững vàng.",
-      "records": "14 năm kinh nghiệm, hơn 2.000 chuyến bay đôi an toàn. Top 5 phi công đời đầu của Việt Nam và đạt giải Nhất nội dung Hạ Cánh Chính Xác tại MCC 2023.",
-      "personality": "Minh Võ – 'phi công triệu like' với niềm đam mê bầu trời từ bé, lớn lên chỉ thích trò chuyện với mây và chơi đùa với gió. Bay cùng anh không chỉ là lên cao, mà còn lên luôn tâm trạng! View đẹp, tiếng cười rộn ràng, và năng lượng tích cực lan tỏa suốt chuyến đi. Anh truyền lửa nhẹ tênh mà chất lừ — khiến ai bay xong cũng chỉ muốn… bay thêm lần nữa cho đã!"
-    },
-    "pilot8": {
-      "name": "Toàn Nguyễn",
-      "nickname": "Rambo",
-      "role": "Phi công đội",
-      "des": "Hơn 10 năm cày gió cưỡi mây, gần 5.000 chuyến bay. Bay khắp Việt Nam: Kon Tum, Lý Sơn, Điện Biên… GPS còn chưa kịp load, anh đã đặt chân tới! Dù lượn với anh không chỉ là đam mê — là phong cách sống trên mây.",
-      "img": "Toan Nguyen_team Pilot.jpg",
-      "fullname": "TOÀN NGUYỄN",
-      "experience": "Với hơn 10 năm kinh nghiệm chinh phục bầu trời và gần 5.000 chuyến bay đơn cùng bay đôi, anh là một trong những phi công giàu trải nghiệm và đáng tin cậy nhất tại Việt Nam. Tốt nghiệp khóa huấn luyện an toàn bay đạt tiêu chuẩn quốc tế. Đã từng bay qua hầu hết các điểm dù lượn nổi tiếng trong nước như Kon Tum, Đắk Nông, Nha Trang, Lý Sơn, Điện Biên Phủ. Thường xuyên tham gia các giải thi đấu hạ cánh chính xác tại Hà Nội, Mù Cang Chải và Đà Nẵng, khẳng định kỹ năng bay vững vàng và bản lĩnh thi đấu ổn định.",
-      "records": "Hơn 10 năm kinh nghiệm và gần 5.000 chuyến bay trên khắp Việt Nam. Tham dự hầu hết các giải đấu hạ cánh chính xác và hoàn thành khóa huấn luyện an toàn bay đạt chuẩn quốc tế.",
-      "personality": "Bay cùng Toàn Nguyễn – 'Rambo' của bầu trời, bạn không chỉ được 'cưỡi mây' mà còn được cười mỏi miệng! Anh ấy bay như gió, nói như gió, mang lại cảm giác vừa an toàn vừa vui không tưởng. Bay xong, ai cũng muốn gọi anh làm 'phi công ruột' cho mọi chuyến đi. Đảm bảo một điều: lên cùng Toàn, xuống không muốn rời!"
-    },
-    "pilot9": {
-      "name": "Chiến Thắng",
-      "nickname": "Thắng thần sét",
-      "role": "Phi công đội",
-      "des": "7 năm sống cùng mây gió, hơn 1.500 chuyến bay đôi an toàn, 1.000+ giờ lơ lửng trên trời. Anh từng giữ kỷ lục bay đơn 9 tiếng rưỡi tại Việt Nam! “Càn quét” các giải đấu dù lượn từ Bắc chí Nam, phong độ luôn ở đỉnh cao.",
-      "img": "Chien Thang_Team Pilot.jpg",
-      "fullname": "CHIẾN THẮNG",
-      "experience": "Với 7 năm kinh nghiệm làm bạn cùng trời mây, anh đã thực hiện hơn 1.500 chuyến bay đôi an toàn và chuyên nghiệp, tích lũy hơn 1.000 giờ bay. Anh từng giữ kỷ lục Việt Nam #2 về thời gian bay đơn lâu nhất — 9 tiếng rưỡi liên tục, thể hiện sự bền bỉ và kỹ năng điều khiển dù xuất sắc. Am hiểu sâu sắc về kỹ thuật dù lượn và điều kiện khí tượng tại các điểm bay trên toàn quốc, anh luôn đảm bảo mỗi chuyến bay vừa an toàn vừa thăng hoa cảm xúc.",
-      "records": "Giữ kỷ lục Việt Nam #2 về thời gian bay đơn lâu nhất – 9 tiếng rưỡi liên tục. Hơn 1.500 chuyến bay đôi và hơn 1.000 giờ bay tích lũy trong 7 năm chinh phục bầu trời.",
-      "personality": "Chiến Thắng – 'Thắng thần sét', bay nhanh như tia chớp mà vẫn khiến bạn yên tâm tuyệt đối. Lơ lửng trên trời cùng anh, bạn sẽ cười tít mắt vì vui chẳng muốn xuống. Bay với anh không chỉ là trải nghiệm mà còn là chuyến phiêu lưu tràn ngập tiếng cười. Bay lâu đến mức mây cũng phải thán phục: 'Này, anh có nghỉ không đấy?'"
-    },
-    "pilot10": {
-      "name": "Suman Thapa",
-      "nickname": "Sky Ryder",
-      "role": "Phi công biểu diễn",
-      "des": "Những video nhào lộn ngoạn mục tại Sapa hầu hết đều là của anh – phi công dày dạn kinh nghiệm, am hiểu sâu về dù lượn. Với anh, bay không chỉ là đam mê mà là sự nghiệp. Khách hàng gọi anh bằng cái tên đặc biệt: 'Con của thần gió'.",
-      "img": "Suman Thapa_Team Pilot.jpg",
-      "fullname": "SUMAN THAPA",
-      "experience": "Hoàn thành khóa đào tạo huấn luyện phi công chuyên nghiệp tại Nepal. Là phi công acro với kỹ năng nhào lộn siêu đẳng, thuần thục nhiều động tác kỹ thuật phức tạp. Anh có hơn 1.000 giờ bay đôi chuyên nghiệp, luôn đảm bảo an toàn tuyệt đối cho hành khách. Đã hoạt động hơn 3 năm tại Việt Nam, am hiểu sâu sắc về địa hình và điều kiện khí tượng tại các điểm bay trong nước. Hiện anh đặt mục tiêu trở thành huấn luyện viên dù lượn được chứng nhận quốc tế APPI.",
-      "records": "Phi công acro (nhào lộn) hàng đầu tại Việt Nam, nổi tiếng với các màn trình diễn ngoạn mục tại Sapa. Sở hữu hơn 1.000 giờ bay đôi và 3 năm hoạt động chuyên nghiệp tại Việt Nam.",
-      "personality": "Anh là người mà khi gió nổi lên — dù chưa cất cánh — cũng có thể nghe thấy tiếng trái tim anh reo: 'Chúng ta cùng bay nhé!'. Anh đam mê dù lượn như người ta say tách cà phê buổi sáng — không thể thiếu, không thể ngừng. Với anh, mỗi cú nhào lộn là một nụ cười khẳng định rằng: 'Mình sống là để bay.'"
-    },
-    "pilot11": {
       "name": "Alish Thapa",
       "nickname": "Phantom bầu trời",
       "role": "Huấn luyện viên quốc tế APPI",
@@ -360,7 +261,29 @@
       "records": "Huấn luyện viên APPI quốc tế, từng giảng dạy tại nhiều điểm bay lớn ở Việt Nam, Thái Lan và Trung Quốc. Giữ vai trò quản lý và điều hành tại nhiều tổ chức dù lượn – nhảy dù uy tín trong khu vực.",
       "personality": "Anh là một trong những phi công dù lượn hàng đầu của Nepal, với phong cách huấn luyện vui vẻ và truyền cảm hứng. Anh giúp học viên cảm nhận việc bay như một điệu nhảy giữa không trung — không chỉ học kỹ thuật mà còn học cách yêu bầu trời. Anh mang đến năng lượng tích cực cho mọi chuyến bay, khiến du khách không chỉ nhớ chuyến đi, mà còn nhớ luôn người bạn đồng hành đặc biệt ấy."
     },
-    "pilot12": {
+    "pilot3": {
+      "name": "Subash Thapa",
+      "nickname": "Kỵ sỹ không trung",
+      "role": "Huấn luyện viên dù lượn chuyên nghiệp",
+      "des": "Huấn luyện viên dù lượn chuyên nghiệp đã đào tạo rất nhiều phi công dù lượn trên thế giới. Anh không chỉ có đam mê dù lượn mà còn yêu thích âm nhạc, chính vì thế mọi chuyến bay đôi cùng anh đều sống động và đầy cảm hứng.",
+      "img": "Subash Thapa_Team Pilot.jpg",
+      "fullname": "SUBASH THAPA",
+      "experience": "Anh là phi công trưởng, huấn luyện viên dù lượn và nhảy dù tại Pokhara. Đồng thời từng đảm nhiệm vị trí phi công trưởng tại Acro Paragliding và New Para World Paragliding. Sở hữu hơn 1.000 giờ bay tandem chuyên nghiệp và luôn đặt an toàn lên hàng đầu. Với hơn 3 năm kinh nghiệm hoạt động tại Việt Nam, Subash có kiến thức vững chắc về địa hình và điều kiện thời tiết tại các điểm bay.",
+      "records": "Hơn 1.000 giờ bay tandem chuyên nghiệp, từng giữ vai trò phi công trưởng tại nhiều tổ chức dù lượn uy tín và có 3+ năm hoạt động tại Việt Nam.",
+      "personality": "Subash Thapa không chỉ là huấn luyện viên dù lượn siêu đỉnh mà còn là 'DJ trên không' với tình yêu âm nhạc cháy bỏng, khiến mỗi chuyến bay đôi như một bữa tiệc vui nhộn giữa trời xanh. Anh luôn đảm bảo an toàn tuyệt đối, giúp bạn bay mà không phải lo lắng. Bay cùng anh, bạn không chỉ trải nghiệm sải cánh trên bầu trời mà còn có thêm một người bạn vui tính, tràn đầy năng lượng tích cực!"
+    },
+    "pilot4": {
+      "name": "Suman Thapa",
+      "nickname": "Sky Ryder",
+      "role": "Phi công biểu diễn",
+      "des": "Những video nhào lộn ngoạn mục tại Sapa hầu hết đều là của anh – phi công dày dạn kinh nghiệm, am hiểu sâu về dù lượn. Với anh, bay không chỉ là đam mê mà là sự nghiệp. Khách hàng gọi anh bằng cái tên đặc biệt: 'Con của thần gió'.",
+      "img": "Suman Thapa_Team Pilot.jpg",
+      "fullname": "SUMAN THAPA",
+      "experience": "Hoàn thành khóa đào tạo huấn luyện phi công chuyên nghiệp tại Nepal. Là phi công acro với kỹ năng nhào lộn siêu đẳng, thuần thục nhiều động tác kỹ thuật phức tạp. Anh có hơn 1.000 giờ bay đôi chuyên nghiệp, luôn đảm bảo an toàn tuyệt đối cho hành khách. Đã hoạt động hơn 3 năm tại Việt Nam, am hiểu sâu sắc về địa hình và điều kiện khí tượng tại các điểm bay trong nước. Hiện anh đặt mục tiêu trở thành huấn luyện viên dù lượn được chứng nhận quốc tế APPI.",
+      "records": "Phi công acro (nhào lộn) hàng đầu tại Việt Nam, nổi tiếng với các màn trình diễn ngoạn mục tại Sapa. Sở hữu hơn 1.000 giờ bay đôi và 3 năm hoạt động chuyên nghiệp tại Việt Nam.",
+      "personality": "Anh là người mà khi gió nổi lên — dù chưa cất cánh — cũng có thể nghe thấy tiếng trái tim anh reo: 'Chúng ta cùng bay nhé!'. Anh đam mê dù lượn như người ta say tách cà phê buổi sáng — không thể thiếu, không thể ngừng. Với anh, mỗi cú nhào lộn là một nụ cười khẳng định rằng: 'Mình sống là để bay.'"
+    },
+    "pilot5": {
       "name": "Bishal Thapa",
       "nickname": "Đặc nhiệm cánh gió",
       "role": "Chuyên gia hạ cánh chính xác",
@@ -371,7 +294,7 @@
       "records": "Chuyên gia hạ cánh chính xác hàng đầu – từng giành nhiều danh hiệu tại các giải Pre-World Cup và Accuracy Cup quốc tế. Sở hữu hơn 2.000 chuyến bay và 800+ giờ bay an toàn.",
       "personality": "Bishal Thapa luôn mang theo 'cục pin năng lượng' và nụ cười rạng rỡ trong mỗi chuyến bay. Anh vui tính, dễ mến và luôn khiến khách hàng cảm thấy như đang bay cùng một người bạn thân. Đam mê hạ cánh chuẩn từng milimet, anh biến mỗi cú đáp đất thành một 'vũ điệu' đẹp mắt trên bầu trời. Bay cùng anh, bạn không chỉ trải nghiệm cảm giác bay, mà còn có cả một chuyến phiêu lưu đầy tiếng cười và cảm xúc."
     },
-    "pilot13": {
+    "pilot6": {
       "name": "Bishal Skyboy",
       "nickname": "Skyboy",
       "role": "Phi công Acro",
@@ -382,41 +305,126 @@
       "records": "Phi công Acro nổi tiếng toàn cầu với kỹ năng nhào lộn xuất sắc. Kinh nghiệm bay đôi dày dạn và an toàn, tham gia nhiều sự kiện bay quốc tế.",
       "personality": "Bishal Skyboy nổi bật với kỹ năng bay điêu luyện và phong thái tự tin trên không trung. Anh mang đến trải nghiệm bay sảng khoái, phấn khích và đáng nhớ cho mọi hành khách, luôn giữ thái độ chuyên nghiệp nhưng gần gũi và thân thiện."
     },
+    "pilot7": {
+      "name": "Đinh Thế Anh",
+      "nickname": "Thợ săn mây",
+      "role": "Phi công đội",
+      "des": "Phi công giàu năng lượng thể thao, từ đua xe đạp, bơi lội đến dù lượn, với 2000 chuyến bay, hơn 1500 giờ bay an toàn và 3 lần vô địch hạ cánh chính xác tại Việt Nam.",
+      "img": "The Anh_Team Pilot.jpg",
+      "fullname": "ĐINH THẾ ANH",
+      "experience": "Thực hiện hơn 2.000 chuyến bay, với tổng thời gian bay an toàn vượt mốc 1.000 giờ. Đại diện Việt Nam bay thẳng sang Olympic 2023 tại Hàn Quốc. Ba lần vô địch nội dung hạ cánh chính xác trong các giải đấu quốc gia. Đã từng cất cánh tại nhiều quốc gia trên thế giới như: Thụy Sĩ, Hàn Quốc, Hoa Kỳ, Thái Lan, Indonesia…",
+      "records": "Ba lần vô địch hạ cánh chính xác tại Việt Nam và là đại diện của Việt Nam tham dự Olympic Dù lượn 2023 tại Hàn Quốc.",
+      "personality": "Được mệnh danh là 'anh trai quốc dân' – sinh ra và lớn lên tại Đà Nẵng, chàng trai miền Trung mang trong mình nét dịu dàng, ấm áp đúng chất gió biển và nắng vàng quê hương. Ấn tượng với nụ cười hiền khô, giọng nói trầm ấm và sự chu đáo, tinh tế trong từng hành động. Không chỉ là phi công đỉnh cao mà còn là nhiếp ảnh gia chuyên nghiệp. Khi bay cùng anh, bạn có thể yên tâm rằng sẽ có vô số tấm hình siêu chất, góc nào cũng đẹp và khoảnh khắc nào cũng đáng nhớ!"
+    },
+    "pilot8": {
+      "name": "Tuấn Nguyễn",
+      "nickname": "Nhị ca",
+      "role": "Phi công đội",
+      "des": "Phi công nhẹ nhàng, ân cần, luôn lắng nghe yêu cầu khách. Bạn thích bay mạnh tay hay 'chill' nhẹ nhàng, anh đều có cách chọn góc quay và đường bay siêu phẩm, đảm bảo bay xong ai cũng muốn… làm fan cứng!",
+      "img": "Tuan Nguyen_Team Pilot.jpg",
+      "fullname": "TUẤN NGUYỄN",
+      "experience": "Đã thực hiện thành công hơn 1.000 chuyến bay đôi (tandem) an toàn tại Việt Nam. Hiểu biết sâu về khí tượng tại các điểm bay trên toàn quốc, với khả năng đánh giá và dự báo thời tiết chính xác phục vụ cho hoạt động bay. Thuần thục kỹ năng bay dù lượn không động cơ và có động cơ. Là hướng dẫn viên dù lượn chuyên nghiệp, đã đào tạo và đồng hành cùng nhiều phi công trên hành trình chinh phục bầu trời Việt Nam.",
+      "records": "Hơn 1.000 chuyến bay tandem an toàn, chuyên gia dự báo khí tượng hàng đầu trong cộng đồng bay, và là huấn luyện viên giàu kinh nghiệm tại các điểm bay lớn trên cả nước.",
+      "personality": "Biệt danh mang đậm chất kiếm hiệp 'Nhị ca' nhưng tính cách anh vô cùng thân thiện và dễ thương. Anh đặc biệt yêu quý trẻ nhỏ — sau mỗi chuyến bay, các thiên thần nhỏ đều nhớ đến chú phi công hiền lành và gửi thư cảm ơn. Nếu cha mẹ đang tìm kiếm một người đáng tin cậy, tận tâm và tràn đầy năng lượng tích cực để đồng hành cùng bé yêu trên hành trình chạm mây — thì không ai khác, Nhị ca chính là lựa chọn tuyệt vời!"
+    },
+    "pilot9": {
+      "name": "Minh Trung",
+      "nickname": "Chiến thần không gian",
+      "role": "Phi công đội",
+      "des": "Hơn 2.000 chuyến bay đôi, 7 năm bám dây lơ lửng trên trời, hơn 1.000 giờ “tán mây, thả gió”. Bí danh Trung Chocolate – bay cùng anh, bạn sẽ được chém gió vui hết nấc, cười mỏi miệng!",
+      "img": "Minh Trung_Team Pilot.jpg",
+      "fullname": "MINH TRUNG",
+      "experience": "Hơn 2.000 chuyến bay đôi an toàn cùng hành khách. 7 năm kinh nghiệm bay dù lượn, chuyên sâu trong lĩnh vực bay đôi và bay đường trường. Tích lũy hơn 1.000 giờ bay thực tế, làm chủ nhiều điều kiện thời tiết và địa hình phức tạp. Tốt nghiệp khóa huấn luyện An toàn bay tại Nepal – quốc gia có điều kiện bay khắt khe và tiêu chuẩn quốc tế cao.",
+      "records": "Hơn 2.000 chuyến bay đôi an toàn, hơn 1.000 giờ bay tích lũy, và là phi công Việt Nam hiếm hoi hoàn thành khóa huấn luyện An toàn bay tại Nepal.",
+      "personality": "Cánh dù anh đang bay là cờ đỏ sao vàng rực rỡ — bay là truyền cảm hứng yêu nước, yêu trời, yêu luôn cả cuộc đời. Bay cùng anh, clip dễ lên triệu view TikTok, ảnh và video thì 'xịn xò' khỏi chỉnh, đủ làm crush cũng phải lỡ nhịp tim. Tính cách hòa đồng, vui vẻ, bảo đảm bạn vừa bay vừa cười toe toét, quên luôn cả sợ độ cao. Nhược điểm duy nhất? Nắng làm đen da, mưa làm tóc xù — nhưng thần thái vẫn đỉnh, nụ cười thì không chỗ nào chê!"
+    },
+    "pilot10": {
+      "name": "Phan Hùng",
+      "nickname": "Lãng khách bầu trời",
+      "role": "Phi công đội",
+      "des": "Bay cùng anh, bạn sẽ có clip triệu view triệu like với góc quay siêu nghệ thuật. Trải nghiệm an toàn tuyệt đối và khoảnh khắc bầu trời tuyệt đẹp được lưu giữ, mang về những tư liệu quý giá khó quên trên từng chuyến bay đôi.",
+      "img": "phan_hung.jpg",
+      "fullname": "PHAN HÙNG",
+      "experience": "Bắt đầu theo đuổi đam mê dù lượn từ năm 2018 và hiện là phi công chuyên nghiệp với nhiều năm kinh nghiệm bay tại Việt Nam. Anh am hiểu sâu sắc về khí tượng và địa hình tại các điểm bay trên khắp cả nước — yếu tố then chốt giúp đảm bảo mỗi chuyến bay đều an toàn và mang lại trải nghiệm tối ưu. Đã thực hiện hơn 1.000 chuyến bay đôi chuyên nghiệp và liên tục tham gia các khóa huấn luyện, đào tạo đạt chuẩn quốc tế về dù lượn.",
+      "records": "Hơn 1.000 chuyến bay đôi chuyên nghiệp, chuyên gia phân tích khí tượng và địa hình, thành viên tích cực trong các chương trình huấn luyện đạt chuẩn quốc tế.",
+      "personality": "Gặp Phan Hùng – 'rocker' của bầu trời, mái tóc dài bay trong gió như chính đôi cánh dù lượn. Bay cùng anh, bạn không chỉ có clip triệu view mà còn triệu cảm xúc. Hơn 1.000 chuyến bay – mỗi chuyến là một câu chuyện, một khoảnh khắc để đời. Giàu năng lượng, am hiểu địa hình, đam mê 'cháy' – luôn sẵn sàng đưa bạn chạm mây!"
+    },
+    "pilot11": {
+      "name": "Ngô Văn Đội",
+      "nickname": "Chiến binh lượn lách",
+      "role": "Phi công đội",
+      "des": "Tham gia mọi giải đấu dù lượn tại Việt Nam, giữ kỷ lục 7 giờ bay liên tục tại Đồi Bù – Chương Mỹ. Anh đam mê dù lượn, mang đến cho khách hàng trải nghiệm bay đầy phấn khích, an toàn và ngập tràn tiếng cười.",
+      "img": "Ngo Van Doi_Team Pilot.jpeg",
+      "fullname": "NGÔ VĂN ĐỘI",
+      "experience": "Từ năm 2023 đến 2025, anh đã thực hiện hơn 500 chuyến bay đơn và đôi tại hầu hết các điểm bay nổi tiếng trên khắp Việt Nam. Tích lũy hơn 300 giờ bay thực tế cùng 5 năm kinh nghiệm vững chắc trong lĩnh vực dù lượn. Là gương mặt quen thuộc tại tất cả các giải đấu dù lượn từ Nam ra Bắc, luôn góp mặt với tinh thần thi đấu chuyên nghiệp và niềm đam mê mãnh liệt. Đặc biệt, anh đã lập kỷ lục bay liên tục 7 giờ tại Đồi Bù – Chương Mỹ, đánh dấu một cột mốc đáng tự hào trong sự nghiệp bay của mình.",
+      "records": "Kỷ lục 7 giờ bay liên tục tại Đồi Bù – Chương Mỹ, hơn 500 chuyến bay trong 2 năm và là phi công tích cực tham gia mọi giải đấu dù lượn trên toàn quốc.",
+      "personality": "Chàng trai trẻ mang gió vào nụ cười — bay cao chẳng cần 'đi thang máy'! Đam mê dù lượn cháy bỏng, với anh mỗi chuyến bay là một lần trái tim được 'cất cánh'. Bay cùng anh, bạn sẽ cảm nhận niềm vui lan tỏa giữa trời xanh — nơi gió lùa mạnh như đang vỗ tay cổ vũ bạn. Một người bạn đồng hành siêu tận tâm, luôn sẵn sàng biến giấc mơ bay lơ lửng thành một chuyến phiêu lưu kỳ thú!"
+    },
+    "pilot12": {
+      "name": "Minh Võ",
+      "nickname": "Đại bàng thép",
+      "role": "Phi công đội",
+      "des": "Bay cùng 'phi công triệu like' với 14 năm kinh nghiệm. Đam mê bầu trời từ nhỏ, anh truyền lửa qua từng chuyến bay đôi, mang đến trải nghiệm tuyệt đỉnh và khoảnh khắc đáng nhớ trên cao cho mọi khách hàng.",
+      "img": "Minh Vo_Team Pilot.jpg",
+      "fullname": "MINH VÕ",
+      "experience": "Với 14 năm kinh nghiệm bay dù lượn và hơn 2.000 chuyến bay đôi an toàn, anh là một trong những phi công kỳ cựu và đáng tin cậy hàng đầu tại Việt Nam. Là một trong Top 5 phi công đời đầu, anh đã góp phần đặt nền móng cho cộng đồng dù lượn trong nước. Năm 2023, anh cùng đồng đội xuất sắc giành giải Nhất nội dung Hạ Cánh Chính Xác tại giải đấu MCC, khẳng định kỹ năng chuyên môn và bản lĩnh thi đấu vững vàng.",
+      "records": "14 năm kinh nghiệm, hơn 2.000 chuyến bay đôi an toàn. Top 5 phi công đời đầu của Việt Nam và đạt giải Nhất nội dung Hạ Cánh Chính Xác tại MCC 2023.",
+      "personality": "Minh Võ – 'phi công triệu like' với niềm đam mê bầu trời từ bé, lớn lên chỉ thích trò chuyện với mây và chơi đùa với gió. Bay cùng anh không chỉ là lên cao, mà còn lên luôn tâm trạng! View đẹp, tiếng cười rộn ràng, và năng lượng tích cực lan tỏa suốt chuyến đi. Anh truyền lửa nhẹ tênh mà chất lừ — khiến ai bay xong cũng chỉ muốn… bay thêm lần nữa cho đã!"
+    },
+    "pilot13": {
+      "name": "Toàn Nguyễn",
+      "nickname": "Rambo",
+      "role": "Phi công đội",
+      "des": "Hơn 10 năm cày gió cưỡi mây, gần 5.000 chuyến bay. Bay khắp Việt Nam: Kon Tum, Lý Sơn, Điện Biên… GPS còn chưa kịp load, anh đã đặt chân tới! Dù lượn với anh không chỉ là đam mê — là phong cách sống trên mây.",
+      "img": "Toan Nguyen_team Pilot.jpg",
+      "fullname": "TOÀN NGUYỄN",
+      "experience": "Với hơn 10 năm kinh nghiệm chinh phục bầu trời và gần 5.000 chuyến bay đơn cùng bay đôi, anh là một trong những phi công giàu trải nghiệm và đáng tin cậy nhất tại Việt Nam. Tốt nghiệp khóa huấn luyện an toàn bay đạt tiêu chuẩn quốc tế. Đã từng bay qua hầu hết các điểm dù lượn nổi tiếng trong nước như Kon Tum, Đắk Nông, Nha Trang, Lý Sơn, Điện Biên Phủ. Thường xuyên tham gia các giải thi đấu hạ cánh chính xác tại Hà Nội, Mù Cang Chải và Đà Nẵng, khẳng định kỹ năng bay vững vàng và bản lĩnh thi đấu ổn định.",
+      "records": "Hơn 10 năm kinh nghiệm và gần 5.000 chuyến bay trên khắp Việt Nam. Tham dự hầu hết các giải đấu hạ cánh chính xác và hoàn thành khóa huấn luyện an toàn bay đạt chuẩn quốc tế.",
+      "personality": "Bay cùng Toàn Nguyễn – 'Rambo' của bầu trời, bạn không chỉ được 'cưỡi mây' mà còn được cười mỏi miệng! Anh ấy bay như gió, nói như gió, mang lại cảm giác vừa an toàn vừa vui không tưởng. Bay xong, ai cũng muốn gọi anh làm 'phi công ruột' cho mọi chuyến đi. Đảm bảo một điều: lên cùng Toàn, xuống không muốn rời!"
+    },
     "pilot14": {
-      "name": "Subash Thapa",
-      "nickname": "Kỵ sỹ không trung",
-      "role": "Huấn luyện viên dù lượn chuyên nghiệp",
-      "des": "Huấn luyện viên dù lượn chuyên nghiệp đã đào tạo rất nhiều phi công dù lượn trên thế giới. Anh không chỉ có đam mê dù lượn mà còn yêu thích âm nhạc, chính vì thế mọi chuyến bay đôi cùng anh đều sống động và đầy cảm hứng.",
-      "img": "Subash Thapa_Team Pilot.jpg",
-      "fullname": "SUBASH THAPA",
-      "experience": "Anh là phi công trưởng, huấn luyện viên dù lượn và nhảy dù tại Pokhara. Đồng thời từng đảm nhiệm vị trí phi công trưởng tại Acro Paragliding và New Para World Paragliding. Sở hữu hơn 1.000 giờ bay tandem chuyên nghiệp và luôn đặt an toàn lên hàng đầu. Với hơn 3 năm kinh nghiệm hoạt động tại Việt Nam, Subash có kiến thức vững chắc về địa hình và điều kiện thời tiết tại các điểm bay.",
-      "records": "Hơn 1.000 giờ bay tandem chuyên nghiệp, từng giữ vai trò phi công trưởng tại nhiều tổ chức dù lượn uy tín và có 3+ năm hoạt động tại Việt Nam.",
-      "personality": "Subash Thapa không chỉ là huấn luyện viên dù lượn siêu đỉnh mà còn là 'DJ trên không' với tình yêu âm nhạc cháy bỏng, khiến mỗi chuyến bay đôi như một bữa tiệc vui nhộn giữa trời xanh. Anh luôn đảm bảo an toàn tuyệt đối, giúp bạn bay mà không phải lo lắng. Bay cùng anh, bạn không chỉ trải nghiệm sải cánh trên bầu trời mà còn có thêm một người bạn vui tính, tràn đầy năng lượng tích cực!"
+      "name": "Chiến Thắng",
+      "nickname": "Thắng thần sét",
+      "role": "Phi công đội",
+      "des": "7 năm sống cùng mây gió, hơn 1.500 chuyến bay đôi an toàn, 1.000+ giờ lơ lửng trên trời. Anh từng giữ kỷ lục bay đơn 9 tiếng rưỡi tại Việt Nam! “Càn quét” các giải đấu dù lượn từ Bắc chí Nam, phong độ luôn ở đỉnh cao.",
+      "img": "Chien Thang_Team Pilot.jpg",
+      "fullname": "CHIẾN THẮNG",
+      "experience": "Với 7 năm kinh nghiệm làm bạn cùng trời mây, anh đã thực hiện hơn 1.500 chuyến bay đôi an toàn và chuyên nghiệp, tích lũy hơn 1.000 giờ bay. Anh từng giữ kỷ lục Việt Nam #2 về thời gian bay đơn lâu nhất — 9 tiếng rưỡi liên tục, thể hiện sự bền bỉ và kỹ năng điều khiển dù xuất sắc. Am hiểu sâu sắc về kỹ thuật dù lượn và điều kiện khí tượng tại các điểm bay trên toàn quốc, anh luôn đảm bảo mỗi chuyến bay vừa an toàn vừa thăng hoa cảm xúc.",
+      "records": "Giữ kỷ lục Việt Nam #2 về thời gian bay đơn lâu nhất – 9 tiếng rưỡi liên tục. Hơn 1.500 chuyến bay đôi và hơn 1.000 giờ bay tích lũy trong 7 năm chinh phục bầu trời.",
+      "personality": "Chiến Thắng – 'Thắng thần sét', bay nhanh như tia chớp mà vẫn khiến bạn yên tâm tuyệt đối. Lơ lửng trên trời cùng anh, bạn sẽ cười tít mắt vì vui chẳng muốn xuống. Bay với anh không chỉ là trải nghiệm mà còn là chuyến phiêu lưu tràn ngập tiếng cười. Bay lâu đến mức mây cũng phải thán phục: 'Này, anh có nghỉ không đấy?'"
     }
   },
   "preNotice": {
-    "title": "Lưu Ý Trước Khi Bay",
+    "title": "Chuẩn bị trước khi bay",
     "subtitle": "Thông tin quan trọng trước chuyến bay của bạn",
     "items": {
+      "photoSupport": {
+        "title": "Hỗ trợ chụp ảnh trên không",
+        "description": "Phi công sẽ hỗ trợ góc chụp đẹp nhất trên không, bạn hãy nhắn phi công hỗ trợ chụp khoảnh khắc đẹp nhất!"
+      },
       "timing": {
-        "title": "Đến Sớm",
-        "description": "Vui lòng có mặt ít nhất 30 phút trước giờ bay đã đặt."
-      },
-      "clothing": {
-        "title": "Trang Phục Phù Hợp",
-        "description": "Mặc quần áo thể thao thoải mái và giày bít mũi. Tránh đồ rộng."
-      },
-      "footwear": {
-        "title": "Giày Dép Phù Hợp",
-        "description": "Không mang giày cao gót hoặc dép. Mang giày thể thao hoặc giày leo núi."
+        "title": "Có mặt đúng giờ",
+        "description": "Hãy có mặt trước giờ đón 5 phút để đảm bảo không chậm trễ"
       },
       "storage": {
-        "title": "Bộ Nhớ Điện Thoại",
-        "description": "Đảm bảo điện thoại có ít nhất 4GB dung lượng trống cho ảnh và video."
+        "title": "Bộ nhớ điện thoại",
+        "description": "Điện thoại cần trống tối thiểu 4GB để lưu ảnh/video sau chuyến bay"
+      },
+      "baggage": {
+        "title": "Túi xách cá nhân",
+        "description": "Được mang túi cá nhân nhỏ (1–2kg) đựng vật dụng cần thiết (điện thoại, chìa khóa, giấy tờ)"
+      },
+      "clothing": {
+        "title": "Trang phục phù hợp",
+        "description": "Trang phục thoải mái, thể thao (áo tay dài, quần dài); không mặc váy, không đi giày cao gót; nên mang giày thể thao hoặc giày leo núi (mẹo: đồ sáng màu lên hình rất đẹp)"
+      },
+      "beginner": {
+        "title": "Phù hợp cho người mới",
+        "description": "Phù hợp cho người bay lần đầu"
       },
       "weather": {
-        "title": "Phụ Thuộc Thời Tiết",
-        "description": "Chuyến bay phụ thuộc vào điều kiện thời tiết. Chúng tôi có thể đổi lịch vì an toàn."
+        "title": "Điều kiện thời tiết",
+        "description": "Chuyến bay phụ thuộc thời tiết (gió, mưa, sương mù). Nếu cần đổi lịch, khách sẽ được thông báo trước ít nhất 1 ngày, miễn phí; không muốn đổi lịch sẽ được hoàn tiền 100%"
       }
     },
     "locations": {
@@ -549,12 +557,12 @@
   },
   "pricing": {
     "title": "Giá bay",
-    "subtitle": "Chọn gói bay hoàn hảo cho bạn",
+    "subtitle": "Đặt chỗ trước - Thanh toán sau - Không yêu cầu đặt cọc",
     "packages": {
       "basic": {
         "name": "Gói Cơ Bản",
-        "price": "2.190k",
-        "priceUsd": "85 USD/lượt",
+        "price": "2.090k",
+        "priceUsd": "80 USD/lượt",
         "duration": "Thời gian: 20 phút",
         "weatherNote": "(Tuỳ vào điều kiện thời tiết)",
         "included": "Đã bao gồm:",
@@ -563,14 +571,14 @@
           "photoVideo": "Quay phim & chụp hình GOPRO",
           "drinks": "Menu đồ uống (Cà phê & trà miễn phí)",
           "insurance": "Bảo hiểm dù lượn",
-          "certificate": "Giấy chứng nhận"
+          "certificate": "Giấy chứng nhận tham gia trải nghiệm"
         }
       },
       "standard": {
         "name": "Gói Tiêu Chuẩn",
         "badge": "PHỔ BIẾN",
-        "price": "2.290k",
-        "priceUsd": "105 USD/lượt",
+        "price": "2.190k",
+        "priceUsd": "85 USD/lượt",
         "duration": "Thời gian: 30 phút",
         "weatherNote": "(Tuỳ vào điều kiện thời tiết)",
         "included": "Đã bao gồm:",
@@ -579,14 +587,14 @@
           "photoVideo": "Quay phim & chụp hình GOPRO",
           "drinks": "Menu đồ uống (Cà phê & trà miễn phí)",
           "insurance": "Bảo hiểm dù lượn",
-          "certificate": "Giấy chứng nhận",
+          "certificate": "Giấy chứng nhận tham gia trải nghiệm",
           "hotelTransfer": "Xe đón trả tại khách sạn"
         }
       },
       "premium": {
         "name": "Gói Premium",
-        "price": "3.090k",
-        "priceUsd": "140 USD/lượt",
+        "price": "2.990k",
+        "priceUsd": "113 USD/lượt",
         "duration": "Thời gian: 35 phút",
         "weatherNote": "(Tuỳ vào điều kiện thời tiết)",
         "included": "Đã bao gồm:",
@@ -595,7 +603,7 @@
           "photoVideo": "Quay phim & chụp hình GOPRO",
           "drinks": "Menu đồ uống (Cà phê & trà miễn phí)",
           "insurance": "Bảo hiểm dù lượn",
-          "certificate": "Giấy chứng nhận",
+          "certificate": "Giấy chứng nhận tham gia trải nghiệm",
           "hotelTransfer": "Xe đón trả tại khách sạn",
           "drone": "FLYCAM (DRONE camera)",
           "camera360": "Camera 360 độ"
@@ -636,7 +644,7 @@
     "address": "Địa Chỉ",
     "followUs": "Theo Dõi",
     "quickLinks": "Liên Kết Nhanh",
-    "copyright": "© 2024 Dù Lượn Sapa. Bảo lưu mọi quyền."
+    "copyright": "Đơn vị được cấp phép bay bởi Cục Tác chiến – Bộ Tổng Tham mưu, Bộ Quốc phòng Việt Nam.\nGiấy phép kinh doanh dù lượn số 02/GCN-SVHTT do Sở Văn hoá, Thể thao và Du lịch tỉnh Lào Cai cấp"
   },
   "validation": {
     "required": "Trường này là bắt buộc",

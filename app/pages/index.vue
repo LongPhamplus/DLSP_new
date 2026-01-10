@@ -12,9 +12,9 @@ const currentLocale = computed(() => locale.value || 'vi')
 const dbPosts = ref<any[]>([])
 const currentPostIndex = ref(0)
 
-const basicItemKeys = ['flight', 'photoVideo', 'drinks', 'insurance', 'certificate']
-const standardItemKeys = ['flight', 'photoVideo', 'drinks', 'insurance', 'certificate', 'hotelTransfer']
-const premiumItemKeys = ['flight', 'photoVideo', 'drinks', 'insurance', 'certificate', 'hotelTransfer', 'drone', 'camera360']
+const basicItemKeys = ['flight', 'photoVideo', 'insurance', 'certificate']
+const standardItemKeys = ['flight', 'photoVideo', 'insurance', 'certificate', 'hotelTransfer']
+const premiumItemKeys = ['flight', 'photoVideo', 'insurance', 'certificate', 'hotelTransfer', 'drone', 'camera360']
 
 const latestPosts = computed(() => {
   const posts = dbPosts.value.length > 0 ? dbPosts.value : postsStore.latestPosts
@@ -54,9 +54,7 @@ const previousPost = () => {
   }
 }
 
-
 const gallery = ref(galleryData)
-
 
 const handleImageError = (event: Event) => {
   const target = event.target as HTMLImageElement
@@ -84,10 +82,8 @@ const scrollToAbout = () => {
 
 // Fetch posts and setup scroll reveal animation
 onMounted(() => {
-  // Fetch posts from MongoDB
   fetchPostsFromDB()
 
-  // Scroll reveal animation
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -111,71 +107,120 @@ onMounted(() => {
 
 // SEO
 useHead({
-  title: 'Dù Lượn Sapa - Sapa Paragliding',
+  title: 'Sapa Paragliding',
   meta: [
     { name: 'description', content: 'Experience the dream of flying in Sapa - Book your paragliding adventure today' }
   ]
 })
 </script>
+
 <template>
-  <div>
+  <div class="min-h-screen">
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <!-- Background Video -->
       <div class="absolute inset-0">
         <video poster="/images/header-pic.jpeg" autoplay muted loop playsinline preload="metadata"
           class="w-full h-full object-cover">
-          <source src="/videos/header/header-low.mp4" type="video/mp4">
+          <source src="/videos/header/header_720p_new.mp4" type="video/mp4">
         </video>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/70"></div>
       </div>
 
       <!-- Hero Content -->
-      <div class="relative z-10 text-center text-white px-4 w-full max-w-7xl mx-auto">
+      <div class="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-400/30 mb-8 animate-fade-in">
+          <div class="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+          <span class="text-red-300 text-sm font-medium uppercase tracking-wider">
+            {{ currentLocale === 'vi' ? 'Trải nghiệm dù lượn tuyệt vời' : 'Amazing Paragliding Experience' }}
+          </span>
+        </div>
+
+        <!-- Main Title -->
         <h1
-          class="text-[50px] sm:text-[70px] md:text-[90px] lg:text-[120px] font-black leading-none mb-6 text-shadow animate-fade-in uppercase tracking-wider hero-title">
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-6 animate-fade-in uppercase tracking-wider">
           {{ $t('hero.title') }}
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-shadow animate-fade-in-delay">
+
+        <!-- Subtitle -->
+        <p class="text-lg md:text-xl mb-10 text-slate-200 max-w-4xl mx-auto leading-relaxed animate-fade-in-delay">
           {{ $t('hero.subtitle') }}
         </p>
+
+
+        <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
-          <button @click="localizedNavigateTo('/booking')" class="btn-primary text-lg px-8 py-4">
+          <button @click="localizedNavigateTo('/booking')"
+            class="px-10 py-4 bg-red-500 text-white font-bold uppercase tracking-wider hover:bg-red-600 transition-all duration-300 shadow-lg shadow-red-500/30">
             {{ $t('hero.bookNow') }}
           </button>
-          <button @click="scrollToAbout" class="btn-secondary text-lg px-8 py-4 bg-white/90 hover:bg-white">
+          <button @click="scrollToAbout"
+            class="px-10 py-4 border-2 border-white/40 text-white font-bold uppercase tracking-wider hover:bg-white/10 transition-all duration-300">
             {{ $t('buttons.learnMore') }}
           </button>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto animate-fade-in-delay-2">
+          <div class="text-center">
+            <p class="text-4xl font-black text-red-400">10+</p>
+            <p class="text-sm text-slate-400 uppercase tracking-wider mt-1">{{ currentLocale === 'vi' ? 'Phi công' :
+              'Pilots' }}</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl font-black text-red-400">15K+</p>
+            <p class="text-sm text-slate-400 uppercase tracking-wider mt-1">{{ currentLocale === 'vi' ? 'Chuyến bay' :
+              'Flights' }}</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl font-black text-red-400">100%</p>
+            <p class="text-sm text-slate-400 uppercase tracking-wider mt-1">{{ currentLocale === 'vi' ? 'An toàn' :
+              'Safety' }}</p>
+          </div>
         </div>
       </div>
 
       <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/60">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>
     </section>
 
-    <!-- Gallery Section - Khoảnh khắc dù lượn -->
-    <section id="about" class="py-20 bg-white">
-      <div class="container-custom">
-        <div class="text-center mb-12 scroll-reveal">
-          <h2 class="section-title">Khoảnh khắc dù lượn</h2>
+    <!-- Gallery Section -->
+    <section id="about" class="py-20 lg:py-32 bg-gradient-to-b from-slate-50 to-white">
+      <div class="container mx-auto px-6 lg:px-12">
+        <!-- Section Header -->
+        <div class="flex items-center gap-4 mb-12 scroll-reveal">
+          <div class="w-12 h-12 flex items-center justify-center">
+            <img src="/images/Sapa_logo.png" class="w-full h-full object-contain" alt="Sapa Logo">
+          </div>
+          <div>
+            <h2 class="text-3xl lg:text-4xl font-black text-slate-900">
+              {{ currentLocale === 'vi' ? 'Khoảnh Khắc Dù Lượn' : 'Paragliding Moments' }}
+            </h2>
+            <p class="text-slate-500">{{ currentLocale === 'vi' ? 'Những trải nghiệm đáng nhớ' : 'Memorable experiences'
+              }}</p>
+          </div>
         </div>
 
+        <!-- Gallery Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div v-for="(item, index) in gallery" :key="item.id"
-            class="relative group overflow-hidden rounded-lg cursor-pointer aspect-square scroll-reveal"
+            class="relative group overflow-hidden cursor-pointer aspect-square scroll-reveal"
             :data-delay="(index % 4) * 50">
             <img :src="`${item.image}`" :alt="item.title"
-              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"
               @error="handleImageError" />
+            <!-- Overlay -->
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h3 class="font-bold">{{ item.title }}</h3>
-                <p class="text-sm">{{ item.description }}</p>
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+                <h3 class="font-bold text-lg">{{ item.title }}</h3>
+                <p class="text-sm text-slate-300">{{ item.description }}</p>
               </div>
             </div>
           </div>
@@ -183,161 +228,191 @@ useHead({
       </div>
     </section>
 
-    <!-- Services Section - Giá bay -->
-    <section class="relative isolate pb-32 min-h-[600px] overflow-hidden z-10">
-      <!-- Background Layer -->
-      <div class="absolute inset-0 z-0">
-        <img src="/images/svg/section-backgroud.svg" alt="background" class="w-full h-full object-cover">
+    <!-- Pricing Section -->
+    <section class="py-20 lg:py-32 bg-slate-900 relative overflow-hidden ">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute inset-0"
+          style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
       </div>
-      <div class="container-custom relative z-10">
-        <div class="text-center mb-12 scroll-reveal">
-          <h2 class="section-title">{{ $t('pricing.title') }}</h2>
-          <p class="text-xl text-gray-600">{{ $t('pricing.subtitle') }}</p>
+
+      <div class="container mx-auto px-6 lg:px-12 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16 scroll-reveal">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-400/30 mb-6">
+            <span class="text-red-300 text-sm font-medium uppercase tracking-wider">{{ $t('pricing.title') }}</span>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-black text-white mb-4">
+            {{ currentLocale === 'vi' ? 'Bảng Giá Dịch Vụ' : 'Our Pricing Plans' }}
+          </h2>
+          <p class="text-xl text-slate-400 max-w-2xl mx-auto">{{ $t('pricing.subtitle') }}</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pricing Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <!-- Basic Package -->
-          <div class="card hover:scale-105 transition-transform duration-300 scroll-reveal flex flex-col"
-            data-delay="100">
-            <div class="p-6 flex flex-col flex-grow">
-              <h3 class="text-2xl font-bold mb-2 text-green-600">{{ $t('pricing.packages.basic.name') }}</h3>
-              <div class="mb-4">
-                <p class="text-3xl font-bold text-gray-900">{{ $t('pricing.packages.basic.price') }}</p>
-                <p class="text-sm text-gray-600">({{ $t('pricing.packages.basic.priceUsd') }})</p>
+          <div class="bg-white border border-slate-200 shadow-xl p-8 scroll-reveal flex flex-col" data-delay="100">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">{{ $t('pricing.packages.basic.name') }}</h3>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-black text-red-600">{{ $t('pricing.packages.basic.price') }}</span>
               </div>
-
-              <div class="mb-4 pb-4 border-b">
-                <p class="text-sm font-semibold text-gray-700 mb-2">{{ $t('pricing.packages.basic.duration') }}</p>
-                <p class="text-xs text-gray-600">{{ $t('pricing.packages.basic.weatherNote') }}</p>
-              </div>
-
-              <div class="mb-4 pb-4 border-b flex-grow">
-                <p class="text-sm font-semibold text-gray-700 mb-2">{{ $t('pricing.packages.basic.included') }}</p>
-                <ul class="text-xs text-gray-600 space-y-1">
-                  <li v-for="key in basicItemKeys" :key="key">• {{ $t(`pricing.packages.basic.items.${key}`) }}</li>
-                </ul>
-              </div>
-
-              <button @click="localizedNavigateTo('/booking')" class="btn-primary w-full text-center block mt-auto">
-                {{ $t('buttons.book') }}
-              </button>
+              <p class="text-sm text-slate-500 mt-1">{{ $t('pricing.packages.basic.priceUsd') }}</p>
             </div>
+
+            <div class="border-t border-slate-200 pt-6 mb-6">
+              <p class="text-sm font-semibold text-slate-700 mb-2">{{ $t('pricing.packages.basic.duration') }}</p>
+              <p class="text-xs text-slate-500">{{ $t('pricing.packages.basic.weatherNote') }}</p>
+            </div>
+
+            <div class="flex-grow mb-6">
+              <p class="text-sm font-semibold text-slate-700 mb-3">{{ $t('pricing.packages.basic.included') }}</p>
+              <ul class="space-y-2">
+                <li v-for="key in basicItemKeys" :key="key" class="flex items-start gap-2 text-sm text-slate-600">
+                  <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {{ $t(`pricing.packages.basic.items.${key}`) }}
+                </li>
+              </ul>
+            </div>
+
+            <button @click="localizedNavigateTo('/booking')"
+              class="w-full py-4 border-2 border-red-500 text-red-600 font-bold uppercase tracking-wider hover:bg-red-500 hover:text-white transition-all duration-300">
+              {{ $t('buttons.book') }}
+            </button>
           </div>
 
-          <!-- Standard Package -->
-          <div
-            class="card hover:scale-105 transition-transform duration-300 scroll-reveal border-2 border-green-500 flex flex-col"
-            data-delay="200">
-            <div class="p-6 flex flex-col flex-grow">
-              <div class="mb-2">
-                <span class="inline-block px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">{{
-                  $t('pricing.packages.standard.badge') }}</span>
-              </div>
-              <h3 class="text-2xl font-bold mb-2 text-green-600">{{ $t('pricing.packages.standard.name') }}</h3>
-              <div class="mb-4">
-                <p class="text-3xl font-bold text-gray-900">{{ $t('pricing.packages.standard.price') }}</p>
-                <p class="text-sm text-gray-600">({{ $t('pricing.packages.standard.priceUsd') }})</p>
-              </div>
-
-              <div class="mb-4 pb-4 border-b">
-                <p class="text-sm font-semibold text-gray-700 mb-2">{{ $t('pricing.packages.standard.duration') }}</p>
-                <p class="text-xs text-gray-600">{{ $t('pricing.packages.standard.weatherNote') }}</p>
-              </div>
-
-              <div class="mb-4 pb-4 border-b flex-grow">
-                <p class="text-sm font-semibold text-gray-700 mb-2">{{ $t('pricing.packages.standard.included') }}</p>
-                <ul class="text-xs text-gray-600 space-y-1">
-                  <li v-for="key in standardItemKeys" :key="key">• {{ $t(`pricing.packages.standard.items.${key}`) }}
-                  </li>
-                </ul>
-              </div>
-
-              <button @click="localizedNavigateTo('/booking')" class="btn-primary w-full text-center block mt-auto">
-                {{ $t('buttons.book') }}
-              </button>
+          <!-- Standard Package (Featured) -->
+          <div class="bg-red-600 shadow-2xl p-8 scroll-reveal flex flex-col relative" data-delay="200">
+            <!-- Popular Badge -->
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span class="px-4 py-2 bg-amber-400 text-slate-900 text-xs font-bold uppercase tracking-wider">
+                {{ $t('pricing.packages.standard.badge') }}
+              </span>
             </div>
+
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-white mb-2">{{ $t('pricing.packages.standard.name') }}</h3>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-black text-white">{{ $t('pricing.packages.standard.price') }}</span>
+              </div>
+              <p class="text-sm text-red-200 mt-1">{{ $t('pricing.packages.standard.priceUsd') }}</p>
+            </div>
+
+            <div class="border-t border-red-500 pt-6 mb-6">
+              <p class="text-sm font-semibold text-white mb-2">{{ $t('pricing.packages.standard.duration') }}</p>
+              <p class="text-xs text-red-200">{{ $t('pricing.packages.standard.weatherNote') }}</p>
+            </div>
+
+            <div class="flex-grow mb-6">
+              <p class="text-sm font-semibold text-white mb-3">{{ $t('pricing.packages.standard.included') }}</p>
+              <ul class="space-y-2">
+                <li v-for="key in standardItemKeys" :key="key" class="flex items-start gap-2 text-sm text-red-100">
+                  <svg class="w-5 h-5 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {{ $t(`pricing.packages.standard.items.${key}`) }}
+                </li>
+              </ul>
+            </div>
+
+            <button @click="localizedNavigateTo('/booking')"
+              class="w-full py-4 bg-white text-red-600 font-bold uppercase tracking-wider hover:bg-slate-100 transition-all duration-300">
+              {{ $t('buttons.book') }}
+            </button>
           </div>
 
           <!-- Premium Package -->
-          <div class="card hover:scale-105 transition-transform duration-300 scroll-reveal flex flex-col"
-            data-delay="300">
-            <div class="p-6 flex flex-col flex-grow">
-              <h3 class="text-2xl font-bold mb-2 text-green-600">{{ $t('pricing.packages.premium.name') }}</h3>
-              <div class="mb-4">
-                <p class="text-3xl font-bold text-gray-900">{{ $t('pricing.packages.premium.price') }}</p>
-                <p class="text-sm text-gray-600">({{ $t('pricing.packages.premium.priceUsd') }})</p>
+          <div class="bg-white border border-slate-200 shadow-xl p-8 scroll-reveal flex flex-col" data-delay="300">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">{{ $t('pricing.packages.premium.name') }}</h3>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-black text-red-600">{{ $t('pricing.packages.premium.price') }}</span>
               </div>
-
-              <div class="mb-4 pb-4 border-b">
-                <p class="text-sm font-semibold text-gray-700 mb-2">{{ $t('pricing.packages.premium.duration') }}</p>
-                <p class="text-xs text-gray-600">{{ $t('pricing.packages.premium.weatherNote') }}</p>
-              </div>
-
-              <div class="mb-4 pb-4 border-b flex-grow">
-                <p class="text-sm font-semibold text-gray-700 mb-2">{{ $t('pricing.packages.premium.included') }}</p>
-                <ul class="text-xs text-gray-600 space-y-1">
-                  <li v-for="key in premiumItemKeys" :key="key">• {{ $t(`pricing.packages.premium.items.${key}`) }}</li>
-                </ul>
-              </div>
-
-              <button @click="localizedNavigateTo('/booking')" class="btn-primary w-full text-center block mt-auto">
-                {{ $t('buttons.book') }}
-              </button>
+              <p class="text-sm text-slate-500 mt-1">{{ $t('pricing.packages.premium.priceUsd') }}</p>
             </div>
+
+            <div class="border-t border-slate-200 pt-6 mb-6">
+              <p class="text-sm font-semibold text-slate-700 mb-2">{{ $t('pricing.packages.premium.duration') }}</p>
+              <p class="text-xs text-slate-500">{{ $t('pricing.packages.premium.weatherNote') }}</p>
+            </div>
+
+            <div class="flex-grow mb-6">
+              <p class="text-sm font-semibold text-slate-700 mb-3">{{ $t('pricing.packages.premium.included') }}</p>
+              <ul class="space-y-2">
+                <li v-for="key in premiumItemKeys" :key="key" class="flex items-start gap-2 text-sm text-slate-600">
+                  <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {{ $t(`pricing.packages.premium.items.${key}`) }}
+                </li>
+              </ul>
+            </div>
+
+            <button @click="localizedNavigateTo('/booking')"
+              class="w-full py-4 border-2 border-red-500 text-red-600 font-bold uppercase tracking-wider hover:bg-red-500 hover:text-white transition-all duration-300">
+              {{ $t('buttons.book') }}
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="relative isolate pt-48 pb-20 text-white overflow-hidden z-20"
-      style="background-image: url('/images/svg/hero-shape.svg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-      <div class="container-custom pb-20">
-        <div class="text-center mb-12 scroll-reveal">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">{{ $t('posts.latestPosts') }}</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            {{ $t('posts.latestPostsDescription') }}
-          </p>
+    <!-- Blog Section -->
+    <section class="py-20 lg:py-32 bg-gradient-to-b from-slate-50 to-white">
+      <div class="container mx-auto px-6 lg:px-12">
+        <!-- Section Header -->
+        <div class="flex items-center justify-between mb-12 scroll-reveal">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-red-500 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-3xl lg:text-4xl font-black text-slate-900">{{ $t('posts.latestPosts') }}</h2>
+              <p class="text-slate-500">{{ $t('posts.latestPostsDescription') }}</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Posts Carousel -->
+        <!-- Posts Grid -->
         <div class="relative">
-          <!-- Carousel Container -->
-          <div class="overflow-hidden rounded-2xl ">
-            <div class="flex transition-transform duration-500 ease-out m-[40px]"
+          <div class="overflow-hidden">
+            <div class="flex transition-transform duration-500 ease-out gap-6"
               :style="{ transform: `translateX(-${currentPostIndex * 100}%)` }">
-              <div v-for="(post, index) in latestPosts" :key="post.id" class="w-full md:w-1/3 flex-shrink-0 px-3">
+              <div v-for="(post, index) in latestPosts" :key="post.id" class="w-full md:w-1/3 flex-shrink-0">
                 <div @click="navigateToPost(post.id)"
-                  class="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 h-full hover:-translate-y-2 group">
-                  <!-- Image Container with Badge -->
-                  <div class="relative h-56 overflow-hidden bg-gradient-to-br from-green-400 to-green-600">
+                  class="bg-white border border-slate-200 shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 group h-full">
+                  <!-- Image -->
+                  <div class="relative aspect-[16/10] overflow-hidden">
                     <img :src="post.image" :alt="currentLocale === 'vi' ? post.titleVi : post.title"
-                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    <!-- Overlay -->
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <!-- Category Badge -->
                     <div class="absolute top-4 right-4">
-                      <span class="px-4 py-2 text-xs font-bold text-white bg-green-600 rounded-full shadow-lg">
+                      <span class="px-3 py-1.5 text-xs font-bold text-white bg-red-600">
                         {{ post.category }}
                       </span>
                     </div>
-
-                    <!-- New Badge (for first post) -->
+                    <!-- New Badge -->
                     <div v-if="index === 0" class="absolute top-4 left-4">
-                      <span
-                        class="px-4 py-2 text-xs font-bold text-white bg-red-500 rounded-full shadow-lg animate-pulse">
-                        🆕 MỚI NHẤT
+                      <span class="px-3 py-1.5 text-xs font-bold text-white bg-amber-500 animate-pulse">
+                        {{ currentLocale === 'vi' ? 'MỚI' : 'NEW' }}
                       </span>
                     </div>
                   </div>
 
                   <!-- Content -->
-                  <div class="p-6 flex flex-col h-full">
+                  <div class="p-6">
                     <!-- Date -->
-                    <div class="flex items-center text-sm text-gray-500 mb-3">
-                      <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-center text-sm text-slate-500 mb-3">
+                      <svg class="w-4 h-4 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
@@ -346,20 +421,20 @@ useHead({
 
                     <!-- Title -->
                     <h3
-                      class="text-2xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-green-600 transition-colors">
+                      class="text-xl font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-red-600 transition-colors">
                       {{ currentLocale === 'vi' ? post.titleVi : post.title }}
                     </h3>
 
                     <!-- Excerpt -->
-                    <p class="text-gray-600 mb-6 line-clamp-3 flex-grow text-sm leading-relaxed">
+                    <p class="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-4">
                       {{ currentLocale === 'vi' ? post.excerptVi : post.excerpt }}
                     </p>
 
-                    <!-- Read More Link -->
+                    <!-- Read More -->
                     <div
-                      class="flex items-center text-green-600 font-bold text-sm group-hover:text-green-700 transition-colors">
+                      class="flex items-center text-red-600 font-bold text-sm group-hover:text-red-700 transition-colors">
                       {{ $t('posts.readMore') }}
-                      <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                      <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                       </svg>
@@ -370,47 +445,254 @@ useHead({
             </div>
           </div>
 
-          <!-- Navigation Controls -->
-          <div v-if="latestPosts.length > 3" class="flex justify-center items-center gap-6 mt-12">
-            <!-- Previous Button -->
+          <!-- Navigation -->
+          <div v-if="latestPosts.length > 3" class="flex justify-center items-center gap-6 mt-10">
             <button @click="previousPost"
-              class="p-3 rounded-full bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed hover:scale-110"
-              :disabled="currentPostIndex === 0" title="Bài viết trước">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              class="w-12 h-12 flex items-center justify-center bg-red-600 text-white hover:bg-red-700 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+              :disabled="currentPostIndex === 0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
 
-            <!-- Dots Indicator -->
-            <div class="flex gap-3">
+            <div class="flex gap-2">
               <button v-for="(_, index) in Math.ceil(latestPosts.length / 3)" :key="index"
                 @click="currentPostIndex = index" :class="[
-                  'rounded-full transition-all duration-300',
-                  currentPostIndex === index
-                    ? 'w-8 h-3 bg-green-600 shadow-lg'
-                    : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
-                ]" :title="`Trang ${index + 1}`" />
+                  'h-2 transition-all duration-300',
+                  currentPostIndex === index ? 'w-8 bg-red-600' : 'w-2 bg-slate-300 hover:bg-slate-400'
+                ]" />
             </div>
 
-            <!-- Next Button -->
             <button @click="nextPost"
-              class="p-3 rounded-full bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed hover:scale-110"
-              :disabled="currentPostIndex >= Math.ceil(latestPosts.length / 3) - 1" title="Bài viết tiếp theo">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              class="w-12 h-12 flex items-center justify-center bg-red-600 text-white hover:bg-red-700 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+              :disabled="currentPostIndex >= Math.ceil(latestPosts.length / 3) - 1">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </button>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="relative z-10 container-custom text-center scroll-reveal">
-        <h2 class="text-4xl font-bold mb-6">Ready for Your Adventure?</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto">
-          Book your paragliding experience today and create memories that will last a lifetime
+    <!-- Contact Info Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-slate-100 via-white to-slate-50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <!-- Section Header -->
+        <div class="text-center mb-12 scroll-reveal">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-400/20 rounded-full mb-4">
+            <span class="text-red-500 text-sm font-medium uppercase tracking-wider">
+              {{ currentLocale === 'vi' ? 'Liên hệ' : 'Contact' }}
+            </span>
+          </div>
+          <h2 class="text-3xl lg:text-4xl font-black text-slate-900 mb-3">
+            {{ currentLocale === 'vi' ? 'Thông Tin Liên Hệ' : 'Contact Information' }}
+          </h2>
+          <p class="text-slate-500 max-w-xl mx-auto">
+            {{ currentLocale === 'vi' ?
+              'Kết nối với chúng tôi qua các kênh sau' :
+              'Connect with us through these channels' }}
+          </p>
+        </div>
+
+        <!-- Row 1: Social Media - 5 cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+          <!-- Zalo -->
+          <div
+            class="contact-card bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 scroll-reveal group"
+            data-delay="0">
+            <div
+              class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.373 0 0 4.925 0 11c0 2.882 1.157 5.527 3.058 7.55C2.725 20.36 1.92 22.09 1.92 22.09s2.63-.78 4.67-2.01C8.35 21.01 10.13 22 12 22c6.627 0 12-4.925 12-11S18.627 0 12 0z" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 text-center mb-1">Zalo</h3>
+            <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ?
+              'Chat trực tiếp' :
+              'Direct chat' }}</p>
+            <a href="https://zalo.me/0338338138" target="_blank" rel="noopener noreferrer"
+              class="block w-full py-2 bg-blue-500 hover:bg-blue-600 text-white text-xs font-semibold text-center rounded-lg transition-colors">
+              {{ currentLocale === 'vi' ? 'Nhắn tin' : 'Message' }}
+            </a>
+          </div>
+
+          <!-- Facebook -->
+          <div
+            class="contact-card bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 scroll-reveal group"
+            data-delay="50">
+            <div
+              class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 text-center mb-1">Facebook</h3>
+            <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ? 'Fanpage chính thức' :
+              'Official fanpage' }}</p>
+            <a href="https://facebook.com/dulluonsapa" target="_blank" rel="noopener noreferrer"
+              class="block w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold text-center rounded-lg transition-colors">
+              {{ currentLocale === 'vi' ? 'Theo dõi' : 'Follow' }}
+            </a>
+          </div>
+
+          <!-- TikTok -->
+          <div
+            class="contact-card bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 scroll-reveal group"
+            data-delay="100">
+            <div
+              class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 text-center mb-1">TikTok</h3>
+            <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ?
+              'Video bay lượn' : 'Flying videos' }}</p>
+            <a href="https://tiktok.com/@dulluonsapa" target="_blank" rel="noopener noreferrer"
+              class="block w-full py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold text-center rounded-lg transition-colors">
+              {{ currentLocale === 'vi' ? 'Theo dõi' : 'Follow' }}
+            </a>
+          </div>
+
+          <!-- YouTube -->
+          <div
+            class="contact-card bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 scroll-reveal group"
+            data-delay="150">
+            <div
+              class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 text-center mb-1">YouTube</h3>
+            <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ?
+              'Kênh chính thức' : 'Official channel' }}</p>
+            <a href="https://youtube.com/@dulluonsapa" target="_blank" rel="noopener noreferrer"
+              class="block w-full py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold text-center rounded-lg transition-colors">
+              {{ currentLocale === 'vi' ? 'Đăng ký' : 'Subscribe' }}
+            </a>
+          </div>
+
+          <!-- Instagram -->
+          <div
+            class="contact-card bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 scroll-reveal group col-span-2 sm:col-span-1"
+            data-delay="200">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 text-center mb-1">Instagram</h3>
+            <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ?
+              'Ảnh đẹp mỗi ngày' : 'Daily photos' }}</p>
+            <a href="https://instagram.com/dulluonsapa" target="_blank" rel="noopener noreferrer"
+              class="block w-full py-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 hover:opacity-90 text-white text-xs font-semibold text-center rounded-lg transition-colors">
+              {{ currentLocale === 'vi' ? 'Theo dõi' : 'Follow' }}
+            </a>
+          </div>
+        </div>
+
+        <!-- Row 2: Contact Details - 4 cards (larger) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Hotline -->
+          <div
+            class="contact-card bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 scroll-reveal"
+            data-delay="250">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 text-center mb-3">
+              {{ currentLocale === 'vi' ? 'Hotline 24/7' : 'Hotline 24/7' }}
+            </h3>
+            <div class="space-y-2 text-center">
+              <a href="tel:+84386887489" class="block text-slate-600 text-sm hover:text-green-600 transition-colors">
+                <span class="font-medium">Ms. Judy:</span> +84 386 887 489
+              </a>
+              <a href="tel:+84776499562" class="block text-slate-600 text-sm hover:text-green-600 transition-colors">
+                <span class="font-medium">Ms. Linh:</span> +84 776 499 562
+              </a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <a href="mailto:sapa.paragliding@gmail.com"
+            class="contact-card bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 scroll-reveal"
+            data-delay="300">
+            <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 text-center mb-3">Email</h3>
+            <p class="text-slate-600 text-sm text-center break-all">sapa.paragliding@gmail.com</p>
+          </a>
+
+          <!-- Office Address -->
+          <div
+            class="contact-card bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 scroll-reveal"
+            data-delay="350">
+            <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 text-center mb-3">
+              {{ currentLocale === 'vi' ? 'Địa chỉ' : 'Address' }}
+            </h3>
+            <p class="text-slate-600 text-sm text-center">Sapa, Lao Cai, Vietnam</p>
+          </div>
+
+          <!-- Working Hours -->
+          <div
+            class="contact-card bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 scroll-reveal"
+            data-delay="400">
+            <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 text-center mb-3">
+              {{ currentLocale === 'vi' ? 'Giờ bay' : 'Flight Hours' }}
+            </h3>
+            <p class="text-slate-600 text-sm text-center">7:00 AM - 6:00 PM</p>
+            <p class="text-slate-400 text-xs text-center mt-1">
+              {{ currentLocale === 'vi' ? '(Tùy thời tiết)' : '(Weather dependent)' }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="pt-[10rem] pb-20 bg-gray-50"
+      style="background-image: url('/images/svg/hero-shape-short.svg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <div class="container mx-auto px-6 lg:px-12 text-center scroll-reveal">
+        <h2 class="text-4xl lg:text-5xl font-black text-white mb-6">
+          {{ currentLocale === 'vi' ? 'Sẵn Sàng Cho Cuộc Phiêu Lưu?' : 'Ready for Your Adventure?' }}
+        </h2>
+        <p class="text-xl text-red-100 mb-10 max-w-2xl mx-auto">
+          {{ currentLocale === 'vi' ?
+            'Đặt lịch bay ngay hôm nay và tạo nên những kỷ niệm đáng nhớ' :
+            'Book your paragliding experience today and create memories that will last a lifetime' }}
         </p>
         <button @click="localizedNavigateTo('/booking')"
-          class="btn-primary bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-4 inline-block">
+          class="px-12 py-5 bg-white text-red-600 font-bold uppercase tracking-wider hover:bg-slate-100 transition-all duration-300 shadow-lg">
           {{ $t('hero.bookNow') }}
         </button>
       </div>
@@ -431,36 +713,8 @@ useHead({
   }
 }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .animate-fade-in {
   animation: fade-in 1s ease-out;
-}
-
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  line-clamp: 2;
-}
-
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  line-clamp: 3;
 }
 
 .animate-fade-in-delay {
@@ -471,7 +725,20 @@ useHead({
   animation: fade-in 1s ease-out 0.6s both;
 }
 
-/* Scroll Reveal Animations */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -481,15 +748,5 @@ useHead({
 .scroll-reveal.revealed {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Hero Title - Bold & Strong Typography */
-.hero-title {
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
-  text-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.4),
-    0 8px 16px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.2);
-  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.4));
 }
 </style>

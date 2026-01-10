@@ -4,8 +4,7 @@
       class="bg-white/10 backdrop-blur-sm px-2 sm:px-3 py-1.5 sm:py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
       <div class="flex flex-col gap-2">
         <!-- Current Language (Always Visible) -->
-        <button
-          class="p-2 rounded-full bg-green-500 shadow-md scale-110 ring-1 ring-green-300 transition-all duration-200"
+        <button class="p-2 rounded-full bg-red-500 shadow-md scale-110 ring-1 ring-red-300 transition-all duration-200"
           :title="currentLocaleName">
           <component :is="getFlagSvg(currentLocale)" class="w-6 h-6" />
         </button>

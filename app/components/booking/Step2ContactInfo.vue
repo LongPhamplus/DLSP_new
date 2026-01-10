@@ -6,6 +6,37 @@
     </div>
 
     <form @submit.prevent="handleNext" class="space-y-6">
+      <!-- Date and Time -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">
+            {{ $t('booking.fields.date') }} *
+          </label>
+          <DateInput v-model="formData.preferredDate" :min="minDate" required />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">
+            {{ $t('booking.fields.time') }}
+          </label>
+          <select v-model="formData.preferredTime" class="input-field">
+            <option value="">{{ $t('booking.step2Details.selectTime') }}</option>
+            <option value="06:00">06:00 AM</option>
+            <option value="07:00">07:00 AM</option>
+            <option value="08:00">08:00 AM</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="13:00">01:00 PM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="15:00">03:00 PM</option>
+            <option value="16:00">04:00 PM</option>
+            <option value="17:00">05:00 PM</option>
+            <option value="18:00">06:00 PM</option>
+          </select>
+        </div>
+      </div>
       <!-- Full Name -->
       <div>
         <label class="block text-sm font-medium text-gray-700 mb-2">
@@ -31,36 +62,37 @@
         </label>
         <div class="flex gap-2">
           <!-- Country Code Selector -->
-          <select v-model="formData.countryCode" required class="input-field w-40 flex-shrink-0">
-            <option value="" disabled>🌐 Code</option>
-            <option value="+84">🇻🇳 +84</option>
-            <option value="+1">🇺🇸 +1</option>
-            <option value="+44">🇬🇧 +44</option>
-            <option value="+33">🇫🇷 +33</option>
-            <option value="+49">🇩🇪 +49</option>
-            <option value="+7">🇷🇺 +7</option>
-            <option value="+81">🇯🇵 +81</option>
-            <option value="+82">🇰🇷 +82</option>
-            <option value="+86">🇨🇳 +86</option>
-            <option value="+61">🇦🇺 +61</option>
-            <option value="+65">🇸🇬 +65</option>
-            <option value="+66">🇹🇭 +66</option>
-            <option value="+60">🇲🇾 +60</option>
-            <option value="+62">🇮🇩 +62</option>
-            <option value="+63">🇵🇭 +63</option>
-            <option value="+91">🇮🇳 +91</option>
-            <option value="+971">🇦🇪 +971</option>
-            <option value="+39">🇮🇹 +39</option>
-            <option value="+34">🇪🇸 +34</option>
-            <option value="+31">🇳🇱 +31</option>
-            <option value="+46">🇸🇪 +46</option>
-            <option value="+47">🇳🇴 +47</option>
-            <option value="+45">🇩🇰 +45</option>
-            <option value="+41">🇨🇭 +41</option>
-            <option value="+48">🇵🇱 +48</option>
-            <option value="+55">🇧🇷 +55</option>
-            <option value="+52">🇲🇽 +52</option>
-            <option value="+64">🇳🇿 +64</option>
+          <select v-model="formData.countryCode" required class="input-field w-80 flex-shrink-0">
+            <option value="" disabled>🌐 CountryCode</option>
+            <option value="+84">🇻🇳 Vietnam (+84)</option>
+            <option value="+1">🇺🇸 United States (+1)</option>
+            <option value="+44">🇬🇧 United Kingdom (+44)</option>
+            <option value="+33">🇫🇷 France (+33)</option>
+            <option value="+49">🇩🇪 Germany (+49)</option>
+            <option value="+7">🇷🇺 Russia (+7)</option>
+            <option value="+81">🇯🇵 Japan (+81)</option>
+            <option value="+82">🇰🇷 South Korea (+82)</option>
+            <option value="+86">🇨🇳 China (+86)</option>
+            <option value="+61">🇦🇺 Australia (+61)</option>
+            <option value="+65">🇸🇬 Singapore (+65)</option>
+            <option value="+66">🇹🇭 Thailand (+66)</option>
+            <option value="+60">🇲🇾 Malaysia (+60)</option>
+            <option value="+62">🇮🇩 Indonesia (+62)</option>
+            <option value="+63">🇵🇭 Philippines (+63)</option>
+            <option value="+91">🇮🇳 India (+91)</option>
+            <option value="+971">🇦🇪 United Arab Emirates (+971)</option>
+            <option value="+39">🇮🇹 Italy (+39)</option>
+            <option value="+34">🇪🇸 Spain (+34)</option>
+            <option value="+31">🇳🇱 Netherlands (+31)</option>
+            <option value="+46">🇸🇪 Sweden (+46)</option>
+            <option value="+47">🇳🇴 Norway (+47)</option>
+            <option value="+45">🇩🇰 Denmark (+45)</option>
+            <option value="+41">🇨🇭 Switzerland (+41)</option>
+            <option value="+48">🇵🇱 Poland (+48)</option>
+            <option value="+55">🇧🇷 Brazil (+55)</option>
+            <option value="+52">🇲🇽 Mexico (+52)</option>
+            <option value="+64">🇳🇿 New Zealand (+64)</option>
+
           </select>
           <!-- Phone Number Input -->
           <input v-model="formData.phoneNumber" type="tel" required class="input-field flex-1"
@@ -68,44 +100,12 @@
         </div>
       </div>
 
-      <!-- Date and Time -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">
-            {{ $t('booking.fields.date') }} *
-          </label>
-          <input v-model="formData.preferredDate" type="date" required :min="minDate" class="input-field" />
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">
-            {{ $t('booking.fields.time') }}
-          </label>
-          <select v-model="formData.preferredTime" class="input-field">
-            <option value="">{{ $t('booking.step2Details.selectTime') }}</option>
-            <option value="06:00">06:00 AM</option>
-            <option value="07:00">07:00 AM</option>
-            <option value="08:00">08:00 AM</option>
-            <option value="09:00">09:00 AM</option>
-            <option value="10:00">10:00 AM</option>
-            <option value="11:00">11:00 AM</option>
-            <option value="12:00">12:00 PM</option>
-            <option value="13:00">01:00 PM</option>
-            <option value="14:00">02:00 PM</option>
-            <option value="15:00">03:00 PM</option>
-            <option value="16:00">04:00 PM</option>
-            <option value="17:00">05:00 PM</option>
-            <option value="18:00">06:00 PM</option>
-          </select>
-        </div>
-      </div>
-
       <!-- Pickup Location (only if hotel-transfer is selected) -->
       <Transition name="slide-down">
-        <div v-if="hasHotelTransfer" class="bg-green-50 border-2 border-green-200 rounded-lg p-4">
+        <div v-if="hasHotelTransfer" class="bg-red-50 border-2 border-red-300 rounded-none p-4">
           <label class="block text-sm font-medium text-gray-700 mb-2">
             <span class="flex items-center">
-              <svg class="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -132,7 +132,7 @@
       </div>
 
       <!-- Important Notice -->
-      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+      <div class="notice-box">
         <div class="flex items-start">
           <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd"

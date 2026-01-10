@@ -2,7 +2,7 @@
   <div class="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
     <!-- WhatsApp Button -->
     <a :href="whatsappUrl" target="_blank" rel="noopener noreferrer"
-      class="group bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110"
+      class="group bg-red-500 hover:bg-red-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110"
       aria-label="Chat on WhatsApp">
       <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
         <path
