@@ -1,10 +1,13 @@
 {
   "hero": {
     "title": "SAPA PARAGLIDING",
-    "subtitle": "Paragliding is an adventure sport, so choosing a professional organization with Vietnam's top pilots is crucial for a safe flying experience.\\nThe Sapa paragliding take-off point is designed to the highest standards in Vietnam, with an ideal wind-catching location that offers an exciting flight journey and ensures the safest take-off process.",
+    "subtitle": "Paragliding is an adventure sport, so choosing a professional organization with Vietnam's top pilots is crucial for a safe flying experience. The Sapa paragliding take-off point is designed to the highest standards in Vietnam, with an ideal wind-catching location that offers an exciting flight journey and ensures the safest take-off process.",
     "bookNow": "Book Online",
     "chatZalo": "Chat on Zalo",
     "chatWhatsApp": "Chat on WhatsApp"
+  },
+  "common": {
+    "scroll": "Scroll"
   },
   "menu": {
     "home": "Home",
@@ -127,7 +130,8 @@
       "personalInfoNotice": "Please fill in your personal information correctly according to your identification documents. If incorrect, insurance will not be valid.",
       "fullName": "Full Name",
       "dateOfBirth": "Date of Birth",
-      "weight": "Weight"
+      "weight": "Weight",
+      "fillContactInfo": "Fill in booker's information"
     },
     "step4Details": {
       "serviceDetails": "Service Details",
@@ -429,6 +433,180 @@
         "description": "Flights depend on weather (wind, rain, fog). If rescheduling is needed, you'll be notified at least 1 day in advance, free of charge; if you prefer not to reschedule, you'll receive a 100% refund"
       }
     },
+    "tabs": {
+      "requirements": {
+        "title": "Requirements",
+        "subtitle": "Participation requirements",
+        "items": {
+          "weight": {
+            "title": "Weight",
+            "desc": "Under 120kg. If over 95kg, please notify us in advance to arrange suitable pilot and equipment."
+          },
+          "health": {
+            "title": "Physical Fitness",
+            "desc": "Basic physical fitness required, ability to run briefly. Not suitable for overweight individuals or those with serious mobility issues."
+          },
+          "age": {
+            "title": "Age",
+            "desc": "From 2 years old and above can participate in tandem flights with a pilot."
+          }
+        }
+      },
+      "booking": {
+        "title": "Booking",
+        "subtitle": "Booking information",
+        "items": {
+          "method": {
+            "title": "Booking Method",
+            "desc": "Book directly via website or contact hotline / Zalo / WhatsApp."
+          },
+          "payment": {
+            "title": "Payment",
+            "desc": "Cash, bank transfer, or credit card. No prepayment required."
+          },
+          "confirmation": {
+            "title": "Confirmation",
+            "desc": "We will contact you within 3 hours after receiving your booking."
+          }
+        }
+      },
+      "cancellation": {
+        "title": "Cancellation",
+        "subtitle": "Cancellation & rescheduling policy",
+        "items": {
+          "byUs": {
+            "title": "Cancelled by Sapa Paragliding",
+            "desc": "No charges for customers. Full refund provided. No additional fees apply."
+          },
+          "byCustomer": {
+            "title": "Cancelled by Customer",
+            "desc": "Notify via email/hotline/Zalo/WhatsApp. 1+ day before: Free. Same day: 50% of booking value."
+          },
+          "reschedule": {
+            "title": "Rescheduling",
+            "desc": "Free rescheduling upon customer request."
+          }
+        }
+      },
+      "weather": {
+        "title": "Weather",
+        "subtitle": "Weather conditions for flying",
+        "items": {
+          "condition": {
+            "title": "Flight Conditions",
+            "desc": "Wind direction and intensity are crucial factors. If forecast is suitable, the flight will proceed as scheduled."
+          },
+          "cancel": {
+            "title": "Weather Cancellation",
+            "desc": "Final decision made on flight day. If cancelled: No charges, option to reschedule or 100% refund."
+          }
+        }
+      },
+      "clothing": {
+        "title": "Clothing",
+        "subtitle": "Dress code guidelines",
+        "items": {
+          "clothes": {
+            "title": "Attire",
+            "desc": "Comfortable sportswear (long sleeves, long pants); no skirts. Tip: Bright colors photograph beautifully."
+          },
+          "shoes": {
+            "title": "Footwear",
+            "desc": "No high heels. Sneakers or hiking boots recommended. We can lend shoes for free if needed."
+          },
+          "glasses": {
+            "title": "Eyewear",
+            "desc": "Sunglasses protect your eyes from UV and strong wind (~40 km/h). Prescription glasses can be worn."
+          }
+        }
+      },
+      "schedule": {
+        "title": "Schedule",
+        "subtitle": "Flight schedule information",
+        "items": {
+          "duration": {
+            "title": "Experience Duration",
+            "desc": "The entire experience takes approximately 1 hour 30 minutes."
+          },
+          "contact": {
+            "title": "Communication",
+            "desc": "Check email/messages for notifications about changes or cancellations (if any)."
+          },
+          "spectators": {
+            "title": "Spectators",
+            "desc": "Family members can wait at the take-off area to watch the flight."
+          },
+          "parking": {
+            "title": "Parking",
+            "desc": "Free parking available (operating from 6:00 – 22:00, no camping allowed)."
+          }
+        }
+      },
+      "transport": {
+        "title": "Transport",
+        "subtitle": "Shuttle service",
+        "items": {
+          "shuttle": {
+            "title": "Pick-up/Drop-off",
+            "desc": "Pick-up and drop-off service from your hotel as per booking information."
+          },
+          "companion": {
+            "title": "Companions",
+            "desc": "For non-flying companions, please notify us of the number so we can arrange and quote appropriate fees."
+          }
+        }
+      },
+      "meetingPoint": {
+        "title": "Meeting Point",
+        "subtitle": "Where to meet",
+        "items": {
+          "center": {
+            "title": "Sapa Center",
+            "desc": "Sun Plaza shopping center in Sapa town center."
+          },
+          "hotel": {
+            "title": "Hotel/Homestay",
+            "desc": "Sapa, Lao Chai, Ta Van areas: please provide your location when booking."
+          }
+        }
+      },
+      "flyingSpot": {
+        "title": "Flying Spots",
+        "subtitle": "Take-off & landing points",
+        "items": {
+          "takeoff": {
+            "title": "Take-off Point",
+            "desc": "Designed to Vietnam's highest safety standards, ideal wind-catching location, ensuring safe take-off and impressive experience."
+          },
+          "landing": {
+            "title": "Landing Point",
+            "desc": "Landing at Lao Chai cultural village, near traditional market – displaying handmade crafts by local villagers."
+          }
+        }
+      },
+      "faq": {
+        "title": "Process",
+        "subtitle": "Detailed flight process",
+        "items": {
+          "meet": {
+            "title": "Meet Your Pilot",
+            "desc": "At the take-off point, you'll meet your pilot, have time for questions, and can leave your baggage."
+          },
+          "baggage": {
+            "title": "Take-off Briefing",
+            "desc": "Listen to instructions, put on flight gear, and practice take-off movements."
+          },
+          "takeoff": {
+            "title": "Take-off",
+            "desc": "Run firmly, continuously, and don't stop until the pilot instructs. After take-off, relax and enjoy the views."
+          },
+          "safety": {
+            "title": "Landing",
+            "desc": "Safe and comfortable equipment. Gentle landing, can stand or sit depending on conditions."
+          }
+        }
+      }
+    },
     "locations": {
       "title": "Flight Locations",
       "takeoff": "Take-off Point",
@@ -439,9 +617,73 @@
   "about": {
     "title": "About Sapa Paragliding",
     "subtitle": "Your trusted partner for unforgettable flying experiences",
+    "tagline": "Fly higher. Feel more. Live fully.",
     "intro": {
       "title": "Welcome to Sapa Paragliding",
-      "description": "We are a professional paragliding team based in Sapa, Vietnam. With years of experience and a passion for flight, we offer safe and thrilling paragliding experiences over the stunning landscapes of Sapa."
+      "description": "We are a professional paragliding team based in Sapa, Vietnam. With years of experience and a passion for flight, we offer safe and thrilling paragliding experiences over the stunning landscapes of Sapa.",
+      "highlight": "50,000+ safe flights • 15+ years of experience • International pilot team"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide safe, memorable, and exhilarating paragliding experiences while showcasing the breathtaking beauty of Sapa from a bird's eye view.",
+      "points": {
+        "safety": "Absolute safety in every flight",
+        "experience": "World-class experience with professional service",
+        "nature": "Showcasing Sapa's beauty from a unique perspective"
+      }
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become the leading paragliding service in Vietnam, known for safety, professionalism, and exceptional customer experiences.",
+      "goals": {
+        "leader": "Lead the paragliding industry in Vietnam",
+        "international": "Achieve international safety certification",
+        "community": "Build a paragliding enthusiast community"
+      }
+    },
+    "values": {
+      "title": "Core Values",
+      "safety": {
+        "title": "Safety Is Supreme",
+        "description": "100% of flights comply with international safety standards. Equipment is regularly inspected, pilots are professionally trained."
+      },
+      "excellence": {
+        "title": "Excellence In Service",
+        "description": "From booking to landing, we commit to delivering the most perfect experience."
+      },
+      "passion": {
+        "title": "Passion And Dedication",
+        "description": "Each pilot is not just an expert but also a sky lover, ready to share the passion with you."
+      },
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "Updating the latest technology, advanced flying methods to improve service quality."
+      }
+    },
+    "story": {
+      "title": "Our Story",
+      "founded": "Founded in 2010",
+      "description": "Starting from a passion for flying and love for Sapa, we built the first professional pilot team in the region. Over 15 years of development, Sapa Paragliding has become a trusted destination for tens of thousands of domestic and international visitors.",
+      "milestones": {
+        "2010": "Founded with 3 initial pilots",
+        "2015": "Achieved APPI international safety certification",
+        "2020": "Expanded team with international pilots",
+        "2024": "Completed 50,000+ safe flights"
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "safety": "Absolute safety - No compromise",
+      "quality": "International-class service quality",
+      "support": "24/7 customer support",
+      "satisfaction": "100% satisfaction guarantee or money back"
+    },
+    "whyChoose": {
+      "title": "Why Choose Sapa Paragliding?",
+      "cta": {
+        "title": "Ready to Experience Sapa from Above?",
+        "description": "Join thousands of satisfied customers who have experienced the thrill of paragliding in Sapa"
+      }
     },
     "features": {
       "safety": {
@@ -481,21 +723,6 @@
         "description": "100% safety record with certified pilots and top-quality equipment"
       }
     },
-    "whyChoose": {
-      "title": "Why Choose Sapa Paragliding?",
-      "cta": {
-        "title": "Ready to Experience Sapa from Above?",
-        "description": "Join thousands of satisfied customers who have experienced the thrill of paragliding in Sapa"
-      }
-    },
-    "mission": {
-      "title": "Our Mission",
-      "description": "To provide safe, memorable, and exhilarating paragliding experiences while showcasing the breathtaking beauty of Sapa from a bird's eye view."
-    },
-    "vision": {
-      "title": "Our Vision",
-      "description": "To become the leading paragliding service in Vietnam, known for safety, professionalism, and exceptional customer experiences."
-    },
     "process": {
       "title": "Flight Process",
       "step1": {
@@ -534,7 +761,7 @@
         "items": {
           "flight": "Paragliding flight 8-15 minutes",
           "photoVideo": "GOPRO video & photo recording",
-          "drinks": "Drink menu (Free coffee & tea)",
+          "drinks": "Beverages at the flight site",
           "insurance": "Paragliding insurance",
           "certificate": "Certificate"
         }
@@ -550,7 +777,7 @@
         "items": {
           "flight": "Paragliding flight 8-15 minutes",
           "photoVideo": "GOPRO video & photo recording",
-          "drinks": "Drink menu (Free coffee & tea)",
+          "drinks": "Beverages at the flight site",
           "insurance": "Paragliding insurance",
           "certificate": "Certificate",
           "hotelTransfer": "Hotel pick-up and drop-off"
@@ -566,7 +793,7 @@
         "items": {
           "flight": "Paragliding flight 8-15 minutes",
           "photoVideo": "GOPRO video & photo recording",
-          "drinks": "Drink menu (Free coffee & tea)",
+          "drinks": "Beverages at the flight site",
           "insurance": "Paragliding insurance",
           "certificate": "Certificate",
           "hotelTransfer": "Hotel pick-up and drop-off",
@@ -581,8 +808,8 @@
     "subtitle": "Choose the perfect flight experience for you"
   },
   "gallery": {
-    "title": "Gallery",
-    "subtitle": "Capture the moments of freedom"
+    "title": "Paragliding Moments",
+    "subtitle": "Memorable experiences"
   },
   "cta": {
     "title": "Ready for Your Adventure?",
@@ -609,7 +836,7 @@
     "address": "Address",
     "followUs": "Follow Us",
     "quickLinks": "Quick Links",
-    "copyright": "Licensed to fly by the Operations Department – General Staff, Ministry of National Defense of Vietnam.\\nParagliding business license No. 02/GCN-SVHTT issued by the Department of Culture, Sports and Tourism of Lao Cai Province"
+    "copyright": "Licensed to fly by the Operations Department – General Staff, Ministry of National Defense of Vietnam. Paragliding business license No. 02/GCN-SVHTT issued by the Department of Culture, Sports and Tourism of Lao Cai Province"
   },
   "validation": {
     "required": "This field is required",

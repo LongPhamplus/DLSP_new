@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
     const date = now.toISOString().split('T')[0].replace(/-/g, '') // YYYYMMDD
     const time = now.toTimeString().split(' ')[0].replace(/:/g, '') // HHMMSS
     const phone = body.phone ? body.phone.replace(/\D/g, '') : 'UNKNOWN' // Remove non-digits
-    const bookingId = `BID_${phone}_${date}_${time}`
+    const bookingId = `BID_${phone.slice(-6)}_${date}_${time}`
 
     console.log(`✅ Booking received: ${bookingId}`)
     console.log(`📱 Telegram Chat ID: ${body.telegramChatId || 'Not provided'}`)

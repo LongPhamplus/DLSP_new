@@ -1,10 +1,13 @@
 {
   "hero": {
-    "title": "DÙ LƯỢN\nSAPA",
-    "subtitle": "Dù lượn là môn thể thao mạo hiểm, vì vậy việc lựa chọn đơn vị tổ chức chuyên nghiệp với đội ngũ phi công hàng đầu Việt Nam là yếu tố quan trọng để đảm bảo an toàn cho trải nghiệm bay.\nĐiểm cất cánh dù lượn Sapa được thiết kế đạt tiêu chuẩn cao nhất tại Việt Nam, sở hữu vị trí đón gió thuận lợi, mang đến hành trình bay hấp dẫn và giúp quá trình cất cánh diễn ra an toàn nhất.",
+    "title": "DÙ LƯỢN SAPA",
+    "subtitle": "Dù lượn là môn thể thao mạo hiểm, vì vậy việc lựa chọn đơn vị tổ chức chuyên nghiệp với đội ngũ phi công hàng đầu Việt Nam là yếu tố quan trọng để đảm bảo an toàn cho trải nghiệm bay. Điểm cất cánh dù lượn Sapa được thiết kế đạt tiêu chuẩn cao nhất tại Việt Nam, sở hữu vị trí đón gió thuận lợi, mang đến hành trình bay hấp dẫn và giúp quá trình cất cánh diễn ra an toàn nhất.",
     "bookNow": "Đặt Lịch Ngay",
     "chatZalo": "Chat qua Zalo",
     "chatWhatsApp": "Chat qua WhatsApp"
+  },
+  "common": {
+    "scroll": "Cuộn xuống"
   },
   "menu": {
     "home": "Trang Chủ",
@@ -125,7 +128,8 @@
       "personalInfoNotice": "Vui lòng điền đúng thông tin cá nhân theo giấy tờ tùy thân. Nếu sai, bảo hiểm sẽ không có hiệu lực.",
       "fullName": "Họ và Tên",
       "dateOfBirth": "Ngày Sinh",
-      "weight": "Cân Nặng"
+      "weight": "Cân Nặng",
+      "fillContactInfo": "Điền thông tin người đặt"
     },
     "step4Details": {
       "serviceDetails": "Chi Tiết Dịch Vụ",
@@ -427,6 +431,180 @@
         "description": "Chuyến bay phụ thuộc thời tiết (gió, mưa, sương mù). Nếu cần đổi lịch, khách sẽ được thông báo trước ít nhất 1 ngày, miễn phí; không muốn đổi lịch sẽ được hoàn tiền 100%"
       }
     },
+    "tabs": {
+      "requirements": {
+        "title": "Điều kiện",
+        "subtitle": "Điều kiện tham gia bay",
+        "items": {
+          "weight": {
+            "title": "Cân nặng",
+            "desc": "Dưới 120kg. Trường hợp trên 95kg vui lòng thông báo trước để sắp xếp phi công và trang thiết bị phù hợp."
+          },
+          "health": {
+            "title": "Thể lực",
+            "desc": "Mức độ thể lực cơ bản, có khả năng chạy ngắn. Không phù hợp với người thừa cân nhiều hoặc gặp vấn đề nghiêm trọng về vận động."
+          },
+          "age": {
+            "title": "Độ tuổi",
+            "desc": "Từ 2 tuổi trở lên có thể tham gia bay cùng phi công."
+          }
+        }
+      },
+      "booking": {
+        "title": "Đặt vé",
+        "subtitle": "Thông tin đặt vé bay",
+        "items": {
+          "method": {
+            "title": "Phương thức đặt vé",
+            "desc": "Đặt vé trực tiếp qua website hoặc liên hệ hotline / Zalo / WhatsApp."
+          },
+          "payment": {
+            "title": "Thanh toán",
+            "desc": "Tiền mặt, chuyển khoản ngân hàng hoặc thẻ tín dụng. Không yêu cầu thanh toán trước."
+          },
+          "confirmation": {
+            "title": "Xác nhận",
+            "desc": "Chúng tôi sẽ liên hệ trong vòng 3 giờ ngay sau khi nhận được booking đặt vé."
+          }
+        }
+      },
+      "cancellation": {
+        "title": "Huỷ bay",
+        "subtitle": "Chính sách huỷ và đổi lịch",
+        "items": {
+          "byUs": {
+            "title": "Huỷ bay do Sapa Paragliding",
+            "desc": "Khách hàng không phải thanh toán chi phí. Vé sẽ được hoàn tiền đầy đủ. Không phát sinh bất kỳ khoản phí nào."
+          },
+          "byCustomer": {
+            "title": "Huỷ bay do khách hàng",
+            "desc": "Thông báo qua email/hotline/Zalo/WhatsApp. Trước 1 ngày: Miễn phí. Trong ngày bay: Phí 50% giá trị đặt vé."
+          },
+          "reschedule": {
+            "title": "Đổi lịch bay",
+            "desc": "Miễn phí đổi lịch bay theo yêu cầu của khách hàng."
+          }
+        }
+      },
+      "weather": {
+        "title": "Thời tiết",
+        "subtitle": "Điều kiện thời tiết bay",
+        "items": {
+          "condition": {
+            "title": "Điều kiện bay",
+            "desc": "Hướng gió và cường độ gió là yếu tố quan trọng quyết định việc bay. Nếu dự báo phù hợp, chuyến bay sẽ diễn ra đúng lịch."
+          },
+          "cancel": {
+            "title": "Huỷ do thời tiết",
+            "desc": "Quyết định cuối cùng đưa ra trong ngày bay. Nếu huỷ: Không phát sinh phí, có thể dời lịch hoặc hoàn tiền 100%."
+          }
+        }
+      },
+      "clothing": {
+        "title": "Trang phục",
+        "subtitle": "Hướng dẫn trang phục bay",
+        "items": {
+          "clothes": {
+            "title": "Quần áo",
+            "desc": "Trang phục thoải mái, thể thao (áo tay dài, quần dài); không mặc váy. Mẹo: Đồ sáng màu lên hình rất đẹp."
+          },
+          "shoes": {
+            "title": "Giày dép",
+            "desc": "Không đi giày cao gót. Nên mang giày thể thao hoặc giày leo núi. Chúng tôi có thể cho mượn giày miễn phí nếu cần."
+          },
+          "glasses": {
+            "title": "Kính mắt",
+            "desc": "Kính râm bảo vệ mắt khỏi tia UV và gió mạnh (~40 km/h). Có thể mang kính cận."
+          }
+        }
+      },
+      "schedule": {
+        "title": "Lịch trình",
+        "subtitle": "Thông tin lịch trình bay",
+        "items": {
+          "duration": {
+            "title": "Thời gian trải nghiệm",
+            "desc": "Toàn bộ trải nghiệm khoảng 1 giờ 30 phút."
+          },
+          "contact": {
+            "title": "Liên hệ",
+            "desc": "Kiểm tra email/tin nhắn để nhận thông báo về thay đổi hoặc huỷ chuyến (nếu có)."
+          },
+          "spectators": {
+            "title": "Khán giả",
+            "desc": "Người thân có thể chờ tại khu vực cất cánh để xem bay."
+          },
+          "parking": {
+            "title": "Bãi đỗ xe",
+            "desc": "Đỗ xe miễn phí (hoạt động từ 6:00 – 22:00, không cho cắm trại)."
+          }
+        }
+      },
+      "transport": {
+        "title": "Xe đưa đón",
+        "subtitle": "Dịch vụ xe trung chuyển",
+        "items": {
+          "shuttle": {
+            "title": "Đón/Trả khách",
+            "desc": "Có dịch vụ đón và trả khách từ khách sạn theo thông tin đặt vé."
+          },
+          "companion": {
+            "title": "Người đi cùng",
+            "desc": "Đối với người đi cùng (không bay), vui lòng thông báo số lượng để sắp xếp và báo phí phù hợp."
+          }
+        }
+      },
+      "meetingPoint": {
+        "title": "Điểm gặp",
+        "subtitle": "Điểm hẹn gặp mặt",
+        "items": {
+          "center": {
+            "title": "Trung tâm Sapa",
+            "desc": "Trung tâm thương mại Sun Plaza tại trung tâm Sapa."
+          },
+          "hotel": {
+            "title": "Khách sạn/Homestay",
+            "desc": "Khu vực Sapa, Lao Chải, Tả Van: vui lòng báo địa điểm khi đặt bay."
+          }
+        }
+      },
+      "flyingSpot": {
+        "title": "Điểm bay",
+        "subtitle": "Điểm cất cánh & hạ cánh",
+        "items": {
+          "takeoff": {
+            "title": "Điểm cất cánh",
+            "desc": "Thiết kế theo tiêu chuẩn an toàn cao nhất tại Việt Nam, vị trí đón gió lý tưởng, đảm bảo cất cánh an toàn và trải nghiệm ấn tượng."
+          },
+          "landing": {
+            "title": "Điểm hạ cánh",
+            "desc": "Hạ cánh tại bản văn hoá Lao Chải, gần chợ truyền thống – nơi trưng bày sản phẩm thủ công do người dân địa phương làm bằng tay."
+          }
+        }
+      },
+      "faq": {
+        "title": "Quy trình",
+        "subtitle": "Quy trình bay chi tiết",
+        "items": {
+          "meet": {
+            "title": "Gặp gỡ phi công",
+            "desc": "Tại điểm cất cánh, khách làm quen với phi công, có thời gian đặt câu hỏi và gửi hành lý."
+          },
+          "baggage": {
+            "title": "Hướng dẫn cất cánh",
+            "desc": "Nghe hướng dẫn, mặc trang bị bay và tập động tác cất cánh."
+          },
+          "takeoff": {
+            "title": "Cất cánh",
+            "desc": "Chạy đà mạnh, liên tục và không dừng lại cho đến khi phi công yêu cầu. Sau khi bay lên, thư giãn và ngắm cảnh."
+          },
+          "safety": {
+            "title": "Hạ cánh",
+            "desc": "Trang bị an toàn, thoải mái. Hạ cánh nhẹ nhàng, có thể đứng hoặc ngồi tuỳ điều kiện."
+          }
+        }
+      }
+    },
     "locations": {
       "title": "Địa Điểm Bay",
       "takeoff": "Điểm Cất Cánh",
@@ -569,7 +747,7 @@
         "items": {
           "flight": "Chuyến bay dù lượn 8-15 phút",
           "photoVideo": "Quay phim & chụp hình GOPRO",
-          "drinks": "Menu đồ uống (Cà phê & trà miễn phí)",
+          "drinks": "Đồ uống tại điểm bay",
           "insurance": "Bảo hiểm dù lượn",
           "certificate": "Giấy chứng nhận tham gia trải nghiệm"
         }
@@ -585,7 +763,7 @@
         "items": {
           "flight": "Chuyến bay dù lượn 8-15 phút",
           "photoVideo": "Quay phim & chụp hình GOPRO",
-          "drinks": "Menu đồ uống (Cà phê & trà miễn phí)",
+          "drinks": "Đồ uống tại điểm bay",
           "insurance": "Bảo hiểm dù lượn",
           "certificate": "Giấy chứng nhận tham gia trải nghiệm",
           "hotelTransfer": "Xe đón trả tại khách sạn"
@@ -601,7 +779,7 @@
         "items": {
           "flight": "Chuyến bay dù lượn 8-15 phút",
           "photoVideo": "Quay phim & chụp hình GOPRO",
-          "drinks": "Menu đồ uống (Cà phê & trà miễn phí)",
+          "drinks": "Đồ uống tại điểm bay",
           "insurance": "Bảo hiểm dù lượn",
           "certificate": "Giấy chứng nhận tham gia trải nghiệm",
           "hotelTransfer": "Xe đón trả tại khách sạn",
@@ -616,8 +794,8 @@
     "subtitle": "Chọn trải nghiệm bay hoàn hảo cho bạn"
   },
   "gallery": {
-    "title": "Thư Viện Ảnh",
-    "subtitle": "Lưu giữ những khoảnh khắc tự do"
+    "title": "Khoảnh Khắc Dù Lượn",
+    "subtitle": "Những trải nghiệm đáng nhớ"
   },
   "cta": {
     "title": "Sẵn Sàng Cho Cuộc Phiêu Lưu?",
@@ -644,7 +822,7 @@
     "address": "Địa Chỉ",
     "followUs": "Theo Dõi",
     "quickLinks": "Liên Kết Nhanh",
-    "copyright": "Đơn vị được cấp phép bay bởi Cục Tác chiến – Bộ Tổng Tham mưu, Bộ Quốc phòng Việt Nam.\nGiấy phép kinh doanh dù lượn số 02/GCN-SVHTT do Sở Văn hoá, Thể thao và Du lịch tỉnh Lào Cai cấp"
+    "copyright": "Đơn vị được cấp phép bay bởi Cục Tác chiến – Bộ Tổng Tham mưu, Bộ Quốc phòng Việt Nam. Giấy phép kinh doanh dù lượn số 02/GCN-SVHTT do Sở Văn hoá, Thể thao và Du lịch tỉnh Lào Cai cấp"
   },
   "validation": {
     "required": "Trường này là bắt buộc",

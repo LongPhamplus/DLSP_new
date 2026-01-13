@@ -119,7 +119,7 @@
             <!-- Scroll Indicator -->
             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce z-20 hidden lg:block">
                 <div class="flex flex-col items-center gap-2">
-                    <span class="text-white/70 text-xs uppercase tracking-widest">Scroll</span>
+                    <span class="text-white/70 text-xs uppercase tracking-widest">{{ $t('common.scroll') }}</span>
                     <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -175,7 +175,7 @@
                                     <div
                                         class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
                                         <p class="text-gray-700 leading-relaxed">{{ $t(`about.story.milestones.${year}`)
-                                        }}</p>
+                                            }}</p>
                                     </div>
                                 </div>
                             </div>

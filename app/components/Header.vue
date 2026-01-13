@@ -1,80 +1,87 @@
 <template>
-  <!-- Horizontal Header Bar (static, part of page) -->
-  <header class="relative z-60 bg-white/95 backdrop-blur-md shadow-lg" style="position: relative; z-index: 60;">
-    <div class="container-custom flex items-center justify-between py-4">
-      <!-- Logo -->
-      <NuxtLink to="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-        <img src="/images/Sapa_logo.png" alt="Sapa Paragliding Logo" class="h-12 w-12 object-contain"
-          @error="handleLogoError" />
-        <span class="hidden sm:inline text-stroke-sapa">{{ $t('hero.title')
-          }}</span>
-      </NuxtLink>
-
-      <!-- Menu Items (Desktop) -->
-      <nav class="hidden md:flex items-center gap-8">
-        <NuxtLink v-for="item in menuItems" :key="item.path" :to="getLocalizedPath(item.path)"
-          class="uppercase text-gray-700 hover:text-red-600 font-medium transition-colors" active-class="text-red-600">
-          {{ $t(item.label) }}
+  <div>
+    <!-- Horizontal Header Bar (static, part of page) -->
+    <header class="relative bg-white/95 backdrop-blur-md shadow-lg" style="position: relative; z-index: 60;">
+      <div class="container-custom flex items-center justify-between py-4">
+        <!-- Logo -->
+        <NuxtLink to="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src="/images/Sapa_logo.png" alt="Sapa Paragliding Logo" class="h-12 w-12 object-contain"
+            @error="handleLogoError" />
+          <span class="hidden sm:inline text-stroke-sapa">{{ $t('hero.title')
+            }}</span>
         </NuxtLink>
-      </nav>
 
-      <!-- Right Controls -->
-      <div class="flex items-center gap-3">
-        <!-- Menu Button (Mobile) -->
-        <button @click="toggleMenu"
-          class="md:hidden bg-red-600 hover:bg-red-700 text-white p-2.5 rounded-lg transition-all duration-300"
+        <!-- Menu Items (Desktop) -->
+        <nav class="hidden md:flex items-center gap-8">
+          <NuxtLink v-for="item in menuItems" :key="item.path" :to="getLocalizedPath(item.path)"
+            class="uppercase text-gray-700 hover:text-red-600 font-medium transition-colors"
+            active-class="text-red-600">
+            {{ $t(item.label) }}
+          </NuxtLink>
+        </nav>
+
+        <!-- Right Controls -->
+        <div class="flex items-center gap-3">
+          <!-- Menu Button (Mobile) -->
+          <button @click.stop="toggleMenu"
+            class="md:hidden bg-red-600 hover:bg-red-700 text-white p-2.5 rounded-lg transition-all duration-300"
+            aria-label="Toggle menu">
+            <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <!-- Language Switcher -->
+          <LanguageSwitcherHorizontal />
+        </div>
+      </div>
+    </header>
+
+    <!-- Floating Icons (visible only when scrolled down) -->
+    <div v-if="!isAtTop" class="fixed top-0 left-0 right-0 z-50">
+      <!-- Logo in top-left corner -->
+      <div class="fixed top-2 sm:top-4 left-2 sm:left-4 z-50">
+        <NuxtLink to="/"
+          class="flex items-center justify-center bg-white/10 backdrop-blur-sm p-2 sm:p-4 rounded-full hover:shadow-xl transition-all duration-300 hover:scale-110">
+          <img src="/images/Sapa_logo.png" alt="Sapa Paragliding Logo" class="h-12 sm:h-20 w-12 sm:w-20 object-contain"
+            @error="handleLogoError" />
+        </NuxtLink>
+      </div>
+
+      <!-- Floating Menu Button and Language Switcher (top-right) -->
+      <div class="fixed top-2 sm:top-4 right-2 sm:right-4 z-50 flex flex-col items-center gap-2 sm:gap-3">
+        <!-- Menu Button -->
+        <button @click.stop="toggleMenu"
+          class="bg-white hover:bg-gray-100 text-red-600 p-2.5 sm:p-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl"
           aria-label="Toggle menu">
-          <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg v-if="!isMenuOpen" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg v-else class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
 
         <!-- Language Switcher -->
-        <LanguageSwitcherHorizontal />
+        <LanguageSwitcher />
       </div>
     </div>
-  </header>
 
-  <!-- Floating Icons (visible only when scrolled down) -->
-  <div v-if="!isAtTop" class="fixed top-0 left-0 right-0 z-50">
-    <!-- Logo in top-left corner -->
-    <div class="fixed top-2 sm:top-4 left-2 sm:left-4 z-50">
-      <NuxtLink to="/"
-        class="flex items-center justify-center bg-white/10 backdrop-blur-sm p-2 sm:p-4 rounded-full hover:shadow-xl transition-all duration-300 hover:scale-110">
-        <img src="/images/Sapa_logo.png" alt="Sapa Paragliding Logo" class="h-12 sm:h-20 w-12 sm:w-20 object-contain"
-          @error="handleLogoError" />
-      </NuxtLink>
-    </div>
+    <!-- Overlay (always available, independent of scroll position) -->
+    <Transition name="fade">
+      <div v-if="isMenuOpen" @click="closeMenu" class="fixed inset-0 bg-black/50 z-[9998]" />
+    </Transition>
 
-    <!-- Floating Menu Button and Language Switcher (top-right) -->
-    <div class="fixed top-2 sm:top-4 right-2 sm:right-4 z-50 flex flex-col items-center gap-2 sm:gap-3">
-      <!-- Menu Button -->
-      <button @click="toggleMenu"
-        class="bg-white hover:bg-gray-100 text-red-600 p-2.5 sm:p-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl"
-        aria-label="Toggle menu">
-        <svg v-if="!isMenuOpen" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg v-else class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
-      <!-- Language Switcher -->
-
-      <LanguageSwitcher />
-
-    </div>
-
-    <!-- Slide-out Menu -->
+    <!-- Slide-out Menu (always available, independent of scroll position) -->
     <Transition name="slide">
-      <nav v-if="isMenuOpen" class="fixed top-0 left-0 h-full w-full sm:w-80 bg-white shadow-2xl overflow-y-auto z-50">
+      <nav v-if="isMenuOpen"
+        class="fixed top-0 left-0 h-full w-full sm:w-80 bg-white shadow-2xl overflow-y-auto z-[9999]">
         <div class="p-4 sm:p-8">
-          <!-- Close Button for Mobile -->
-          <div class="flex justify-end mb-4 sm:hidden">
+          <!-- Close Button -->
+          <div class="flex justify-end mb-4">
             <button @click="closeMenu" class="text-gray-600 hover:text-gray-900 p-2" aria-label="Close menu">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -127,11 +134,6 @@
           </div>
         </div>
       </nav>
-    </Transition>
-
-    <!-- Overlay -->
-    <Transition name="fade">
-      <div v-if="isMenuOpen" @click="closeMenu" class="fixed inset-0 bg-black bg-opacity-50 z-40" />
     </Transition>
   </div>
 </template>

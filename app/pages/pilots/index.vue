@@ -5,13 +5,9 @@
       <img src="/images/pilot_background.jpeg" alt="Background" class="w-full h-full object-cover" />
     </div>
     <!-- Hero Section -->
-    <section class="relative bg-slate-900 py-24 lg:py-32 overflow-hidden">
-      <!-- Background Image (lowest layer) -->
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0" style="background-image: url('/images/svg/pilot-hero-section.svg');">
-        </div>
-      </div>
+    <section class="relative py-24 lg:py-32 overflow-hidden">
+      <!-- Blur overlay -->
+      <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-md opacity-50"></div>
 
       <div class="container mx-auto px-6 lg:px-12 relative z-10">
         <div class="max-w-4xl mx-auto text-center">

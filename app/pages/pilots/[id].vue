@@ -380,7 +380,7 @@ const localizedNavigateTo = (path: string) => {
 }
 
 // Total number of pilots
-const totalPilots = 10
+const totalPilots = 14
 
 // Current pilot number (extract from pilotId)
 const currentPilotNumber = computed(() => {

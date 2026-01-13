@@ -1,10 +1,13 @@
 {
   "hero": {
-    "title": "PARAPENTE\nSAPA",
-    "subtitle": "Le parapente est un sport d'aventure, c'est pourquoi le choix d'une organisation professionnelle avec les meilleurs pilotes du Vietnam est crucial pour une expérience de vol sécurisée.\\nLe point de décollage de parapente de Sapa est conçu selon les normes les plus élevées au Vietnam, avec un emplacement idéal pour capter le vent, offrant un parcours de vol passionnant et garantissant le processus de décollage le plus sûr.",
+    "title": "PARAPENTE SAPA",
+    "subtitle": "Le parapente est un sport d'aventure, c'est pourquoi le choix d'une organisation professionnelle avec les meilleurs pilotes du Vietnam est crucial pour une expérience de vol sécurisée. Le point de décollage de parapente de Sapa est conçu selon les normes les plus élevées au Vietnam, avec un emplacement idéal pour capter le vent, offrant un parcours de vol passionnant et garantissant le processus de décollage le plus sûr.",
     "bookNow": "Réserver en Ligne",
     "chatZalo": "Chat sur Zalo",
     "chatWhatsApp": "Chat sur WhatsApp"
+  },
+  "common": {
+    "scroll": "Défiler"
   },
   "menu": {
     "home": "Accueil",
@@ -127,7 +130,8 @@
       "personalInfoNotice": "Veuillez remplir vos informations personnelles correctement selon vos documents d'identification. Si incorrect, l'assurance ne sera pas valide.",
       "fullName": "Nom Complet",
       "dateOfBirth": "Date de Naissance",
-      "weight": "Poids"
+      "weight": "Poids",
+      "fillContactInfo": "Remplir les informations du réservant"
     },
     "step4Details": {
       "serviceDetails": "Détails du Service",
@@ -429,6 +433,180 @@
         "description": "Les vols dépendent de la météo (vent, pluie, brouillard). Si un report est nécessaire, vous serez informé au moins 1 jour à l'avance, gratuitement; si vous préférez ne pas reporter, vous recevrez un remboursement à 100%"
       }
     },
+    "tabs": {
+      "requirements": {
+        "title": "Conditions",
+        "subtitle": "Conditions de participation",
+        "items": {
+          "weight": {
+            "title": "Poids",
+            "desc": "Moins de 120 kg. Si plus de 95 kg, veuillez nous informer à l'avance pour organiser pilote et équipement adaptés."
+          },
+          "health": {
+            "title": "Condition Physique",
+            "desc": "Condition physique de base requise, capacité à courir brièvement. Non adapté aux personnes en surpoids important ou ayant des problèmes de mobilité sérieux."
+          },
+          "age": {
+            "title": "Âge",
+            "desc": "À partir de 2 ans, participation possible en vol tandem avec un pilote."
+          }
+        }
+      },
+      "booking": {
+        "title": "Réservation",
+        "subtitle": "Informations de réservation",
+        "items": {
+          "method": {
+            "title": "Méthode de Réservation",
+            "desc": "Réservez directement via le site web ou contactez hotline / Zalo / WhatsApp."
+          },
+          "payment": {
+            "title": "Paiement",
+            "desc": "Espèces, virement bancaire ou carte de crédit. Aucun prépaiement requis."
+          },
+          "confirmation": {
+            "title": "Confirmation",
+            "desc": "Nous vous contacterons dans les 3 heures après réception de votre réservation."
+          }
+        }
+      },
+      "cancellation": {
+        "title": "Annulation",
+        "subtitle": "Politique d'annulation et report",
+        "items": {
+          "byUs": {
+            "title": "Annulé par Sapa Paragliding",
+            "desc": "Aucun frais pour les clients. Remboursement complet fourni. Aucun frais supplémentaire."
+          },
+          "byCustomer": {
+            "title": "Annulé par le Client",
+            "desc": "Notification via email/hotline/Zalo/WhatsApp. 1+ jour avant : Gratuit. Même jour : 50% de la valeur de réservation."
+          },
+          "reschedule": {
+            "title": "Report",
+            "desc": "Report gratuit sur demande du client."
+          }
+        }
+      },
+      "weather": {
+        "title": "Météo",
+        "subtitle": "Conditions météo pour voler",
+        "items": {
+          "condition": {
+            "title": "Conditions de Vol",
+            "desc": "La direction et l'intensité du vent sont des facteurs cruciaux. Si les prévisions sont favorables, le vol aura lieu comme prévu."
+          },
+          "cancel": {
+            "title": "Annulation Météo",
+            "desc": "Décision finale prise le jour du vol. Si annulé : Aucun frais, option de report ou remboursement 100%."
+          }
+        }
+      },
+      "clothing": {
+        "title": "Tenue",
+        "subtitle": "Conseils vestimentaires",
+        "items": {
+          "clothes": {
+            "title": "Vêtements",
+            "desc": "Vêtements de sport confortables (manches longues, pantalons longs) ; pas de jupes. Astuce : Les couleurs vives sont superbes en photo."
+          },
+          "shoes": {
+            "title": "Chaussures",
+            "desc": "Pas de talons hauts. Baskets ou chaussures de randonnée recommandées. Nous pouvons prêter des chaussures gratuitement si nécessaire."
+          },
+          "glasses": {
+            "title": "Lunettes",
+            "desc": "Les lunettes de soleil protègent vos yeux des UV et du vent fort (~40 km/h). Les lunettes de vue peuvent être portées."
+          }
+        }
+      },
+      "schedule": {
+        "title": "Horaires",
+        "subtitle": "Informations sur le programme",
+        "items": {
+          "duration": {
+            "title": "Durée de l'Expérience",
+            "desc": "L'expérience complète dure environ 1 heure 30 minutes."
+          },
+          "contact": {
+            "title": "Communication",
+            "desc": "Vérifiez email/messages pour les notifications de changements ou annulations (le cas échéant)."
+          },
+          "spectators": {
+            "title": "Spectateurs",
+            "desc": "Les membres de la famille peuvent attendre à la zone de décollage pour regarder le vol."
+          },
+          "parking": {
+            "title": "Parking",
+            "desc": "Parking gratuit disponible (fonctionne de 6h00 à 22h00, camping interdit)."
+          }
+        }
+      },
+      "transport": {
+        "title": "Transport",
+        "subtitle": "Service de navette",
+        "items": {
+          "shuttle": {
+            "title": "Prise en charge/Retour",
+            "desc": "Service de prise en charge et retour depuis votre hôtel selon les informations de réservation."
+          },
+          "companion": {
+            "title": "Accompagnateurs",
+            "desc": "Pour les accompagnateurs ne volant pas, veuillez nous informer du nombre pour organiser et établir les frais appropriés."
+          }
+        }
+      },
+      "meetingPoint": {
+        "title": "Point de RDV",
+        "subtitle": "Où se rencontrer",
+        "items": {
+          "center": {
+            "title": "Centre de Sapa",
+            "desc": "Centre commercial Sun Plaza au centre-ville de Sapa."
+          },
+          "hotel": {
+            "title": "Hôtel/Homestay",
+            "desc": "Zones de Sapa, Lao Chai, Ta Van : veuillez indiquer votre emplacement lors de la réservation."
+          }
+        }
+      },
+      "flyingSpot": {
+        "title": "Sites de Vol",
+        "subtitle": "Points de décollage et atterrissage",
+        "items": {
+          "takeoff": {
+            "title": "Point de Décollage",
+            "desc": "Conçu selon les normes de sécurité les plus élevées du Vietnam, emplacement idéal pour capter le vent, garantissant un décollage sûr et une expérience impressionnante."
+          },
+          "landing": {
+            "title": "Point d'Atterrissage",
+            "desc": "Atterrissage au village culturel de Lao Chai, près du marché traditionnel – exposant l'artisanat fait main par les villageois locaux."
+          }
+        }
+      },
+      "faq": {
+        "title": "Processus",
+        "subtitle": "Processus de vol détaillé",
+        "items": {
+          "meet": {
+            "title": "Rencontrez Votre Pilote",
+            "desc": "Au point de décollage, vous rencontrerez votre pilote, aurez du temps pour les questions et pourrez laisser vos bagages."
+          },
+          "baggage": {
+            "title": "Briefing Décollage",
+            "desc": "Écoutez les instructions, enfilez l'équipement de vol et pratiquez les mouvements de décollage."
+          },
+          "takeoff": {
+            "title": "Décollage",
+            "desc": "Courez fermement, continuellement, sans vous arrêter jusqu'à l'instruction du pilote. Après le décollage, détendez-vous et profitez des vues."
+          },
+          "safety": {
+            "title": "Atterrissage",
+            "desc": "Équipement sûr et confortable. Atterrissage en douceur, debout ou assis selon les conditions."
+          }
+        }
+      }
+    },
     "locations": {
       "title": "Lieux de Vol",
       "takeoff": "Point de Décollage",
@@ -439,9 +617,73 @@
   "about": {
     "title": "À Propos de Parapente Sapa",
     "subtitle": "Votre partenaire de confiance pour des expériences de vol inoubliables",
+    "tagline": "Volez plus haut. Ressentez plus. Vivez pleinement.",
     "intro": {
       "title": "Bienvenue chez Parapente Sapa",
-      "description": "Nous sommes une équipe professionnelle de parapente basée à Sapa, Vietnam. Avec des années d'expérience et une passion pour le vol, nous offrons des expériences de parapente sûres et passionnantes sur les paysages magnifiques de Sapa."
+      "description": "Nous sommes une équipe professionnelle de parapente basée à Sapa, Vietnam. Avec des années d'expérience et une passion pour le vol, nous offrons des expériences de parapente sûres et passionnantes sur les paysages magnifiques de Sapa.",
+      "highlight": "50 000+ vols en sécurité • 15+ ans d'expérience • Équipe de pilotes internationale"
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Fournir des expériences de parapente sûres, mémorables et exaltantes tout en présentant la beauté à couper le souffle de Sapa vue du ciel.",
+      "points": {
+        "safety": "Sécurité absolue dans chaque vol",
+        "experience": "Expérience de classe mondiale avec service professionnel",
+        "nature": "Présenter la beauté de Sapa sous un angle unique"
+      }
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Devenir le service de parapente leader au Vietnam, connu pour la sécurité, le professionnalisme et les expériences client exceptionnelles.",
+      "goals": {
+        "leader": "Diriger l'industrie du parapente au Vietnam",
+        "international": "Obtenir la certification de sécurité internationale",
+        "community": "Construire une communauté de passionnés de parapente"
+      }
+    },
+    "values": {
+      "title": "Valeurs Fondamentales",
+      "safety": {
+        "title": "La Sécurité Est Primordiale",
+        "description": "100% des vols respectent les normes de sécurité internationales. L'équipement est régulièrement inspecté, les pilotes sont formés professionnellement."
+      },
+      "excellence": {
+        "title": "Excellence Dans Le Service",
+        "description": "De la réservation à l'atterrissage, nous nous engageons à offrir l'expérience la plus parfaite."
+      },
+      "passion": {
+        "title": "Passion Et Dévouement",
+        "description": "Chaque pilote n'est pas seulement un expert mais aussi un amoureux du ciel, prêt à partager sa passion avec vous."
+      },
+      "innovation": {
+        "title": "Innovation Continue",
+        "description": "Mise à jour des dernières technologies, méthodes de vol avancées pour améliorer la qualité du service."
+      }
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "founded": "Fondée en 2010",
+      "description": "Partant d'une passion pour le vol et l'amour de Sapa, nous avons construit la première équipe de pilotes professionnels de la région. Au cours de 15 ans de développement, Parapente Sapa est devenu une destination de confiance pour des dizaines de milliers de visiteurs nationaux et internationaux.",
+      "milestones": {
+        "2010": "Fondée avec 3 pilotes initiaux",
+        "2015": "Obtention de la certification de sécurité internationale APPI",
+        "2020": "Expansion de l'équipe avec des pilotes internationaux",
+        "2024": "Plus de 50 000 vols en sécurité accomplis"
+      }
+    },
+    "commitment": {
+      "title": "Notre Engagement",
+      "safety": "Sécurité absolue - Sans compromis",
+      "quality": "Qualité de service de classe internationale",
+      "support": "Support client 24/7",
+      "satisfaction": "Garantie de satisfaction à 100% ou remboursement"
+    },
+    "whyChoose": {
+      "title": "Pourquoi Choisir Parapente Sapa?",
+      "cta": {
+        "title": "Prêt à Découvrir Sapa d'en Haut?",
+        "description": "Rejoignez des milliers de clients satisfaits qui ont vécu le frisson du parapente à Sapa"
+      }
     },
     "features": {
       "safety": {
@@ -481,21 +723,6 @@
         "description": "100% de sécurité avec des pilotes certifiés et un équipement de qualité supérieure"
       }
     },
-    "whyChoose": {
-      "title": "Pourquoi Choisir Parapente Sapa?",
-      "cta": {
-        "title": "Prêt à Découvrir Sapa d'en Haut?",
-        "description": "Rejoignez des milliers de clients satisfaits qui ont vécu le frisson du parapente à Sapa"
-      }
-    },
-    "mission": {
-      "title": "Notre Mission",
-      "description": "Fournir des expériences de parapente sûres, mémorables et exaltantes tout en présentant la beauté à couper le souffle de Sapa vue du ciel."
-    },
-    "vision": {
-      "title": "Notre Vision",
-      "description": "Devenir le service de parapente leader au Vietnam, connu pour la sécurité, le professionnalisme et les expériences client exceptionnelles."
-    },
     "process": {
       "title": "Processus de Vol",
       "step1": {
@@ -534,7 +761,7 @@
         "items": {
           "flight": "Vol en parapente 8-15 minutes",
           "photoVideo": "Enregistrement vidéo et photo GOPRO",
-          "drinks": "Menu boissons (Café et thé gratuits)",
+          "drinks": "Boissons sur le site de vol",
           "insurance": "Assurance parapente",
           "certificate": "Certificat"
         }
@@ -550,7 +777,7 @@
         "items": {
           "flight": "Vol en parapente 8-15 minutes",
           "photoVideo": "Enregistrement vidéo et photo GOPRO",
-          "drinks": "Menu boissons (Café et thé gratuits)",
+          "drinks": "Boissons sur le site de vol",
           "insurance": "Assurance parapente",
           "certificate": "Certificat",
           "hotelTransfer": "Transfert hôtel aller-retour"
@@ -566,7 +793,7 @@
         "items": {
           "flight": "Vol en parapente 8-15 minutes",
           "photoVideo": "Enregistrement vidéo et photo GOPRO",
-          "drinks": "Menu boissons (Café et thé gratuits)",
+          "drinks": "Boissons sur le site de vol",
           "insurance": "Assurance parapente",
           "certificate": "Certificat",
           "hotelTransfer": "Transfert hôtel aller-retour",
@@ -581,8 +808,8 @@
     "subtitle": "Choisissez l'expérience de vol parfaite pour vous"
   },
   "gallery": {
-    "title": "Galerie",
-    "subtitle": "Capturez les moments de liberté"
+    "title": "Moments de Parapente",
+    "subtitle": "Expériences mémorables"
   },
   "cta": {
     "title": "Prêt pour Votre Aventure?",
@@ -609,7 +836,7 @@
     "address": "Adresse",
     "followUs": "Suivez-nous",
     "quickLinks": "Liens Rapides",
-    "copyright": "Autorisé à voler par le Département des Opérations – État-major général, Ministère de la Défense nationale du Vietnam.\\nLicence de parapente n° 02/GCN-SVHTT délivrée par le Département de la Culture, des Sports et du Tourisme de la province de Lao Cai"
+    "copyright": "Autorisé à voler par le Département des Opérations – État-major général, Ministère de la Défense nationale du Vietnam. Licence de parapente n° 02/GCN-SVHTT délivrée par le Département de la Culture, des Sports et du Tourisme de la province de Lao Cai"
   },
   "validation": {
     "required": "Ce champ est obligatoire",

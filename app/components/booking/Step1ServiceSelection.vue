@@ -1,261 +1,190 @@
 <template>
-    <div class="space-y-8">
-        <!-- Title -->
-        <div>
-            <h2 class="text-3xl font-bold text-gray-900 text-center mb-2">{{ $t('booking.selectService') }}</h2>
-        </div>
+    <div class="space-y-5">
+        <!-- Header + Passenger Count Row -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <h2 class="text-2xl font-bold text-gray-900">{{ $t('booking.selectService') }}</h2>
 
-        <!-- Number of Passengers - Modern Compact Style -->
-        <div class="booking-section bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Left: Passenger Selection -->
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-3">
-                        <div class="bg-red-600 p-2.5 rounded-none">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-600 font-medium uppercase tracking-wide">{{
-                                $t('booking.step1Details.numberOfPassengers') }}</p>
-                            <p class="text-xl font-bold text-gray-900">{{ numberOfPassengers }} {{
-                                $t('booking.step1Details.people')
-                            }}</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center bg-white rounded-none shadow-sm p-0.5 border-2 border-gray-200">
-                        <button @click="decreasePassengers" :disabled="numberOfPassengers <= 1"
-                            class="stepper-btn w-9 h-9">
-                            −
-                        </button>
-                        <span class="px-4 text-center font-bold text-red-600 text-lg">{{ numberOfPassengers }}</span>
-                        <button @click="increasePassengers" :disabled="numberOfPassengers >= 20"
-                            class="stepper-btn w-9 h-9">
-                            +
-                        </button>
-                    </div>
+            <!-- Compact Passenger Selector -->
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span class="text-sm font-medium text-gray-600">{{ $t('booking.step1Details.numberOfPassengers')
+                        }}</span>
                 </div>
-
-                <!-- Right: Total Price Display -->
-                <div
-                    class="flex items-center justify-between bg-white rounded-none p-4 border-2 border-red-300 shadow-lg">
-                    <div>
-                        <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">{{
-                            $t('booking.step1Details.estimatedTotal') }}</p>
-                        <p class="text-2xl font-bold text-red-600 mt-1">{{ formatPriceVND(totalPrice) }}</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">USD</p>
-                        <p class="text-xl font-bold text-gray-700 mt-1">{{ formatPriceUSD(totalPriceUSD) }}</p>
-                    </div>
+                <div class="flex items-center bg-white border-2 border-gray-200 rounded-lg">
+                    <button @click="decreasePassengers" :disabled="numberOfPassengers <= 1"
+                        class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 disabled:opacity-40 font-bold">−</button>
+                    <span class="px-3 font-bold text-red-600">{{ numberOfPassengers }}</span>
+                    <button @click="increasePassengers" :disabled="numberOfPassengers >= 20"
+                        class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 disabled:opacity-40 font-bold">+</button>
                 </div>
             </div>
         </div>
 
-        <!-- Service Information -->
-        <div class="booking-section space-y-6">
-            <!-- Base Price -->
-            <div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">{{ $t('booking.step1Details.flightPrice') }}</h3>
-                <p class="text-2xl font-bold text-red-600">
-                    {{ $t('booking.step1Details.from') }} {{ formatPriceVND(basePrice) }}{{
-                        $t('booking.step1Details.perFlight')
-                    }}
-                </p>
-                <p class="text-lg text-gray-600">({{ formatPriceUSD(basePriceUSD) }}{{
-                    $t('booking.step1Details.perFlight') }})
-                </p>
+        <!-- Price Display Card -->
+        <div class="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-200 rounded-xl p-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+                <div>
+                    <p class="text-xs text-gray-500 uppercase tracking-wide">{{ $t('booking.step1Details.flightPrice')
+                        }}</p>
+                    <p class="text-lg font-bold text-gray-900">{{ formatPriceVND(basePrice) }}</p>
+                </div>
+                <div v-if="activeDiscount > 0">
+                    <p class="text-xs text-green-600 uppercase tracking-wide">{{
+                        $t('booking.step1Details.groupDiscount') }}</p>
+                    <p class="text-lg font-bold text-green-600">-{{ formatPriceVND(activeDiscount) }}/{{
+                        $t('booking.step1Details.people') }}</p>
+                </div>
+                <div v-if="optionalServicesTotal > 0">
+                    <p class="text-xs text-gray-500 uppercase tracking-wide">{{
+                        $t('booking.step1Details.optionalServicesTotal') }}</p>
+                    <p class="text-lg font-bold text-gray-700">+{{ formatPriceVND(optionalServicesTotal) }}</p>
+                </div>
+                <div class="col-span-2 md:col-span-1 text-right">
+                    <p class="text-xs text-gray-500 uppercase tracking-wide">{{ $t('booking.step1Details.total') }}</p>
+                    <p class="text-2xl font-bold text-red-600">{{ formatPriceVND(totalPrice) }}</p>
+                    <p class="text-sm text-gray-500">({{ formatPriceUSD(totalPriceUSD) }})</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional Services - Compact Chips -->
+        <div class="bg-white border border-gray-200 rounded-xl p-4">
+            <h3 class="text-sm font-bold text-gray-900 mb-3 flex items-center">
+                <svg class="w-4 h-4 text-red-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                        clip-rule="evenodd" />
+                </svg>
+                {{ $t('booking.step1Details.optionalServices') }}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+                <button v-for="option in optionalServices" :key="option.id" @click="toggleOption(option.id)" :class="[
+                    'px-4 py-2 rounded-lg text-sm font-medium transition-all border-2',
+                    selectedOptions.includes(option.id)
+                        ? 'bg-red-600 text-white border-red-600'
+                        : 'bg-white text-gray-700 border-gray-300 hover:border-red-400'
+                ]">
+                    <span>{{ option.name }}</span>
+                    <span class="ml-1 opacity-80">+{{ formatPriceVND(option.priceVND) }}</span>
+                </button>
             </div>
 
-            <!-- Duration -->
-            <div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">{{ $t('booking.step1Details.tourDuration') }}</h3>
-                <p class="text-gray-700">{{ $t('booking.step1Details.durationText') }}</p>
+            <!-- Quantity selectors for selected services -->
+            <div v-if="selectedOptions.includes('drone') || selectedOptions.includes('camera360')"
+                class="mt-3 pt-3 border-t border-gray-100">
+                <div v-for="serviceId in ['drone', 'camera360']" :key="serviceId">
+                    <div v-if="selectedOptions.includes(serviceId)" class="flex items-center justify-between py-2">
+                        <span class="text-sm text-gray-600">{{ getServiceName(serviceId) }} × {{
+                            $t('booking.step1Details.numberOfPeople') }}:</span>
+                        <div class="flex items-center bg-gray-100 rounded-lg">
+                            <button @click.prevent="decreaseServiceQuantity(serviceId)"
+                                :disabled="(serviceQuantities[serviceId] ?? 1) <= 1"
+                                class="w-7 h-7 flex items-center justify-center text-gray-600 hover:bg-gray-200 disabled:opacity-40 font-bold rounded-l-lg">−</button>
+                            <span class="px-3 font-bold text-red-600 text-sm">{{ serviceQuantities[serviceId] ?? 1
+                                }}</span>
+                            <button @click.prevent="increaseServiceQuantity(serviceId)"
+                                :disabled="(serviceQuantities[serviceId] ?? 1) >= numberOfPassengers"
+                                class="w-7 h-7 flex items-center justify-center text-gray-600 hover:bg-gray-200 disabled:opacity-40 font-bold rounded-r-lg">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <!-- Included Services -->
-            <div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">{{ $t('booking.step1Details.included') }}</h3>
-                <ul class="space-y-2">
-                    <li v-for="(item, index) in includedServices" :key="index" class="flex items-start">
-                        <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor"
-                            viewBox="0 0 20 20">
+        <!-- Collapsible Sections -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Included Services Accordion -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                <button @click="showIncluded = !showIncluded"
+                    class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+                    <span class="font-bold text-gray-900 flex items-center">
+                        <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <span class="text-gray-700">{{ item }}</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Optional Services -->
-            <div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">{{ $t('booking.step1Details.optionalServices') }}</h3>
-                <div class="space-y-3">
-                    <label v-for="option in optionalServices" :key="option.id" class="service-option flex items-start"
-                        :class="selectedOptions.includes(option.id) ? 'selected' : ''">
-                        <input type="checkbox" :value="option.id" v-model="selectedOptions"
-                            class="checkbox-modern mt-1" />
-                        <div class="ml-3 flex-1">
-                            <p class="font-semibold text-gray-900">{{ option.name }}</p>
-                            <p class="text-sm text-gray-600 mt-1">{{ option.description }}</p>
-
-                            <!-- Quantity selector for drone and camera360 -->
-                            <div v-if="selectedOptions.includes(option.id) && (option.id === 'drone' || option.id === 'camera360')"
-                                class="mt-3 flex items-center gap-3">
-                                <span class="text-sm text-gray-700 font-medium">{{
-                                    $t('booking.step1Details.numberOfPeople') }}:</span>
-                                <div class="flex items-center bg-gray-100 rounded-none p-1">
-                                    <button @click.prevent="decreaseServiceQuantity(option.id)"
-                                        :disabled="(serviceQuantities[option.id] ?? 1) <= 1"
-                                        class="stepper-btn w-8 h-8">
-                                        −
-                                    </button>
-                                    <span class="px-4 text-center font-bold text-red-600">{{
-                                        serviceQuantities[option.id] ?? 1
-                                    }}</span>
-                                    <button @click.prevent="increaseServiceQuantity(option.id)"
-                                        :disabled="(serviceQuantities[option.id] ?? 1) >= numberOfPassengers"
-                                        class="stepper-btn w-8 h-8">
-                                        +
-                                    </button>
-                                </div>
-                            </div>
-
-                            <p class="text-lg font-bold text-red-600 mt-2">
-                                {{ formatPriceVND(option.priceVND * (selectedOptions.includes(option.id) && (option.id
-                                    === 'drone' ||
-                                    option.id === 'camera360') ? serviceQuantities[option.id] || 1 : 1)) }}/{{ option.unit
-                                }}
-                                <span class="text-sm text-gray-500">({{ formatPriceUSD(option.priceUSD *
-                                    (selectedOptions.includes(option.id) && (option.id === 'drone' || option.id ===
-                                        'camera360') ?
-                                        serviceQuantities[option.id] || 1 : 1)) }}/{{ option.unit }})</span>
-                            </p>
-                        </div>
-                    </label>
-                </div>
-            </div>
-
-            <!-- Locations -->
-            <div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">{{ $t('booking.step1Details.locations') }}</h3>
-                <div class="space-y-3">
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 text-red-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                        </svg>
-                        <div>
-                            <p class="font-semibold text-gray-900">{{ $t('booking.step1Details.takeoffPoint') }}</p>
-                            <a href="https://maps.app.goo.gl/bGtKFTuxyZvJhsJZ9" target="_blank"
-                                class="text-red-600 hover:underline text-sm">
-                                {{ $t('booking.step1Details.viewMap') }}
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 text-red-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                        <div>
-                            <p class="font-semibold text-gray-900">{{ $t('booking.step1Details.landingPoint') }}</p>
-                            <a href="https://maps.app.goo.gl/mYnh4KJVk3aQZLYC6" target="_blank"
-                                class="text-red-600 hover:underline text-sm">
-                                {{ $t('booking.step1Details.viewMap') }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Promotions -->
-            <div class="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 rounded-none p-6">
-                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <svg class="w-6 h-6 text-red-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+                        {{ $t('booking.step1Details.included') }}
+                    </span>
+                    <svg :class="['w-5 h-5 text-gray-500 transition-transform', showIncluded ? 'rotate-180' : '']"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
-                    {{ $t('booking.step1Details.promotionInfo') }}
-                </h3>
-                <ul class="space-y-2">
-                    <li v-for="promo in promotions" :key="promo.minPeople"
-                        class="flex items-center justify-between p-3 bg-white rounded-none border-l-4"
-                        :class="numberOfPassengers >= promo.minPeople ? 'border-red-600 ring-2 ring-red-500' : 'border-transparent'">
-                        <div class="flex items-center">
-                            <svg v-if="numberOfPassengers >= promo.minPeople" class="w-5 h-5 text-red-600 mr-2"
-                                fill="currentColor" viewBox="0 0 20 20">
+                </button>
+                <div v-if="showIncluded" class="px-4 pb-4">
+                    <ul class="space-y-1 text-sm text-gray-600">
+                        <li v-for="(item, index) in includedServices" :key="index" class="flex items-start">
+                            <svg class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span
-                                :class="numberOfPassengers >= promo.minPeople ? 'font-bold text-red-700' : 'text-gray-700'">
-                                {{ promo.text }}
-                            </span>
-                        </div>
-                        <span
-                            :class="numberOfPassengers >= promo.minPeople ? 'font-bold text-red-600' : 'text-gray-600'">
-                            -{{ formatPriceVND(promo.discountVND) }}/người
-                            <span class="text-sm">({{ formatPriceUSD(promo.discountUSD) }})</span>
-                        </span>
-                    </li>
-                </ul>
+                            <span>{{ item }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-                <!-- Active Discount Display -->
-                <div v-if="activeDiscount" class="mt-4 p-4 bg-red-600 text-white rounded-lg">
-                    <p class="font-bold text-lg">{{ $t('booking.step1Details.youSave') }} {{
-                        formatPriceVND(activeDiscount *
-                            numberOfPassengers) }}</p>
-                    <p class="text-sm">({{ formatPriceUSD(activeDiscountUSD * numberOfPassengers) }})</p>
+            <!-- Promotions Accordion -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                <button @click="showPromos = !showPromos"
+                    class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+                    <span class="font-bold text-gray-900 flex items-center">
+                        <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+                        </svg>
+                        {{ $t('booking.step1Details.promotionInfo') }}
+                        <span v-if="activeDiscount > 0"
+                            class="ml-2 px-2 py-0.5 bg-green-100 text-green-700 text-xs rounded-full font-bold">
+                            -{{ formatPriceVND(activeDiscount * numberOfPassengers) }}
+                        </span>
+                    </span>
+                    <svg :class="['w-5 h-5 text-gray-500 transition-transform', showPromos ? 'rotate-180' : '']"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div v-if="showPromos" class="px-4 pb-4">
+                    <ul class="space-y-2 text-sm">
+                        <li v-for="promo in promotions" :key="promo.minPeople"
+                            :class="['flex items-center justify-between p-2 rounded-lg', numberOfPassengers >= promo.minPeople ? 'bg-green-50 text-green-700 font-medium' : 'text-gray-600']">
+                            <span>{{ promo.text }}</span>
+                            <span>-{{ formatPriceVND(promo.discountVND) }}/{{ $t('booking.step1Details.people')
+                                }}</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Price Summary -->
-        <div class="booking-section">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">{{ $t('booking.step1Details.priceSummary') }}</h3>
-            <div class="space-y-3">
-                <div class="flex justify-between text-gray-700">
-                    <span>{{ $t('booking.step1Details.flightPriceFor') }} ({{ numberOfPassengers }} {{
-                        $t('booking.step1Details.people') }})</span>
-                    <span class="font-semibold">{{ formatPriceVND(basePrice * numberOfPassengers) }}</span>
-                </div>
-
-                <!-- Optional Services Total -->
-                <div v-if="optionalServicesTotal > 0" class="flex justify-between text-gray-700">
-                    <span>{{ $t('booking.step1Details.optionalServicesTotal') }}</span>
-                    <span class="font-semibold">{{ formatPriceVND(optionalServicesTotal) }}</span>
-                </div>
-
-                <!-- Discount -->
-                <div v-if="activeDiscount > 0" class="flex justify-between text-red-600">
-                    <span>{{ $t('booking.step1Details.groupDiscount') }}</span>
-                    <span class="font-semibold">-{{ formatPriceVND(activeDiscount * numberOfPassengers) }}</span>
-                </div>
-
-                <div class="border-t-2 border-gray-200 pt-3">
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">{{ $t('booking.step1Details.total') }}</span>
-                        <div class="text-right">
-                            <p class="text-3xl font-bold text-red-600">{{ formatPriceVND(totalPrice) }}</p>
-                            <p class="text-lg text-gray-500">({{ formatPriceUSD(totalPriceUSD) }})</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Locations - Inline -->
+        <div class="flex flex-wrap gap-4 text-sm">
+            <a href="https://maps.app.goo.gl/bGtKFTuxyZvJhsJZ9" target="_blank"
+                class="flex items-center text-red-600 hover:text-red-700 transition-colors">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+                {{ $t('booking.step1Details.takeoffPoint') }} →
+            </a>
+            <a href="https://maps.app.goo.gl/mYnh4KJVk3aQZLYC6" target="_blank"
+                class="flex items-center text-blue-600 hover:text-blue-700 transition-colors">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                {{ $t('booking.step1Details.landingPoint') }} →
+            </a>
         </div>
 
         <!-- Navigation -->
-        <div class="flex justify-end">
-            <button @click="handleNext" class="btn-primary text-lg px-12 py-4">
+        <div class="flex justify-end pt-2">
+            <button @click="handleNext" class="btn-primary text-lg px-10 py-3">
                 {{ $t('booking.step1Details.continue') }}
             </button>
         </div>
@@ -275,6 +204,10 @@ interface OptionalService {
 }
 
 const bookingStore = useBookingStore()
+
+// UI State
+const showIncluded = ref(false)
+const showPromos = ref(false)
 
 // Base pricing
 const basePrice = 2090000 // VND
@@ -369,17 +302,12 @@ const optionalServicesTotal = computed(() => {
     selectedOptions.value.forEach(optionId => {
         const service = optionalServices.value.find((s: OptionalService) => s.id === optionId)
         if (service) {
-            // Hotel transfer is per person
             if (service.id === 'hotel-transfer') {
                 total += service.priceVND * numberOfPassengers.value
-            }
-            // Drone and camera360 are per person based on selected quantity
-            else if (service.id === 'drone' || service.id === 'camera360') {
+            } else if (service.id === 'drone' || service.id === 'camera360') {
                 const quantity = serviceQuantities.value[service.id] || 1
                 total += service.priceVND * quantity
-            }
-            // Other services are per trip
-            else {
+            } else {
                 total += service.priceVND
             }
         }
@@ -394,12 +322,10 @@ const optionalServicesTotalUSD = computed(() => {
         if (service) {
             if (service.id === 'hotel-transfer') {
                 total += service.priceUSD * numberOfPassengers.value
-            }
-            else if (service.id === 'drone' || service.id === 'camera360') {
+            } else if (service.id === 'drone' || service.id === 'camera360') {
                 const quantity = serviceQuantities.value[service.id] || 1
                 total += service.priceUSD * quantity
-            }
-            else {
+            } else {
                 total += service.priceUSD
             }
         }
@@ -437,6 +363,22 @@ const formatPriceUSD = (price: number) => {
     }).format(price)
 }
 
+// Get service name by ID
+const getServiceName = (serviceId: string) => {
+    const service = optionalServices.value.find(s => s.id === serviceId)
+    return service?.name || serviceId
+}
+
+// Toggle option selection
+const toggleOption = (optionId: string) => {
+    const index = selectedOptions.value.indexOf(optionId)
+    if (index > -1) {
+        selectedOptions.value.splice(index, 1)
+    } else {
+        selectedOptions.value.push(optionId)
+    }
+}
+
 // Passenger controls
 const increasePassengers = () => {
     if (numberOfPassengers.value < 20) {
@@ -458,7 +400,6 @@ const handleNext = () => {
         basePrice
     )
     bookingStore.setNumberOfPassengers(numberOfPassengers.value)
-    // Save selected options and quantities to store using actions
     bookingStore.setSelectedOptions(selectedOptions.value)
     bookingStore.setServiceQuantities(serviceQuantities.value)
     bookingStore.nextStep()

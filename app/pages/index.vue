@@ -12,9 +12,9 @@ const currentLocale = computed(() => locale.value || 'vi')
 const dbPosts = ref<any[]>([])
 const currentPostIndex = ref(0)
 
-const basicItemKeys = ['flight', 'photoVideo', 'insurance', 'certificate']
-const standardItemKeys = ['flight', 'photoVideo', 'insurance', 'certificate', 'hotelTransfer']
-const premiumItemKeys = ['flight', 'photoVideo', 'insurance', 'certificate', 'hotelTransfer', 'drone', 'camera360']
+const basicItemKeys = ['flight', 'photoVideo', 'insurance', 'drinks', 'certificate']
+const standardItemKeys = ['flight', 'photoVideo', 'insurance', 'certificate', 'drinks', 'hotelTransfer']
+const premiumItemKeys = ['flight', 'photoVideo', 'insurance', 'certificate', 'hotelTransfer', 'drone', 'drinks', 'camera360']
 
 const latestPosts = computed(() => {
   const posts = dbPosts.value.length > 0 ? dbPosts.value : postsStore.latestPosts
@@ -55,6 +55,24 @@ const previousPost = () => {
 }
 
 const gallery = ref(galleryData)
+
+// Locale suffix mapping for gallery items
+const localeSuffixMap: Record<string, string> = {
+  vi: 'Vi',
+  en: 'En',
+  fr: 'Fr',
+  ru: 'Ru'
+}
+
+const getGalleryTitle = (item: any) => {
+  const suffix = localeSuffixMap[currentLocale.value] || 'En'
+  return item[`title${suffix}`] || item.titleEn
+}
+
+const getGalleryDescription = (item: any) => {
+  const suffix = localeSuffixMap[currentLocale.value] || 'En'
+  return item[`description${suffix}`] || item.descriptionEn
+}
 
 const handleImageError = (event: Event) => {
   const target = event.target as HTMLImageElement
@@ -120,7 +138,7 @@ useHead({
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <!-- Background Video -->
       <div class="absolute inset-0">
-        <video poster="/images/header-pic.jpeg" autoplay muted loop playsinline preload="metadata"
+        <video poster="/images/pilot_background.jpeg" autoplay muted loop playsinline preload="metadata"
           class="w-full h-full object-cover">
           <source src="/videos/header/header_720p_new.mp4" type="video/mp4">
         </video>
@@ -200,10 +218,9 @@ useHead({
           </div>
           <div>
             <h2 class="text-3xl lg:text-4xl font-black text-slate-900">
-              {{ currentLocale === 'vi' ? 'Khoảnh Khắc Dù Lượn' : 'Paragliding Moments' }}
+              {{ $t('gallery.title') }}
             </h2>
-            <p class="text-slate-500">{{ currentLocale === 'vi' ? 'Những trải nghiệm đáng nhớ' : 'Memorable experiences'
-              }}</p>
+            <p class="text-slate-500">{{ $t('gallery.subtitle') }}</p>
           </div>
         </div>
 
@@ -212,15 +229,15 @@ useHead({
           <div v-for="(item, index) in gallery" :key="item.id"
             class="relative group overflow-hidden cursor-pointer aspect-square scroll-reveal"
             :data-delay="(index % 4) * 50">
-            <img :src="`${item.image}`" :alt="item.title"
+            <img :src="`${item.image}`" :alt="getGalleryTitle(item)"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"
               @error="handleImageError" />
             <!-- Overlay -->
             <div
               class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
-                <h3 class="font-bold text-lg">{{ item.title }}</h3>
-                <p class="text-sm text-slate-300">{{ item.description }}</p>
+                <h3 class="font-bold text-lg">{{ getGalleryTitle(item) }}</h3>
+                <p class="text-sm text-slate-300">{{ getGalleryDescription(item) }}</p>
               </div>
             </div>
           </div>
@@ -513,7 +530,7 @@ useHead({
             <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ?
               'Chat trực tiếp' :
               'Direct chat' }}</p>
-            <a href="https://zalo.me/0338338138" target="_blank" rel="noopener noreferrer"
+            <a href="https://zalo.me/84386887489" target="_blank" rel="noopener noreferrer"
               class="block w-full py-2 bg-blue-500 hover:bg-blue-600 text-white text-xs font-semibold text-center rounded-lg transition-colors">
               {{ currentLocale === 'vi' ? 'Nhắn tin' : 'Message' }}
             </a>
@@ -533,7 +550,7 @@ useHead({
             <h3 class="text-sm font-bold text-slate-900 text-center mb-1">Facebook</h3>
             <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ? 'Fanpage chính thức' :
               'Official fanpage' }}</p>
-            <a href="https://facebook.com/dulluonsapa" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.facebook.com/bayduluonsapa/" target="_blank" rel="noopener noreferrer"
               class="block w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold text-center rounded-lg transition-colors">
               {{ currentLocale === 'vi' ? 'Theo dõi' : 'Follow' }}
             </a>
@@ -553,7 +570,7 @@ useHead({
             <h3 class="text-sm font-bold text-slate-900 text-center mb-1">TikTok</h3>
             <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ?
               'Video bay lượn' : 'Flying videos' }}</p>
-            <a href="https://tiktok.com/@dulluonsapa" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.tiktok.com/@sapa_paragliding" target="_blank" rel="noopener noreferrer"
               class="block w-full py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold text-center rounded-lg transition-colors">
               {{ currentLocale === 'vi' ? 'Theo dõi' : 'Follow' }}
             </a>
@@ -573,7 +590,7 @@ useHead({
             <h3 class="text-sm font-bold text-slate-900 text-center mb-1">YouTube</h3>
             <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ?
               'Kênh chính thức' : 'Official channel' }}</p>
-            <a href="https://youtube.com/@dulluonsapa" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.youtube.com/@sapa.paragliding" target="_blank" rel="noopener noreferrer"
               class="block w-full py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold text-center rounded-lg transition-colors">
               {{ currentLocale === 'vi' ? 'Đăng ký' : 'Subscribe' }}
             </a>
@@ -593,7 +610,7 @@ useHead({
             <h3 class="text-sm font-bold text-slate-900 text-center mb-1">Instagram</h3>
             <p class="text-slate-400 text-xs text-center mb-3">{{ currentLocale === 'vi' ?
               'Ảnh đẹp mỗi ngày' : 'Daily photos' }}</p>
-            <a href="https://instagram.com/dulluonsapa" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.instagram.com/SAPA_PARAGLIDING" target="_blank" rel="noopener noreferrer"
               class="block w-full py-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 hover:opacity-90 text-white text-xs font-semibold text-center rounded-lg transition-colors">
               {{ currentLocale === 'vi' ? 'Theo dõi' : 'Follow' }}
             </a>
